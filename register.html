@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Breast Cancer Awareness</title>
+
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="css/style.css" />
+
+<script src="js/script.js" type="application/javascript"> </script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script>
+$(function () {
+	$("#register").click(function(){		
+		var uname=document.getElementById("fullname").value;
+		var age=document.getElementById("age").value;
+		var uid=document.getElementById("userid").value;
+		var pwd=document.getElementById("userpw").value;
+
+$.getJSON("http://www.mobiletest.mednl.com/signup.php?jsoncallback=?&uname="+uname+"&age="+age+"&uid="+uid+"&pwd="+pwd, function(data){ 
+   alert(data['msg']);
+
+});
+});
+});
+
+</script>
+</head>
+<body>
+<article data-role="page" id="page1" class="data-value">
+<div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
+    <h1 class="ui-title" role="heading" aria-level="1">Register</h1>
+  </div>
+
+  <div data-role="content">
+    <div class="register">
+      <form id="registerform" method="post" action="www.mobiletest.mednl.com/signup.php">
+        <div data-role="fieldcontain">
+        <p>
+        <label for="fullname"> FULL NAME : </label>
+        <em>*</em>
+        <input type="text" name="fullname" id="fullname" value="" placeholder="Enter your Full Name"  class="required"/>
+        </p>
+        <p>  
+          <label for="age"> AGE : </label>
+          <em>*</em>
+          <input type="text" name="age" id="age" value="" placeholder="Enter your Age" minlength="6" class="required" />
+        </p>
+        <p>  
+          <label for="userid">USER ID:</label>
+          <em>*</em>
+          <input type="email" name="userid" id="userid" value="" placeholder="Enter User ID"  class="required"/>
+        </p>
+        <p>  
+          <label for="userpw">PASSWORD:</label>
+          <em>*</em>
+          <input type="password" name="userpw" id="userpw" value="" placeholder="Enter Password"  class="required"/>         
+        </p>
+        <p>
+               <input type="button" value="Register" id="register" />
+		</p>               
+        </div>
+      </form>
+      <div id="results"></div>
+    </div>
+  </div>
+</article>
+</body>
+</html>
