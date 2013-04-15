@@ -1,32 +1,147 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Breast Cancer Awareness</title>
-
-<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.css" />
+<link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-
-<script src="js/script.js" type="application/javascript"> </script>
-<script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.js"></script>
+<link rel="stylesheet" href="liteAccordion.css">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<script src="jquery.validate.js"></script>
+<script src="jquery.simplemodal.js"> </script>
+
 <script>
+  
+$(document).ready(function() {
+ /*$('#page1').liteAccordion();		*/
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == 'name')
+        {
+         // alert(sParameterName[1]);
+		   $('h4').append(sParameterName[1]);
+		   $('#popupt').css({ 'display': 'block'});
+		$("#dialog-message").append(sParameterName[1]);
+		//$('#popupt').append(sParameterName[1]);
+		//$('#dialog-message').modal();	  
+    
+		 }
+    }
+$('#centers').live("click",function()
+{
+ 	/*var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == 'name')
+        {
+         alert(sParameterName[1]);		
+		 }
+    }
+		  window.location = 'centers.html?name='+sParameterName[1];	
+	*/
+	 window.location = 'centers.html';
+}); 
+$('#info').live("click",function()
+{
+	  window.location = 'info.html';
+});
+/*$('#reminder').live("click",function()
+{
+	var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == 'name')
+        {
+         alert(sParameterName[1]);		   
+		 }
+    }
+	  window.location = 'datepicker.html?name='+sParameterName[1];
+});*/
+  
+});
+
 
 </script>
 </head>
 <body>
-<article data-role="page" id="page1" class="data-value">
-<div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
-    <h1 class="ui-title" role="heading" aria-level="1">Home</h1>
+<div id="page1" data-role="page">
+  <div data-role="header">
+    <h1 style="float: left">Home</h1>
+    <h4 class="ui-title"> Welcome </h4>
   </div>
-  <div data-role="content">
-   
+  <div data-role="content"> 
+   <form  id="home" method="post"  action="www.mobiletest.mednl.com/login.php" >
+    
+      <input type="button" value="General information" id="info"/>
+      <input type="button" value="Early detection and screening" id="detection"/>
+      <input type="button" value="Breast Cancer Risk Assessment Tool" id="assessment"/>
+      <input type="button" value="Recommendations for early detection" id="detection"/>
+      <input type="button" value="Mammogram centre locator" id="centers"/>
+      <input type="button" value="Treatment options" id="treatment"/>
+      <input type="button" value="Life after breast cancer" id="life"/>
+     
+      <div id="dialog-message" title="Test alert"> </div>
+    </form>
+   <!--   <ol>
+      <li>
+        <h2><span>General information</span></h2>
+        <div>
+          <input type="button" value="What is breast cancer?" id="what"/>
+          <input type="button" value="Worldwide statistics" id="statistics"/>
+          <input type="button" value="Burden of breast cancer in India" id="burden"/>
+          <input type="button" value="Risk factors " id="factors"/>
+        </div>
+      </li>
+      <li>
+        <h2><span>Early detection and screening</span></h2>
+        <div>
+          <input type="button" value="What is breast cancer?" id="what"/>
+        </div>
+      </li>
+      <li>
+        <h2><span>Breast Cancer Risk Assessment Tool</span></h2>
+        <div>
+          <input type="button" value="What is breast cancer?" id="what"/>
+        </div>
+      </li>
+      <li>
+        <h2><span>Recommendations for early detection</span></h2>
+        <div>
+          <input type="button" value="What is breast cancer?" id="what"/>
+        </div>
+      </li>
+      <li>
+        <h2><span>Mammogram centre locator</span></h2>
+        <div>
+          <input type="button" value="What is breast cancer?" id="what"/>
+        </div>
+      </li>
+      <li>
+        <h2><span>Treatment options</span></h2>
+        <div>
+          <input type="button" value="What is breast cancer?" id="what"/>
+        </div>
+      </li>
+      <li>
+        <h2><span>Life after breast cancer</span></h2>
+        <div>
+          <input type="button" value="What is breast cancer?" id="what"/>
+        </div>
+      </li>
+    </ol>-->
   </div>
-  <div data-position="fixed" data-role="footer" class="ui-footer ui-bar-a ui-footer-fixed slideup" ></div>
-</article>
+</div>
 </body>
 </html>

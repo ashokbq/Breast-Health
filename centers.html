@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mammography Centers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="style.css" />
+
+<!--<script src="jquery-1.8.3.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<script>
+/*$(document).bind('pagebeforeshow', function () {
+	var selhtml;
+    $.getJSON('http://www.mobiletest.mednl.com/getcity.php', function (data) {  
+            $.each(data, function (i, item) {
+             selhtml += '<option value="'+item.id+'">'+item.name + '</option>';
+			 });
+   $('#city').empty().append(selhtml);
+ }); 
+
+});*/
+
+  	$(document).ready(function() {
+			$('#city').change(function() {
+	  	var val = document.getElementById("city").value;
+	//	alert(val);
+		var html='';
+	  $.getJSON('http://www.mobiletest.mednl.com/centers.php?city='+val+'&callback=?', function (data) {
+		   $.each(data, function (i, item) {
+			   				/*alert(item.name);
+				alert(item.image);
+				alert(item.address);*/
+	html +='<img id="cityimage" src="'+item.image+'"><br/><div id="cname">'+item.name+'</div><br/><div id="add">'+item.address+'</div><div style="clear:both;"> </div>';		 
+		   });
+		$('#placeholder').empty().append(html);
+        });
+  });
+
+	});
+</script>
+</head>
+<body>
+<div id="centerhome" data-role="page">
+  <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
+    <h1 class="ui-title" role="heading" aria-level="1">Mammography Centers</h1>
+  </div>
+  <div id="main-content"> <br>
+    <select id="city">
+        <option label="Select City">Select City</option>
+      <option value="1" label="Delhi">Delhi</option>
+      <option value="2" label="Bangalore">Bangalore</option>
+    </select>
+    <div id="placeholder"></div>
+    <!-- end of centerhome --> 
+  </div>
+</div>
+</body>
+</html>

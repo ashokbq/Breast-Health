@@ -1,0 +1,401 @@
+   
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+     display: none; <- Crashes Chrome on hover 
+    -webkit-appearance: none;
+    margin: 0;  <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+
+html, body {
+    height: 100%;
+    text-align: center;
+}
+.clear {
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.ui-header .ui-title, .ui-footer .ui-title
+{
+	    margin:0.6em 20% 0.8em !important;
+}
+label.error {
+	color: red;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.4;
+	margin-top: 0.5em;
+	width: 100%;
+	float: none;
+}
+ @media screen and (orientation: portrait) {
+label.error {
+	margin-left: 0;
+	display: block;
+}
+}
+ @media screen and (orientation: landscape) {
+label.error {
+	display: inline-block;
+	margin-left: 22%;
+}
+}
+em {
+	color: red;
+	font-weight: bold;
+	padding-right: .25em;
+}
+
+.ui-icon, .ui-widget-content .ui-icon {
+    background-image: url("ui-icons_222222_256x240.png") !important;
+}
+/* Modal Popup */
+#dialog-message 
+{
+display:none;
+}
+
+/* Overlay */
+#simplemodal-overlay {background-color:#000;}
+
+/* Container */
+#simplemodal-container {height:100px; width:200px; color:#bbb; background-color:#333; border:4px solid #444; padding:12px;}
+#simplemodal-container .simplemodal-data {padding:8px;}
+#simplemodal-container code {background:#141414; border-left:3px solid #65B43D; color:#bbb; display:block; font-size:12px; margin-bottom:12px; padding:4px 6px 6px;}
+#simplemodal-container a {color:#ddd;}
+#simplemodal-container a.modalCloseImg {background:url(x.png) no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-15px; right:-16px; cursor:pointer;}
+#simplemodal-container h3 {color:#84b8d9;}
+
+
+/* Mammographic centers */
+.ui-listview .ui-li-icon
+{
+	top: 0.5em;
+}
+
+#centerhome .ui-icon-arrow-r {
+    background-position: -48px 86%;
+}
+
+.cimg
+{
+    border: 2px solid #333333;
+    float: left;
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 7px 7px 7px 7px;
+}
+.centerdetail
+{
+    float: left;
+    width: auto;
+    padding-left: 35px;
+}
+.center1,
+.center2,
+.center3
+{
+ border: 2px solid #333333;
+    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 20px;
+    min-height: 175px;
+    width: 100%;
+}
+.city
+{
+	font-family: Courier New;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+
+/* File Uploader Styles from styles.css */
+
+/*-------------------------
+	Simple reset
+--------------------------*/
+
+
+
+*{
+	margin:0;
+	padding:0;
+}
+
+
+
+/*-------------------------
+	General Styles
+--------------------------*/
+
+
+
+html{
+	background:url('background_tile_2.jpg');
+	min-height:100%;
+	position:relative;
+	
+}
+
+body{
+	color:#fff;
+	min-height:600px;
+	font:14px/1.3 'Segoe UI',Arial, sans-serif;
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#54a6de;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+header, footer{
+	display:block;
+}
+
+
+
+/*-------------------------
+	Header Styles
+--------------------------*/
+
+
+
+header{
+	background:url('background_tile_1.jpg');
+	padding:75px;
+	position: relative;
+}
+
+header:before,
+#dropbox:before{
+	display: block;
+	content:'';
+	height:4px;
+	width:100%;
+	background:url('blue_line.jpg');
+	position: absolute;
+	top:0;
+	left:0;
+	box-shadow:0 2px 2px rgba(0,0,0,0.4);
+}
+
+
+
+/*-------------------------
+	Dropbox Element
+--------------------------*/
+
+
+
+#dropbox{
+	background:url('background_tile_3.jpg');
+	
+	border-radius:3px;
+	position: relative;
+	margin:80px auto 90px;
+	min-height: 290px;
+	overflow: hidden;
+	padding-bottom: 40px;
+    width: 990px;
+	
+	box-shadow:0 0 4px rgba(0,0,0,0.3) inset,0 -3px 2px rgba(0,0,0,0.1);
+}
+
+
+#dropbox .message{
+	font-size: 11px;
+    text-align: center;
+    padding-top:160px;
+    display: block;
+}
+
+#dropbox .message i{
+	color:#ccc;
+	font-size:10px;
+}
+
+#dropbox:before{
+	border-radius:3px 3px 0 0;
+}
+
+
+
+/*-------------------------
+	Image Previews
+--------------------------*/
+
+
+
+#dropbox .preview{
+	width:245px;
+	height: 215px;
+	float:left;
+	margin: 55px 0 0 60px;
+	position: relative;
+	text-align: center;
+}
+
+#dropbox .preview img{
+	max-width: 240px;
+	max-height:180px;
+	border:3px solid #fff;
+	display: block;
+	
+	box-shadow:0 0 2px #000;
+}
+
+#dropbox .imageHolder{
+	display: inline-block;
+	position:relative;
+}
+
+#dropbox .uploaded{
+	position: absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	background: url('done.png') no-repeat center center rgba(255,255,255,0.5);
+	display: none;
+}
+
+#dropbox .preview.done .uploaded{
+	display: block;
+}
+
+
+
+/*-------------------------
+	Progress Bars
+--------------------------*/
+
+
+
+#dropbox .progressHolder{
+	position: absolute;
+	background-color:#252f38;
+	height:12px;
+	width:100%;
+	left:0;
+	bottom: 0;
+	
+	box-shadow:0 0 2px #000;
+}
+
+#dropbox .progress{
+	background-color:#2586d0;
+	position: absolute;
+	height:100%;
+	left:0;
+	width:0;
+	
+	box-shadow: 0 0 1px rgba(255, 255, 255, 0.4) inset;
+	
+	-moz-transition:0.25s;
+	-webkit-transition:0.25s;
+	-o-transition:0.25s;
+	transition:0.25s;
+}
+
+#dropbox .preview.done .progress{
+	width:100% !important;
+}
+
+
+/* Date Picker */
+
+#example {
+	position: relative;
+	width: 500px;
+	padding: 20px;
+}
+p {
+	margin: 7px 0 0 0;
+}
+#purr-container {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+.notice {
+	position: relative;
+	width: 324px;
+}
+.notice .close {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	display: block;
+	width: 18px;
+	height: 17px;
+	text-indent: -9999px;
+	background: url(purrClose.png) no-repeat 0 10px;
+}
+.notice-body {
+	min-height: 50px;
+	padding: 22px 22px 0 22px;
+	background: url(purrTop.png) no-repeat left top;
+	color: #f9f9f9;
+}
+.notice-body img {
+	width: 50px;
+	margin: 0 10px 0 0;
+	float: left;
+}
+.notice-body h3 {
+	margin: 0;
+	font-size: 1.1em;
+}
+.notice-body p {
+	margin: 5px 0 0 60px;
+	font-size: 0.8em;
+	line-height: 1.4em;
+}
+.notice-bottom {
+	height: 22px;
+	background: url(purrBottom.png) no-repeat left top;
+}
+
+#about,
+#self_assesment,
+#assessment ,
+#centers ,
+#reminder ,
+#share 
+{
+background:url(maps.png) no-repeat !important;	
+}
+
+#cityimage
+{
+    float: left;
+    width: 300px;
+}
+#cname,
+#add
+{
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 7%;
+    text-align: center;
+}
+#cname
+{
+    margin-top: 2%;
+}
+#add
+{
+	margin-top:1%;
+}
