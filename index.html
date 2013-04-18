@@ -3,20 +3,18 @@
 <head>
 <title>Home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.css" />
+<link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="jquery-ui.css" />
+<link rel="stylesheet" href="jquery.mobile.simpledialog.min.css" />
 <link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-<link rel="stylesheet" href="liteAccordion.css">
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<!--<link rel="stylesheet" href="custom_d.min.css" />-->
+<script src="jquery-1.7.1.min.js"></script>
+<script src="jquery-ui.js"></script>
+<script src="jquery.mobile-1.1.0.min.js"></script>
 <script src="jquery.validate.js"></script>
 <script src="jquery.simplemodal.js"> </script>
+<script>  
 
-<script>
-  
 $(document).ready(function() {
  /*$('#page1').liteAccordion();		*/
     var sPageURL = window.location.search.substring(1);
@@ -35,41 +33,7 @@ $(document).ready(function() {
     
 		 }
     }
-$('#centers').live("click",function()
-{
- 	/*var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++)
-    {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == 'name')
-        {
-         alert(sParameterName[1]);		
-		 }
-    }
-		  window.location = 'centers.html?name='+sParameterName[1];	
-	*/
-	 window.location = 'centers.html';
-}); 
-$('#info').live("click",function()
-{
-	  window.location = 'info.html';
-});
-/*$('#reminder').live("click",function()
-{
-	var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++)
-    {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == 'name')
-        {
-         alert(sParameterName[1]);		   
-		 }
-    }
-	  window.location = 'datepicker.html?name='+sParameterName[1];
-});*/
-  
+
 });
 
 
@@ -77,70 +41,75 @@ $('#info').live("click",function()
 </head>
 <body>
 <div id="page1" data-role="page">
-  <div data-role="header">
+  <div data-role="header" data-theme="d">
     <h1 style="float: left">Home</h1>
     <h4 class="ui-title"> Welcome </h4>
   </div>
-  <div data-role="content"> 
-   <form  id="home" method="post"  action="www.mobiletest.mednl.com/login.php" >
-    
-      <input type="button" value="General information" id="info"/>
-      <input type="button" value="Early detection and screening" id="detection"/>
-      <input type="button" value="Breast Cancer Risk Assessment Tool" id="assessment"/>
-      <input type="button" value="Recommendations for early detection" id="detection"/>
-      <input type="button" value="Mammogram centre locator" id="centers"/>
-      <input type="button" value="Treatment options" id="treatment"/>
-      <input type="button" value="Life after breast cancer" id="life"/>
-     
-      <div id="dialog-message" title="Test alert"> </div>
-    </form>
-   <!--   <ol>
-      <li>
-        <h2><span>General information</span></h2>
-        <div>
-          <input type="button" value="What is breast cancer?" id="what"/>
-          <input type="button" value="Worldwide statistics" id="statistics"/>
-          <input type="button" value="Burden of breast cancer in India" id="burden"/>
-          <input type="button" value="Risk factors " id="factors"/>
-        </div>
-      </li>
-      <li>
-        <h2><span>Early detection and screening</span></h2>
-        <div>
-          <input type="button" value="What is breast cancer?" id="what"/>
-        </div>
-      </li>
-      <li>
-        <h2><span>Breast Cancer Risk Assessment Tool</span></h2>
-        <div>
-          <input type="button" value="What is breast cancer?" id="what"/>
-        </div>
-      </li>
-      <li>
-        <h2><span>Recommendations for early detection</span></h2>
-        <div>
-          <input type="button" value="What is breast cancer?" id="what"/>
-        </div>
-      </li>
-      <li>
-        <h2><span>Mammogram centre locator</span></h2>
-        <div>
-          <input type="button" value="What is breast cancer?" id="what"/>
-        </div>
-      </li>
-      <li>
-        <h2><span>Treatment options</span></h2>
-        <div>
-          <input type="button" value="What is breast cancer?" id="what"/>
-        </div>
-      </li>
-      <li>
-        <h2><span>Life after breast cancer</span></h2>
-        <div>
-          <input type="button" value="What is breast cancer?" id="what"/>
-        </div>
-      </li>
-    </ol>-->
+  <div data-role="content" data-theme="d">
+    <div id="main-content"> 
+      <!-- Tab 1 -->
+      <ul data-role="listview" data-inset="true">
+        <li> <a href="#"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">General information <span class="ui-li-count">4</span> </a>
+          <ul>
+            <li> <a href="info.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">What is breast cancer?</a> </li>
+            <li> <a href="statistics.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Worldwide statistics</a> </li>
+            <li> <a href="burden.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Burden of breast cancer in India</a> </li>
+            <li> <a href="factors.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Risk factors <span class="ui-li-count">2</span></a>
+              <ul  data-role="listview" data-inset="true">
+                <li> <a href="non-modifiablerisk.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Non-modifiable risk factors</a> </li>
+                <li> <a href="modifiablerisk.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Modifiable risk factors</a> </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Tab 2 -->
+      <ul data-role="listview" data-inset="true">
+        <li> <a href="#"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Early detection and screening <span class="ui-li-count">4</span> </a>
+          <ul data-role="listview" data-inset="true">
+            <li> <a href="signs.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Signs and symptoms of breast cancer</a> </li>
+            <li> <a href="awareness.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Breast awareness and self-examination</a> </li>
+            <li> <a href="examination.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Clinical breast examination</a> </li>
+            <li> <a href="mammography.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Mammography</a> </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Tab 3 -->
+      <ul data-role="listview" data-inset="true">
+        <li> <a href="alert.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Breast Cancer Risk Assessment Tool</a> </li>
+      </ul>
+      <!-- Tab 4 -->
+      <ul data-role="listview" data-inset="true">
+        <li> <a href="#"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Recommendations for early detection <span class="ui-li-count">3</span> </a>
+          <ul data-role="listview" data-inset="true">
+            <li> <a href="lowrisk.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Low risk individuals </a> </li>
+            <li> <a href="moderaterisk.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Moderate risk individuals</a> </li>
+            <li> <a href="highrisk.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">High risk individuals</a> </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Tab 5 -->
+      <ul data-role="listview" data-inset="true">
+        <li> <a href="centers.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Mammogram centre locator</a> </li>
+      </ul>
+      <!-- Tab 6 -->
+      <ul data-role="listview" data-inset="true">
+        <li> <a href="#"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Treatment options <span class="ui-li-count">5</span> </a>
+          <ul data-role="listview" data-inset="true">
+          
+            <li> <a href="surgery.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Surgery</a> </li>
+            <li> <a href="radiation.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Radiation therapy</a> </li>
+            <li> <a href="chemotherapy.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Chemotherapy</a> </li>
+            <li> <a href="hormonetherapy.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Hormone therapy</a> </li>
+            <li> <a href="targetedtherapy.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Targeted therapy</a> </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Tab 7 -->
+      <ul data-role="listview" data-inset="true">
+        <li> <a href="lifeafterbc.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Life after breast cancer</a> </li>
+      </ul>
+    </div>
   </div>
 </div>
 </body>

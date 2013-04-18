@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="jquery-ui.css" />
+	<link rel="stylesheet" href="jquery.mobile.simpledialog.min.css" />
+	<link rel="stylesheet" href="style.css" />
+	<script src="jquery-1.9.1.js"></script>
+	<script src="jquery-ui.js"></script>
+	<script src="jquery-1.7.1.min.js"></script>
+	<script src="jquery.mobile-1.1.0.min.js"></script>
+	<script src="jquery.validate.js"></script>
+	<script src="jquery.simplemodal.js"> </script>
+	<script>
+	$(document).ready(function() {	
+			$('#loginform').validate({
+				rules: {
+					email: {
+						required: true					
+					},
+					password: {
+						required: true
+					}
+				}
+			});
+	
+	$( "#login" ).click(function() {
+		$("#loginform").validate().element("#email");
+ 		$("#loginform").validate().element("#password");
+    
+	    var uid=document.getElementById("email").value;
+		var pwd=document.getElementById("password").value;
+		
+$.getJSON("http://www.mobiletest.mednl.com/login.php?jsoncallback=?&uid="+uid+"&pwd="+pwd, function(data){   
+   if(data['err']=='2')
+   {	
+  //  $("#dialog-message").append(data['msg']);
+	//  	$('#dialog-message').modal();	
+   		//alert(data['name']);
+	  var username=data['name'];
+	   
+	  //alert(data['msg']);
+	//  window.location = 'home.html?name='+username;
+	   
+   }
+   if(data['err']=='1')
+   {	
+    //alert(data['msg']);
+	  // alert(data['msg']);
+	  $("#dialog-message").append(data['msg']);
+	  	$('#dialog-message').modal();	 
+		 $('#loginform').reset(); 
+   }
+});
+    });	
+		});//end of document.ready()
+
+$(function(){
+$('#reg').live("click",function()
+{
+	  window.location = 'register.html'
+});
+});
+	</script>
+	</head>
+	<body>
+    <div id="page1" data-role="page">
+      <div data-role="header">
+        <h1>Login</h1>
+      </div>
+      <div data-role="content">
+        <form id="loginform" method="post" action="www.mobiletest.mednl.com/login.php">
+          <div data-role="fieldcontain">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div data-role="fieldcontain">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" />
+          </div>
+          <input type="button" value="Login" id="login"/>
+          <input type="button" value="Register" id="reg"/>
+        </form>
+        <div id="dialog-message"> </div>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.css" />
+<link rel="stylesheet" href="style.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<script src="jquery.validate.js"></script>
+<script src="jquery.simplemodal.js"> </script>
+<script>
+$(window).load(function(){
+(function() {
+    $('form > input').keyup(function() {
+
+        var empty = false;
+        $('form > input').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+         $("#register").attr("disabled", "disabled");
+        } 
+		else {
+		  $("#register").removeAttribute("disabled");
+        }
+    });
+})()
+});
+  $(document).ready(function() {	
+			$('#registerform').validate({
+				rules: {
+					fullname: {
+						required:true
+					},
+					age:	  {
+						required:true
+					},
+					userid: {
+						required: true
+					},
+					userpw: {
+						required: true
+					}
+				}
+			}); 	
+$( "#register" ).click(function (event) {	
+		 	
+		var uname=document.getElementById("fullname").value;
+		var age=document.getElementById("age").value;
+		var uid=document.getElementById("userid").value;
+		var pwd=document.getElementById("userpw").value;
+			
+var val=$("#registerform").validate().form();    
+  
+if(val==true)
+{
+
+$.getJSON("http://www.mobiletest.mednl.com/signup.php?jsoncallback=?&uname="+uname+"&age="+age+"&uid="+uid+"&pwd="+pwd, function(data){ 
+   alert(data['msg']);
+ if(data['err']== '1')
+   {
+	    $("#dialog-message").append(data['msg']);
+	  	$('#dialog-message').modal();	 
+	//alert(data['msg']);
+	   window.location='index.html'
+   }
+   if(data['err']== '2')
+   {
+	  // alert(data['msg']);
+	    $("#dialog-message").append(data['msg']);
+	  	$('#dialog-message').modal();
+		 $('#registerform').reset();	
+   }
+});
+}
+else
+{
+	alert("Please fill all inputs");
+	  	$('#dialog-message').modal();	
+}
+  });
+
+});// end of document ready
+
+
+</script>
+</head>
+<body>
+<div id="page2" data-role="page">
+  <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
+    <h1 class="ui-title" role="heading" aria-level="1">Register</h1>
+  </div>
+  <div data-role="content">
+    <form id="registerform" method="post" action="www.mobiletest.mednl.com/signup.php">
+      <div data-role="fieldcontain">
+        <label for="fullname"> First Name <em>*</em></label>
+        <input type="text" name="fullname" id="fullname"  placeholder="Enter your Full Name"  autofocus />
+      </div>
+      <div data-role="fieldcontain">
+        <label for="age"> AGE <em>*</em></label>
+        <input type="number" name="age" id="age"  placeholder="Enter your Age" maxlength="4" size="6" min="18" max="99" pattern="[-0-9]+" />
+      </div>
+      <div data-role="fieldcontain">
+        <label for="userid">EMAIL <em>*</em></label>
+        <input type="email" name="userid" id="userid" placeholder="Example@domain.com" />
+      </div>
+      <div data-role="fieldcontain">
+        <label for="userpw">PASSWORD <em>*</em></label>
+        <input type="password" name="userpw" id="userpw" placeholder="Enter Password"  minlength="6" />
+      </div>
+      <input type="button" id="register" value="Register" />
+    </form>
+    <div id="dialog-message"> </div>
+  </div>
+</div>
+</body>
+</html>
