@@ -16,7 +16,8 @@ function bindItems() {
             $.getJSON('http://www.mobiletest.mednl.com/getcity.php?&callback=?', function (data) {
 
 				var items = '';
-				var itemid;				
+				var itemid;		
+					
 				$.each(data,function(i,item){
 				  items +="<option value='"+item.id+"'>"+item.name+"</option>";
 			//	alert(item.id);
@@ -48,13 +49,15 @@ function bindItems() {
 <body onLoad="bindItems()">
 <div id="centerhome" data-role="page">
   <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
-  <a href="index.html" data-icon="home" class="ui-btn-left" rel="external">Home</a>
+  <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
     <h1 class="ui-title" role="heading" aria-level="1">Mammography Centers</h1>
   </div>
   <div id="main-content"> <br>
-    Country:
+  <b>  Select City: </b>
+<p>
       <select name='city' id='city'>
     </select>     
+</p>   
     <div id="placeholder"></div>
     <!-- end of centerhome --> 
   </div>

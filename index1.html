@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="content-type" content="Access-Control-Allow-Origin: *">
+<link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="jquery-ui.css" />
+<link rel="stylesheet" href="jquery.mobile.simpledialog.min.css" />
+<link rel="stylesheet" href="style.css" />
+<!--<link rel="stylesheet" href="custom_d.min.css" />-->
+<script src="jquery-1.7.1.min.js"></script>
+<script src="jquery-ui.js"></script>
+<script src="jquery.mobile-1.1.0.min.js"></script>
+<script src="jquery.validate.js"></script>
+<script src="jquery.simplemodal.js"> </script>
+<script>  
+ $("#page1").live('pageinit', function (event) {
+    $(".ui-collapsible-heading-toggle").bind("click", function (e) {
+        var $link = $(this).find('.collapsible-header-link');
+        if ($link.length > 0)
+            $.mobile.changePage($link.attr('href'));
+    });
+});
+$(document).ready(function() {
+ /*$('#page1').liteAccordion();		*/
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == 'name')
+        {
+         // alert(sParameterName[1]);
+		   $('h4').append(sParameterName[1]);
+		   $('#popupt').css({ 'display': 'block'});
+		$("#dialog-message").append(sParameterName[1]);
+		//$('#popupt').append(sParameterName[1]);
+		//$('#dialog-message').modal();	  
+    
+		 }
+    }
+$('#what').live("click",function()
+{
+ 	/*var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == 'name')
+        {
+         alert(sParameterName[1]);		
+		 }
+    }
+		  window.location = 'centers.html?name='+sParameterName[1];	
+	*/
+	 window.location = 'info.html';
+}); 
+$('#statistics').live("click",function()
+{
+	 window.location = 'statistics.html';
+}); 
+$('#burden').live("click",function()
+{
+	 window.location = 'burden.html';
+}); 
+$('#factors').live("click",function()
+{
+	 window.location = 'factors.html';
+}); 
+$('#signs').live("click",function()
+{
+	 window.location = 'signs.html';
+}); 
+$('#awareness').live("click",function()
+{
+	 window.location = 'awareness.html';
+}); 
+$('#examination').live("click",function()
+{
+	 window.location = 'examination.html';
+});
+$('#mammography').live("click",function()
+{
+	 window.location = 'mammography.html';
+});
+$('#lowrisk').live("click",function()
+{
+	 window.location = 'lowrisk.html';
+});
+$('#moderaterisk').live("click",function()
+{
+	 window.location = 'moderaterisk.html';
+});
+$('#highrisk').live("click",function()
+{
+	 window.location = 'highrisk.html';
+});
+$('#locator').live("click",function()
+{
+	 window.location = 'centers.html';
+});
+$('#surgery').live("click",function()
+{
+	 window.location = 'surgery.html';
+});
+$('#radiation').live("click",function()
+{
+	 window.location = 'radiation.html';
+});
+$('#chemotherapy').live("click",function()
+{
+	 window.location = 'chemotherapy.html';
+});
+$('#hormonetherapy').live("click",function()
+{
+	 window.location = 'hormonetherapy.html';
+});
+$('#targetedtherapy').live("click",function()
+{
+	 window.location = 'targetedtherapy.html';
+});
+$('#life').live("click",function()
+{
+	 window.location = 'life.html';
+});
+/*$('#reminder').live("click",function()
+{
+	var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == 'name')
+        {
+         alert(sParameterName[1]);		   
+		 }
+    }
+	  window.location = 'datepicker.html?name='+sParameterName[1];
+});*/
+  
+});
+
+
+</script>
+</head>
+<body>
+<div id="page1" data-role="page">
+  <div data-role="header" data-theme="d">
+    <h1 style="float: left">Home</h1>
+    <h4 class="ui-title"> Welcome </h4>
+  </div>
+  <div data-role="content" data-theme="d">
+    <div id="main-content"> 
+      <!--  <form  id="home" method="post"  action="www.mobiletest.mednl.com/login.php" >-->
+      <div data-role="collapsible-set" class="index" data-inset="true" data-theme="d">
+        <div data-role="collapsible" data-collapsed="false" >
+          <h3>General information</h3>
+          <p>
+            <input type="button" value="What is breast cancer?" id="what" />
+          </p>
+          <p>
+            <input type="button" value="Worldwide statistics" id="statistics"/>
+          </p>
+          <p>
+            <input type="button" value="Burden of breast cancer in India" id="burden"/>
+          </p>
+          <div data-role="collapsible-set" data-inset="true">
+            <div data-role="collapsible">
+              <h3>Risk Factors 
+                <!--<input type="button" value="Risk factors" id="factors"/>--> 
+              </h3>
+              <div data-role="collapsible" data-collapsed="false">
+                <p>
+                  <input type="button" value="Modifiable Risk" id="modifiablerisk"/>
+                </p>
+                <p>
+                  <input type="button" value="Non-Modifiable Risk" id="non-modifiablerisk"/>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-role="collapsible">
+          <h3>Early detection and screening</h3>
+          <p>
+            <input type="button" value="Signs and symptoms of breast cancer " id="signs"/>
+          </p>
+          <p>
+            <input type="button" value="Breast awareness and self-examination" id="awareness"/>
+          </p>
+          <p>
+            <input type="button" value="Clinical breast examination" id="examination"/>
+          </p>
+          <p>
+            <input type="button" value="Mammography" id="mammography"/>
+          </p>
+        </div>
+        <div data-role="collapsible" data-collapsed="true" data-allow-collapse="false">
+          <h3> <a href="#">Breast Cancer Risk Assessment Tool</a> 
+            <!-- <input type="button" value="Breast Cancer Risk Assessment Tool" id="tool"/>--> 
+          </h3>
+        </div>
+        <div data-role="collapsible">
+          <h3>Recommendations for early detection</h3>
+          <p>
+            <input type="button" value="Low risk individuals" id="lowrisk"/>
+          </p>
+          <p>
+            <input type="button" value="Moderate risk individuals" id="moderaterisk"/>
+          </p>
+          <p>
+            <input type="button" value="High risk individuals" id="highrisk"/>
+          </p>
+        </div>
+        <div data-role="collapsible" data-collapsed="true" data-allow-collapse="false">
+          <p><a href="centers.html" class="collapsible-header-link" rel="external">Mammogram centre locator</a></p>
+          <!--<input type="button" value="Mammogram centre locator" id="locator"/>--> 
+        </div>
+        <div data-role="collapsible">
+          <h3>Treatment options </h3>
+          <p>
+            <input type="button" value="Surgery" id="surgery"/>
+          </p>
+          <p>
+            <input type="button" value="Radiation therapy" id="radiation"/>
+          </p>
+          <p>
+            <input type="button" value="Chemotherapy" id="chemotherapy"/>
+          </p>
+          <p>
+            <input type="button" value="Hormone therapy" id="hormonetherapy"/>
+          </p>
+          <p>
+            <input type="button" value="Targeted therapy" id="targetedtherapy"/>
+          </p>
+        </div>
+        <div  data-role="collapsible" data-collapsed="true" data-allow-collapse="false">
+          <h3> <a href="#">Life after breast cancer</a> 
+            <!--          <input type="button" value="Life after breast cancer" id="life"/>--> 
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -13,29 +13,43 @@
 <script src="jquery.mobile-1.1.0.min.js"></script>
 <script src="jquery.validate.js"></script>
 <script src="jquery.simplemodal.js"> </script>
+<script  type="text/javascript">
+/*function resizeImage() {
+	if (screen.width == 800) {
+    	document.images["clinical"].src = "yoursmall.gif";
+	}
+	else if (screen.width == 1024) {
+    	document.images["clinical"].src = "yourmedium.gif";
+	}
+	You can add more here
+	else {
+    	document.images["clinical"].src = "yourlarge.gif";
+	}
+}*/
 </script>
 </head>
-<body>
+<body onload="resizeImage();">
 <div id="examination" data-role="page"  class="data-value detection" >
-<div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html" data-icon="home" class="ui-btn-left" rel="external">Home</a>
-  <h1 class="ui-title" role="heading" aria-level="1">Clinical Examination</h1>
-</div>
-<div data-role="content">
-  <div id="main-content">
-    <div style="float:left;width:50%;">
-      <h1> A VISUAL CHECK OF SKIN AND TISSUE </h1>
-      <p> During a clinical breast exam, your healthcare provider checks your breasts' appearance. You may be asked to raise your arms over your head, let them hang by your sides, or press your hands against your hips. These postures allow your healthcare provider to look for differences in size or shape between your breasts. The skin covering your breasts is checked for any rash, dimpling, or other abnormal signs. Your nipples may be checked to see if fluid is expressed when lightly squeezed. </p>
-      <h2> A Manual Check for Unusual Texture or Lumps </h2>
-      <p> Using the pads of the fingers, your healthcare provider checks your entire breast, underarm, and collarbone area for any lumps or abnormalities. It is worth noting that some women have breast tissue that appears to be full of tiny fibrous bumps or ridges throughout the breast tissue, known as fibrocystic breasts. Overall lumpy tissue is something your provider will want to note but is unrelated to cancer. </p>
-      <p> A suspicious lump –the type your physician is checking for– is generally about the size of a pea before anyone can feel it in the breast tissue. The manual exam is done on one side and then the other. Your healthcare provider will also check the lymph nodes near the breast to see if they are enlarged. </p>
-      <h2> An Assessment of Any Suspicious Area </h2>
-      <p> If a lump is discovered, your healthcare provider will note its size, shape, and texture. He or she will also check to see if the lump moves easily. Benign lumps often feel different from cancerous ones, but any lump found will likely need to be examined with further diagnostic measures. </p>
-      <p> It may be helpful to know that lumps that appear soft, smooth, round, and movable are likely to be either benign tumors or cysts. A lump that is hard and oddly-shaped and feels firmly attached within the breast is more likely to be cancer, but further tests are needed to diagnose the problem. </p>
-      <h2> The Value of Clinical Breast Exams </h2>
-      <p> Clinical Breast exams are an important part of early detection. Although most lumps are discovered through breast self-exams, an experienced professional may notice a suspicious place that fails to register as a warning in the patient's mind. </p>
-    </div>
-    <img src="clinical.jpg" alt="Clinical Examination" width="40%" height="50%" align="right"/> </div>
-     <footer data-role="footer" data-theme="d" data-position="fixed">
+  <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
+    <h1 class="ui-title" role="heading" aria-level="1">Clinical Examination</h1>
+  </div>
+  <div data-role="content">
+    <div id="main-content">
+      <img src="clinical.jpg" name="clinical" alt="Clinical Examination" align="right"/> </div>
+      <div>      
+        <h1> A VISUAL CHECK OF SKIN AND TISSUE </h1>
+        <p> During a clinical breast exam, your healthcare provider checks your breasts' appearance. You may be asked to raise your arms over your head, let them hang by your sides, or press your hands against your hips. These postures allow your healthcare provider to look for differences in size or shape between your breasts. The skin covering your breasts is checked for any rash, dimpling, or other abnormal signs. Your nipples may be checked to see if fluid is expressed when lightly squeezed. </p>
+        <h2> A Manual Check for Unusual Texture or Lumps </h2>
+        <p> Using the pads of the fingers, your healthcare provider checks your entire breast, underarm, and collarbone area for any lumps or abnormalities. It is worth noting that some women have breast tissue that appears to be full of tiny fibrous bumps or ridges throughout the breast tissue, known as fibrocystic breasts. Overall lumpy tissue is something your provider will want to note but is unrelated to cancer. </p>
+        <p> A suspicious lump –the type your physician is checking for– is generally about the size of a pea before anyone can feel it in the breast tissue. The manual exam is done on one side and then the other. Your healthcare provider will also check the lymph nodes near the breast to see if they are enlarged. </p>
+        <h2> An Assessment of Any Suspicious Area </h2>
+        <p> If a lump is discovered, your healthcare provider will note its size, shape, and texture. He or she will also check to see if the lump moves easily. Benign lumps often feel different from cancerous ones, but any lump found will likely need to be examined with further diagnostic measures. </p>
+        <p> It may be helpful to know that lumps that appear soft, smooth, round, and movable are likely to be either benign tumors or cysts. A lump that is hard and oddly-shaped and feels firmly attached within the breast is more likely to be cancer, but further tests are needed to diagnose the problem. </p>
+        <h2> The Value of Clinical Breast Exams </h2>
+        <p> Clinical Breast exams are an important part of early detection. Although most lumps are discovered through breast self-exams, an experienced professional may notice a suspicious place that fails to register as a warning in the patient's mind. </p>
+      </div>
+    
+    <footer data-role="footer" data-theme="d" data-position="fixed">
       <div data-role="navbar" class="btm-navigation" data-grid="d">
         <ul id="btm_nav">
           <li><a href="signs.html" id="info" data-icon="custom" rel="external" >Signs and symptoms of breast cancer</a></li>
@@ -45,7 +59,7 @@
         </ul>
       </div>
     </footer>
-</div>
+  </div>
 </div>
 </body>
 </html>

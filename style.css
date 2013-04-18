@@ -1,4 +1,4 @@
-   
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
      display: none; <- Crashes Chrome on hover 
@@ -426,14 +426,14 @@ background-position: -36px 1px !important;
     background: linear-gradient(#EA80B0, #F3A7C9) repeat scroll 0 0 #F3A7C9;
 }*/
 
-/*bottom navigation */
+/*bottom navigation
 #burden .ui-content,
 #whatisbc .ui-content,
 #factors .ui-content,
 #statistics .ui-content
 {
     padding: 15px 0;
-}
+} */
 .btm-navigation .ui-grid-d .ui-block-a, 
 .btm-navigation .ui-grid-d .ui-block-b,
 .btm-navigation .ui-grid-d .ui-block-c, 
@@ -555,7 +555,6 @@ abbr,acronym { border:0;}
 
 #factors ul,
 #mammography ul
-
  {
     list-style: disc outside none;
 /*	padding:2%; */
@@ -588,4 +587,19 @@ width:25%;
 #mammography ul#btm_nav
 {
 	padding:0%;
+}
+
+
+#index .ui-page
+{
+background-image:-webkit-gradient(linear,left top,left bottom,from(#F2C8D2),to(#eee)) !important;
+background-image:-webkit-linear-gradient(#F2C8D2,#eee) !important;
+background-image:-moz-linear-gradient(#F2C8D2,#eee) !important;
+background-image:-ms-linear-gradient(#F2C8D2,#eee) !important;
+background-image:-o-linear-gradient(#F2C8D2,#eee) !important;
+background-image:linear-gradient(#F2C8D2,#eee) !important;
+}
+.ui-content
+{
+	padding-left:30px;
 }

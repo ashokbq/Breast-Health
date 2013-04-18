@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Home</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
 <link rel="stylesheet" href="jquery-ui.css" />
@@ -14,6 +15,9 @@
 <script src="jquery.validate.js"></script>
 <script src="jquery.simplemodal.js"> </script>
 <script>  
+$(document).bind('pagebeforeshow', function () {
+	
+});
 
 $(document).ready(function() {
  /*$('#page1').liteAccordion();		*/
@@ -35,15 +39,27 @@ $(document).ready(function() {
     }
 
 });
-
+ $('#splash').live('pageshow', function(){
+       var hideSplash = function() {
+           $.mobile.changePage($("#home"));
+       };
+      setTimeout(hideSplash, 4000);
+  });
 
 </script>
 </head>
-<body>
-<div id="page1" data-role="page">
+<body id="index">
+ <div data-role="page" id="splash"> 
+            <div data-role="content">  
+                <img src="splashimg.jpg" alt="startup image" style="width: 100%; height: 100%" />
+            </div>
+        </div>
+
+
+<div id="home" data-role="page">
   <div data-role="header" data-theme="d">
-    <h1 style="float: left">Home</h1>
-    <h4 class="ui-title"> Welcome </h4>
+    <h1>Home</h1>
+  <!--  <h4 class="ui-title"> Welcome </h4>-->
   </div>
   <div data-role="content" data-theme="d">
     <div id="main-content"> 
