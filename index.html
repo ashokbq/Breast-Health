@@ -20,7 +20,6 @@ $(document).bind('pagebeforeshow', function () {
 });
 
 $(document).ready(function() {
- /*$('#page1').liteAccordion();		*/
     var sPageURL = window.location.search.substring(1);
     var sURLVariables = sPageURL.split('&');
     for (var i = 0; i < sURLVariables.length; i++)
@@ -51,13 +50,13 @@ $(document).ready(function() {
 <body id="index">
  <div data-role="page" id="splash"> 
             <div data-role="content">  
-                <img src="splashimg.jpg" alt="startup image" style="width: 100%; height: 100%" />
+                <img src="breastcanceraware.jpg" alt="startup image" style="width: 100%; height: 100%" />
             </div>
         </div>
 
 
 <div id="home" data-role="page">
-  <div data-role="header" data-theme="d">
+  <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
     <h1>Home</h1>
   <!--  <h4 class="ui-title"> Welcome </h4>-->
   </div>
@@ -66,7 +65,7 @@ $(document).ready(function() {
       <!-- Tab 1 -->
       <ul data-role="listview" data-inset="true">
         <li> <a href="#"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">General information <span class="ui-li-count">4</span> </a>
-          <ul>
+          <ul  data-role="listview" data-inset="true">
             <li> <a href="info.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">What is breast cancer?</a> </li>
             <li> <a href="statistics.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Worldwide statistics</a> </li>
             <li> <a href="burden.html" rel="external"> <img src="Pink_ribbon.png" alt="icon1" class="ui-li-icon">Burden of breast cancer in India</a> </li>

@@ -11,56 +11,62 @@
 <script src="jquery-ui.js"></script>
 <script src="jquery-1.7.1.min.js"></script>
 <script src="jquery.mobile-1.1.0.min.js"></script>
+
 <script>
 function bindItems() {
-            $.getJSON('http://www.mobiletest.mednl.com/getcity.php?&callback=?', function (data) {
+      $.getJSON('http://www.mobiletest.mednl.com/getcity.php?&callback=?', function (data) {
 
-				var items = '';
-				var itemid;		
-					
-				$.each(data,function(i,item){
-				  items +="<option value='"+item.id+"'>"+item.name+"</option>";
-			//	alert(item.id);
-			//	alert(item.name);
-			});
-    $("select").html(items); 
-        });		
+          var items = '';
+          var itemid;		
+              items +="<option value='0'> Select</option>";
+          $.each(data,function(i,item){
+            items +="<option value='"+item.id+"'>"+item.name+"</option>";
+      //	alert(item.id);
+      //	alert(item.name);
+      });
+$("select").html(items); 
+  });		
 }
- 	$(document).ready(function() {
+$(document).bind('pagebeforeshow', function () {
 
-			$('#city').change(function() {
-	  	var val = document.getElementById("city").value;
-	//	alert(val);
-		var html='';
-	  $.getJSON('http://www.mobiletest.mednl.com/centers.php?city='+val+'&callback=?', function (data) {
-		   $.each(data, function (i, item) {
-			 	/*alert(item.name);
-				alert(item.image);
-				alert(item.address);*/
-	html +='<img id="cityimage" src="'+item.image+'"><br/><div id="cname">'+item.name+'</div><br/><div id="add">'+item.address+'</div><div style="clear:both;"> </div>';		 
-		   });
-		$('#placeholder').empty().append(html);
-        });
+      $('#city').change(function() {
+  var val = document.getElementById("city").value;
+  var selcity = $("#city option:selected").text();
+//	alert(selcity);
+//	alert(val);
+  var html='';
+$.getJSON('http://www.mobiletest.mednl.com/centers.php?city='+val+'&callback=?', function (data) {
+     $.each(data, function (i, item) {
+          /*alert(item.name);
+          alert(item.image);
+          alert(item.address);*/
+          
+html +='<div id="citydetail"><img id="cityimage" src="'+item.image+'"><div class="clear:both;"> </div> <span id="tip">Click Center Name to know more</span><div id="cname"><a id="clickname" class="tTip" rel="external" href="center_display.html?city='+val+'">'+item.name+'</a></div></div><div class="clear"> </div>';		 
+     });
+  $('#placeholder').empty().append(html);
   });
+});
+});
 
-	});
 </script>
 </head>
 <body onLoad="bindItems()">
 <div id="centerhome" data-role="page">
-  <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
-  <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
-    <h1 class="ui-title" role="heading" aria-level="1">Mammography Centers</h1>
-  </div>
-  <div id="main-content"> <br>
-  <b>  Select City: </b>
+<div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
+<a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
+<h1 class="ui-title" role="heading" aria-level="1">Mammography Centers</h1>
+</div>
+<div data-role="content">
+<div id="main-content"> <br>
+<b> Select City: </b>
 <p>
-      <select name='city' id='city'>
-    </select>     
-</p>   
-    <div id="placeholder"></div>
-    <!-- end of centerhome --> 
-  </div>
+<select name='city' id='city'>
+</select>
+</p>
+<div id="placeholder"></div>
+<!-- end of centerhome --> 
+</div>
+</div>
 </div>
 </body>
 </html>

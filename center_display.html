@@ -3,45 +3,71 @@
 <head>
 <title>Mammography Centers</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.css" />
+<link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="jquery-ui.css" />
+<link rel="stylesheet" href="jquery.mobile.simpledialog.min.css" />
 <link rel="stylesheet" href="style.css" />
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<script src="jquery-1.9.1.js"></script>
+<script src="jquery-ui.js"></script>
+<script src="jquery-1.7.1.min.js"></script>
+<script src="jquery.mobile-1.1.0.min.js"></script>
+<script>
+
+$(document).bind('pagebeforeshow', function () {
+ 	 var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == 'city')
+        {
+       //   alert(sParameterName[1]);
+		 var val=sParameterName[1];    
+		 }
+    }
+var cityname='';
+if(val=='1')
+{
+	cityname="Delhi";
+}
+else if(val=='2')
+{
+		cityname="Bangalore";
+}
+else
+{
+		cityname="Hyderabad";
+}
+$('#citydisplay').empty().append(cityname);
+
+		var html='';
+		var cityheader='';
+	  $.getJSON('http://www.mobiletest.mednl.com/centers.php?city='+val+'&callback=?', function (data) {
+	
+		   $.each(data, function (i, item) {
+			 	/*alert(item.name);
+				alert(item.image);
+				alert(item.address);*/
+				
+	html +='<div id="citydetail"> <img id="cityimage" src="'+item.image+'"><br/><div id="detail"><div id="name_dis">'+item.name+'</div><div id="add_dis">'+item.address+'</div><div style="clear:both;"> </div></div> </div>';		 
+		   });
+		$('#placeholder').empty().append(html);
+        });
+  });
+
+</script>
 </head>
 <body>
-<div id="addcenter" data-role="page">
-  <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
-    <h1 class="ui-title" role="heading" aria-level="1">Add Mammography Centers</h1>
+<div id="centerhome" data-role="page">
+  <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> 
+  <a href="centers.html" data-add-back-btn="true" data-rel="back" class="ui-btn-left" rel="external">Back</a>
+    <h1 class="ui-title" role="heading" aria-level="1">Mammography Centers</h1>
   </div>
   <div id="main-content"> 
-    <div id="placeholder">
-    <form action="" method="get">
-     <div data-role="fieldcontain">
-       <label for="centername">Center Name <em>*</em></label>
-        <input type="text" name="centername" id="centername"  placeholder="Enter Center Name"  autofocus />
-     </div>
-      <div data-role="fieldcontain">
-       <label for="center_city">Center City <em>*</em></label>
-        <input type="text" name="center_city" id="center_city"  placeholder="Enter City" />
-     </div>
-      <div data-role="fieldcontain">
-       <label for="address">Address<em>*</em></label>
-        <input type="text" name="address" id="address"  placeholder="Enter Center address" />
-     </div>
-      <div data-role="fieldcontain">
-       <input type="file"  name="centerimage" id="centerimage"/>
-     </div>
-      <div data-role="fieldcontain">
-       <input type="button" value="Save!"/>
-     </div>
-    </form>
-    </div>
-    
-  </div><!-- end of centeradd --> 
+  <div id="citydisplay"> </div>
+    <div id="placeholder"></div>
+    <!-- end of centerhome --> 
+  </div>
 </div>
 </body>
 </html>

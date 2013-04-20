@@ -7,10 +7,36 @@
 <link rel="stylesheet" href="jquery-ui.css" />
 <link rel="stylesheet" href="jquery.mobile.simpledialog.min.css" />
 <link rel="stylesheet" href="style.css" />
+<link id="size-stylesheet" rel="stylesheet" type="text/css" href="wide.css" />
 <script src="jquery-1.9.1.js"></script>
 <script src="jquery-ui.js"></script>
 <script src="jquery-1.7.1.min.js"></script>
 <script src="jquery.mobile-1.1.0.min.js"></script>
+<script>
+$(document).ready(function(){
+function adjustStyle(width) {
+    width = parseInt(width);
+    if (width < 701) {
+        $("#size-stylesheet").attr("href", "narrow.css");
+	//	alert('hi');
+    } else if ((width >= 701) && (width < 900)) {
+        $("#size-stylesheet").attr("href", "medium.css");
+		//		alert('hi900');
+    } else {
+       $("#size-stylesheet").attr("href", "wide.css"); 
+    		//		alert('hi<900');
+	}
+	
+}
+
+$(function() {
+    adjustStyle($(this).width());
+    $(window).resize(function() {
+        adjustStyle($(this).width());
+    });
+});
+});
+</script>
 </head>
 
 <body>
@@ -19,8 +45,7 @@
     <h1 class="ui-title" role="heading" aria-level="1">Mammography</h1>
   </div>
   <div data-role="content">
-    <div id="main-content">
-      <img src="mammogram.jpg" alt="mammogram" align="right"/>  
+    <div id="main-content"> <img src="mammogram.jpg" alt="mammogram" align="right" width="50%"/>
       <div>
         <h1>WHAT IS A MAMMOGRAM? </h1>
         <p> A mammogram is an x-ray that allows a qualified specialist to examine the breast tissue for any suspicious areas. The breast is exposed to a small dose of iodizing radiation that produces an image of the breast tissue.</p>
@@ -33,8 +58,7 @@
           <li> Even women who have no symptoms and no known risks for breast cancer should have regularly scheduled mammograms to help detect potential breast cancer at the earliest possible time. </li>
         </ul>
       </div>
-      <img src="mammo2.jpg" alt="mammogram"/>
-    </div>
+      <img src="mammo2.jpg" alt="mammogram" width="100%"/> </div>
     <footer data-role="footer" data-theme="d" data-position="fixed">
       <div data-role="navbar" class="btm-navigation" data-grid="d">
         <ul id="btm_nav">
