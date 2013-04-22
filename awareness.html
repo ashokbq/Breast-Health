@@ -7,23 +7,41 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <script type='text/javascript' src="jquery-1.8.2.min.js"></script>
 <script type='text/javascript' src="jquery.mobile-1.3.0.min.js"></script>
+  <script>
+$(document).on('pagebeforecreate', 'body', function(){     
+    var interval = setInterval(function(){
+      $.mobile.loading( "show", {
+text: "Loading",
+textVisible: true,
+theme: "a",
+html: ""
+});
+        clearInterval(interval);
+    },1);    
+});
+
+$(document).on('pageshow', 'body', function(){  
+    var interval = setInterval(function(){
+       $.mobile.loading('hide');
+        clearInterval(interval);
+    },1);      
+});
+  </script>
 
 </head>
 <body>
 <div id="awareness" data-role="page"  class="jqm-demos ui-responsive-panel detection" >
-  <div data-role="panel" data-position="left"  data-dismissible="true" class="ui-responsive-panel ui-bar-c" id="nav-panel" data-theme="b">
-        <ul data-role="listview" data-theme="a" class="nav-search">
-          <li><a href="signs.html" id="info" data-icon="custom" rel="external">Signs and symptoms of breast cancer</a></li>
-          <li><a href="#" id="statistics" data-icon="custom" rel="external"  class="selected">Breast awareness and self-examination</a></li>
-          <li><a href="examination.html" id="burdenicon" data-icon="custom" rel="external">Clinical breast examination</a></li>
-          <li><a href="mammography.html" id="burdenicon" data-icon="custom" rel="external">Mammography</a></li>
-        </ul>
-      </div>
-      
-  <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
-   <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
-    <h1 class="ui-title" role="heading" aria-level="1">Awareness</h1>
+  <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
+    <ul data-role="listview" data-theme="a" data-icon="false" >
+      <li><a href="signs.html" id="info" data-icon="custom" rel="external">Signs and symptoms of breast cancer</a></li>
+      <li><a href="#" id="statistics" data-icon="custom" rel="external"  class="selected">Breast awareness and self-examination</a></li>
+      <li><a href="examination.html" id="burdenicon" data-icon="custom" rel="external">Clinical breast examination</a></li>
+      <li><a href="mammography.html" id="burdenicon" data-icon="custom" rel="external">Mammography</a></li>
+    </ul>
   </div>
+  <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
+    <h1 class="ui-title" role="heading" aria-level="1">Awareness</h1>
+    <a id="topmenu" href="#nav-panel" data-role="button" data-display="overlay" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a> </div>
   <div data-role="content">
     <div id="main-content">
       <h1> Breast awareness and self-exam</h1>
@@ -48,13 +66,7 @@
       <p> Examine each underarm while sitting up or standing and with your arm only slightly raised so you can easily feel in this area. Raising your arm straight up tightens the tissue in this area and makes it harder to examine. </p>
       <p> This procedure for doing breast self-exam is different from previous recommendations. These changes represent an extensive review of the medical literature and input from an expert advisory group. There is evidence that this position (lying down), the area felt, pattern of coverage of the breast, and use of different amounts of pressure increase a woman's ability to find abnormal areas. </p>
     </div>
-      </div>
-    <footer data-role="footer" data-theme="a" data-position="fixed">
-         <a href="#nav-panel" data-role="button" data-display="reveal" data-position="right" data-reveal="reveal" data-dismissible="true" class="ui-bar-a">Menu</a> 
-
-    
-    </footer>
-
+  </div>
 </div>
 </body>
 </html>

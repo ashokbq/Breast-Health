@@ -20,12 +20,32 @@
     	document.images["clinical"].src = "yourlarge.gif";
 	}
 }*/
-</script>
+
+$(document).on('pagebeforecreate', 'body', function(){     
+    var interval = setInterval(function(){
+      $.mobile.loading( "show", {
+text: "Loading",
+textVisible: true,
+theme: "a",
+html: ""
+});
+        clearInterval(interval);
+    },1);    
+});
+
+$(document).on('pageshow', 'body', function(){  
+    var interval = setInterval(function(){
+       $.mobile.loading('hide');
+        clearInterval(interval);
+    },1);      
+});
+  </script>
+
 </head>
 <body onLoad="resizeImage();">
 <div id="examination" data-role="page"  class="jqm-demos ui-responsive-panel detection" >
-  <div data-role="panel" data-position="left"  data-dismissible="true" class="ui-responsive-panel ui-bar-c" id="nav-panel" data-theme="b">
-    <ul data-role="listview" data-theme="a" class="nav-search">
+  <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
+    <ul data-role="listview" data-theme="a" data-icon="false" >
       <li><a href="signs.html" id="info" data-icon="custom" rel="external" >Signs and symptoms of breast cancer</a></li>
       <li><a href="awareness.html" id="statistics" data-icon="custom" rel="external">Breast awareness and self-examination</a></li>
       <li><a href="#" id="burdenicon" data-icon="custom" rel="external" class="selected">Clinical breast examination</a></li>
@@ -34,7 +54,7 @@
   </div>
   <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
     <h1 class="ui-title" role="heading" aria-level="1">Clinical Examination</h1>
-  </div>
+    <a id="topmenu" href="#nav-panel" data-role="button" data-display="overlay" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a> </div>
   <div data-role="content">
     <div id="main-content"> <img src="clinical.jpg" name="clinical" alt="Clinical Examination" align="right" width="50%"/>
       <h1> A VISUAL CHECK OF SKIN AND TISSUE </h1>
@@ -49,12 +69,7 @@
       <p> Clinical Breast exams are an important part of early detection. Although most lumps are discovered through breast self-exams, an experienced professional may notice a suspicious place that fails to register as a warning in the patient's mind. </p>
     </div>
   </div>
-  <div>
-  </div>
-    <footer data-role="footer" data-theme="a" data-position="fixed"> 
-    <a href="#nav-panel" data-role="button" data-display="reveal" data-position="right" data-reveal="reveal" data-dismissible="true" class="ui-bar-a">Menu</a> 
-    </footer>
-  </div>
-
+  <div> </div>
+</div>
 </body>
 </html>

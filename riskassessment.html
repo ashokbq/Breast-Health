@@ -13,8 +13,26 @@
 <script src="jquery.mobile-1.1.0.min.js"></script>
 <script src="jquery.validate.js"></script>
 <script src="jquery.simplemodal.js"> </script>
-</script>
-</head>
+  <script>
+$(document).on('pagebeforecreate', 'body', function(){     
+    var interval = setInterval(function(){
+      $.mobile.loading( "show", {
+text: "Loading",
+textVisible: true,
+theme: "a",
+html: ""
+});
+        clearInterval(interval);
+    },1);    
+});
+
+$(document).on('pageshow', 'body', function(){  
+    var interval = setInterval(function(){
+       $.mobile.loading('hide');
+        clearInterval(interval);
+    },1);      
+});
+  </script></head>
 <body>
 <div id="riskassessment" data-role="page"  class="data-value">
   <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">

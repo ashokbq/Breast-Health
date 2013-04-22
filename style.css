@@ -20,6 +20,12 @@ html, body {
 {
 	    margin:0.6em 20% 0.8em !important;
 }*/
+/* Loader Styles */
+
+.ui-icon-loading {
+background-image: url("ajax-loader.gif") !important; 
+background-size: 46px 46px;
+}
 
 label.error {
 	color: red;
@@ -51,9 +57,9 @@ em {
 #main-content {
 	padding-bottom: 20px;
 }
-.ui-icon, .ui-widget-content .ui-icon {
+/*.ui-icon {
 	background-image: url("ui-icons_222222_256x240.png") !important;
-}
+}*/
 /* Modal Popup */
 #dialog-message {
 	display:none;
@@ -615,8 +621,8 @@ abbr, acronym {
 }
 
 /*panel */
- .ui-responsive-panel.ui-panel-open {
-    width:200px;
+#nav-panel.ui-panel-open {
+    width:400px;
 }
 .ui-panel-animate.ui-panel-content-fixed-toolbar-position-left.ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-reveal, .ui-panel-animate.ui-panel-content-fixed-toolbar-position-left.ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-push, .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-reveal, .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-push {
     left: 0;
@@ -660,4 +666,18 @@ abbr, acronym {
 
 .ui-responsive-panel.ui-bar-c {
     background: linear-gradient(#000000, #000000) repeat scroll 0 0 #EEEEEE;
+}
+
+
+/* Right Menu Styles */
+#topmenu .ui-icon
+{
+    background-image: url("icons-18-white.png") !important;
+    background-position: -432px 2px !important;
+}
+
+#topmenu .ui-icon
+{
+    height: 18px !important;
+    width: 18px !important;
 }

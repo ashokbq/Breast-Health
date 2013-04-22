@@ -1,63 +1,78 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>What is breast cancer?</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.0.min.css">
-<link rel="stylesheet" type="text/css" href="style.css">
-<script type='text/javascript' src="jquery-1.8.2.min.js"></script>
-<script type='text/javascript' src="jquery.mobile-1.3.0.min.js"></script>
-</head>
+  <head>
+  <title>What is breast cancer?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.0.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type='text/javascript' src="jquery-1.8.2.min.js"></script>
+  <script type='text/javascript' src="jquery.mobile-1.3.0.min.js"></script>
+   <script>
+$(document).on('pagebeforecreate', 'body', function(){     
+    var interval = setInterval(function(){
+      $.mobile.loading( "show", {
+text: "Loading",
+textVisible: true,
+theme: "a",
+html: ""
+});
+        clearInterval(interval);
+    },1);    
+});
 
-<body>
+$(document).on('pageshow', 'body', function(){  
+    var interval = setInterval(function(){
+       $.mobile.loading('hide');
+        clearInterval(interval);
+    },1);      
+});
+  </script>
+  </head>
+
+  <body>
 <div id="whatisbc" data-role="page" class="jqm-demos ui-responsive-panel">
-  <div data-role="panel" data-position="left"  data-dismissible="true" class="ui-responsive-panel ui-bar-c" id="nav-panel" data-theme="b">
-    <ul data-role="listview" data-theme="a" class="nav-search">
-      <li><a href="#" id="" data-icon="custom" class="selected">What is breast cancer? </a></li>
-      <li><a href="statistics.html" id="" data-icon="custom" rel="external">Worldwide statistics </a></li>
-      <li><a href="burden.html" id="" data-icon="custom" rel="external">Burden of breast cancer in India</a></li>
-      <li><a href="factors.html" id="" data-icon="custom" rel="external">Risk factors </a></li>
-    </ul>
+    <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
+    <ul data-role="listview" data-theme="a" data-icon="false" >
+        <li><a href="#" id="" data-icon="custom" class="selected">What is breast cancer? </a></li>
+        <li><a href="statistics.html" id="" data-icon="custom" rel="external">Worldwide statistics </a></li>
+        <li><a href="burden.html" id="" data-icon="custom" rel="external">Burden of breast cancer in India</a></li>
+        <li><a href="factors.html" id="" data-icon="custom" rel="external">Risk factors </a></li>
+      </ul>
   </div>
-  <!-- end of panel -->
-  
-  <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
-   <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
+    <!-- end of panel -->
+    
+    <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
     <h1 class="ui-title" role="heading" aria-level="1">What is breast cancer?</h1>
-  </div>
-  <div data-role="content">
+    <a id="topmenu" href="#nav-panel" data-role="button" data-display="overlay" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a> </div>
+    <div data-role="content">
     <div id="main-content">
-      <p>Breast cancer is a type of cancer originating from breast tissue, most commonly from the inner lining of milk ducts or the 
+        <p>Breast cancer is a type of cancer originating from breast tissue, most commonly from the inner lining of milk ducts or the 
         lobules that supply the ducts with milk. Cancers originating from ducts are known as ductal carcinomas, while those originating from 
         lobules are known as lobular carcinomas. Breast cancer occurs in humans and other mammals. While the overwhelming majority of
         human cases occur in women, male breast cancer can also occur. </p>
-      <p> The benefit versus harms of breast cancer screening is controversial. 
+        <p> The benefit versus harms of breast cancer screening is controversial. 
         The characteristics of the cancer determine the treatment which may include surgery, medications (hormonal therapy and chemotherapy), 
         radiation and/or immunotherapy.Surgical provides the single largest benefit,and to increase the likelihood of cure, several chemotherapy regimens 
         are commonly given in addition. Radiation is used after breast-conserving surgery and substantially improves local 
         relapse rates and in many circumstances also overall survival. </p>
-      <h1>Signs and symptoms</h1>
-      <p> Breast cancer showing an inverted nipple, lump and skin dimpling.
+        <h1>Signs and symptoms</h1>
+        <p> Breast cancer showing an inverted nipple, lump and skin dimpling.
         The first noticeable symptom of breast cancer is typically a lump that feels different from the rest of the breast tissue. More than 80% of breast cancer cases are discovered when the woman feels a lump.</p>
-      <p>The earliest breast cancers are detected by a mammogram. Lumps found in lymph nodes located in the armpits can also indicate breast cancer.</p>
-      <p> Indications of breast cancer other than a lump may include thickening different from the other breast tissue, one breast becoming larger or lower, a nipple changing position or shape or becoming inverted, skin puckering or dimpling, a rash on or around a nipple, discharge from nipple/s, constant pain in part of the breast or armpit, and swelling beneath the armpit or around the collarbone.</p>
-      <p> Pain ("mastodynia") is an unreliable tool in determining the presence or absence of breast cancer, but may be indicative of other breast health issues.</p>
-      <p> Inflammatory breast cancer is a particular type of breast cancer which can pose a substantial diagnostic challenge. Symptoms may resemble a breast inflammation and may include itching, pain, swelling, nipple inversion, warmth and redness throughout the breast, as well as an orange-peel texture to the skin referred to as peau d'orange;the absence of a discernible lump delays detection dangerously.</p>
-      <p> Another reported symptom complex of breast cancer is Paget's disease of the breast. This syndrome presents as eczematoid skin changes such as redness and mild flaking of the nipple skin. As Paget's advances, symptoms may include tingling, itching, increased sensitivity, burning, and pain. There may also be discharge from the nipple. 
+        <p>The earliest breast cancers are detected by a mammogram. Lumps found in lymph nodes located in the armpits can also indicate breast cancer.</p>
+        <p> Indications of breast cancer other than a lump may include thickening different from the other breast tissue, one breast becoming larger or lower, a nipple changing position or shape or becoming inverted, skin puckering or dimpling, a rash on or around a nipple, discharge from nipple/s, constant pain in part of the breast or armpit, and swelling beneath the armpit or around the collarbone.</p>
+        <p> Pain ("mastodynia") is an unreliable tool in determining the presence or absence of breast cancer, but may be indicative of other breast health issues.</p>
+        <p> Inflammatory breast cancer is a particular type of breast cancer which can pose a substantial diagnostic challenge. Symptoms may resemble a breast inflammation and may include itching, pain, swelling, nipple inversion, warmth and redness throughout the breast, as well as an orange-peel texture to the skin referred to as peau d'orange;the absence of a discernible lump delays detection dangerously.</p>
+        <p> Another reported symptom complex of breast cancer is Paget's disease of the breast. This syndrome presents as eczematoid skin changes such as redness and mild flaking of the nipple skin. As Paget's advances, symptoms may include tingling, itching, increased sensitivity, burning, and pain. There may also be discharge from the nipple. 
         Approximately half of women diagnosed with Paget's also have a lump in the breast. </p>
-      <p> In rare cases, what initially appears as a fibroadenoma (hard movable lump) could in fact be a phyllodes tumor. Phyllodes tumors are formed within the stroma (connective tissue) of the breast and contain glandular as well as stromal tissue. Phyllodes tumors are not staged in the usual sense; they are classified on the basis of their appearance under the microscope as benign, borderline, or malignant.</p>
-      <p> Occasionally, breast cancer presents as metastatic disease, that is, cancer that has spread beyond the original organ. Metastatic breast cancer will cause symptoms that depend on the location of metastasis. Common sites of metastasis include bone, liver, lung and brain. Unexplained weight loss can occasionally herald an occult breast cancer, as can symptoms of fevers or chills. Bone or joint pains can sometimes be manifestations of metastatic breast cancer, as can jaundice or neurological symptoms. These symptoms are called non-specific, meaning they could be manifestations of many other illnesses.</p>
-      <p> Most symptoms of breast disorders, including most lumps, do not turn out to represent underlying breast cancer. Less than 20% of lumps for example are cancer and benign breast diseases such as mastitis and fibroadenoma of the breast are more common causes of breast disorder symptoms. Nevertheless, the appearance of a new symptom should be taken seriously by both patients and their doctors, because of the possibility of an underlying breast cancer at almost any age.</p>
-    </div>
+        <p> In rare cases, what initially appears as a fibroadenoma (hard movable lump) could in fact be a phyllodes tumor. Phyllodes tumors are formed within the stroma (connective tissue) of the breast and contain glandular as well as stromal tissue. Phyllodes tumors are not staged in the usual sense; they are classified on the basis of their appearance under the microscope as benign, borderline, or malignant.</p>
+        <p> Occasionally, breast cancer presents as metastatic disease, that is, cancer that has spread beyond the original organ. Metastatic breast cancer will cause symptoms that depend on the location of metastasis. Common sites of metastasis include bone, liver, lung and brain. Unexplained weight loss can occasionally herald an occult breast cancer, as can symptoms of fevers or chills. Bone or joint pains can sometimes be manifestations of metastatic breast cancer, as can jaundice or neurological symptoms. These symptoms are called non-specific, meaning they could be manifestations of many other illnesses.</p>
+        <p> Most symptoms of breast disorders, including most lumps, do not turn out to represent underlying breast cancer. Less than 20% of lumps for example are cancer and benign breast diseases such as mastitis and fibroadenoma of the breast are more common causes of breast disorder symptoms. Nevertheless, the appearance of a new symptom should be taken seriously by both patients and their doctors, because of the possibility of an underlying breast cancer at almost any age.</p>
+      </div>
     <!-- End of main --> 
   </div>
-  <footer data-role="footer" data-theme="a" data-position="fixed">
-   <a href="#nav-panel" data-role="button" data-display="reveal" data-position="right" data-reveal="reveal" data-dismissible="true" class="ui-bar-a">Menu</a>
-    </footer>
-  
-  <!-- end of content --> 
-  
-</div>
+    <!-- end of content --> 
+    
+  </div>
 <!-- end of page -->
 
 </body>

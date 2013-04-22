@@ -11,6 +11,26 @@
 <script src="jquery-ui.js"></script>
 <script src="jquery-1.7.1.min.js"></script>
 <script src="jquery.mobile-1.1.0.min.js"></script>
+  <script>
+$(document).on('pagebeforecreate', 'body', function(){     
+    var interval = setInterval(function(){
+      $.mobile.loading( "show", {
+text: "Loading",
+textVisible: true,
+theme: "a",
+html: ""
+});
+        clearInterval(interval);
+    },1);    
+});
+
+$(document).on('pageshow', 'body', function(){  
+    var interval = setInterval(function(){
+       $.mobile.loading('hide');
+        clearInterval(interval);
+    },1);      
+});
+  </script>
 </head>
 
 <body>

@@ -27,7 +27,7 @@ function bindItems() {
 $("select").html(items); 
   });		
 }
-$(document).bind('pagebeforeshow', function () {
+ 	$(document).ready(function() {
 
       $('#city').change(function() {
   var val = document.getElementById("city").value;
@@ -52,21 +52,20 @@ html +='<div id="citydetail"><img id="cityimage" src="'+item.image+'"><div class
 </head>
 <body onLoad="bindItems()">
 <div id="centerhome" data-role="page">
-<div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
-<a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
-<h1 class="ui-title" role="heading" aria-level="1">Mammography Centers</h1>
-</div>
-<div data-role="content">
-<div id="main-content"> <br>
-<b> Select City: </b>
-<p>
-<select name='city' id='city'>
-</select>
-</p>
-<div id="placeholder"></div>
-<!-- end of centerhome --> 
-</div>
-</div>
+  <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
+    <h1 class="ui-title" role="heading" aria-level="1">Mammography Centers</h1>
+  </div>
+  <div data-role="content">
+    <div id="main-content"> <br>
+      <b> Select City: </b>
+      <p>
+        <select name='city' id='city'>
+        </select>
+      </p>
+      <div id="placeholder"></div>
+      <!-- end of centerhome --> 
+    </div>
+  </div>
 </div>
 </body>
 </html>

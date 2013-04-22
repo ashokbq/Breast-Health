@@ -7,49 +7,67 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <script type='text/javascript' src="jquery-1.8.2.min.js"></script>
 <script type='text/javascript' src="jquery.mobile-1.3.0.min.js"></script>
+  <script>
+$(document).on('pagebeforecreate', 'body', function(){     
+    var interval = setInterval(function(){
+      $.mobile.loading( "show", {
+text: "Loading",
+textVisible: true,
+theme: "a",
+html: ""
+});
+        clearInterval(interval);
+    },1);    
+});
+
+$(document).on('pageshow', 'body', function(){  
+    var interval = setInterval(function(){
+       $.mobile.loading('hide');
+        clearInterval(interval);
+    },1);      
+});
+  </script>
 </head>
 
 <body>
 <div id="factors1" data-role="page"  class="jqm-demos ui-responsive-panel">
- <div data-role="panel" data-position="left"  data-dismissible="true" class="ui-responsive-panel ui-bar-c" id="nav-panel" data-theme="b">
-  <ul data-role="listview" data-theme="a" class="nav-search">          <li><a href="info.html" id="info" data-icon="custom" rel="external">What is breast cancer? </a></li>
-          <li><a href="statistics.html" id="" data-icon="custom" rel="external">Worldwide statistics </a></li>
-          <li><a href="burden.html" id="" data-icon="custom" rel="external">Burden of breast cancer in India</a></li>
-          <li><a href="#" id="factors" data-icon="custom" class="selected">Risk factors </a></li>
-        </ul>
-      </div>
+  <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
+    <ul data-role="listview" data-theme="a" data-icon="false" >
+      <li><a href="info.html" id="info" data-icon="custom" rel="external">What is breast cancer? </a></li>
+      <li><a href="statistics.html" id="" data-icon="custom" rel="external">Worldwide statistics </a></li>
+      <li><a href="burden.html" id="" data-icon="custom" rel="external">Burden of breast cancer in India</a></li>
+      <li><a href="#" id="factors" data-icon="custom" class="selected">Risk factors </a></li>
+    </ul>
+  </div>
   <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
     <h1 class="ui-title" role="heading" aria-level="1">Risk factors</h1>
+    <a id="topmenu" href="#nav-panel" data-role="button" data-display="overlay" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a> 
+</div>
+<div data-role="content">
+  <div id="main-content">
+    <h1> What are the risk factors for breast cancer?</h1>
+    <p> A risk factor is anything that affects your chance of getting a disease, such as cancer. Different cancers have different risk factors. For example, exposing skin to strong sunlight is a risk factor for skin cancer. Smoking is a risk factor for cancers of the lung, mouth, larynx (voice box), bladder, kidney, and several other organs. </p>
+    <p> But risk factors don't tell us everything. Having a risk factor, or even several, does not mean that you will get the disease. Most women who have one or more breast cancer risk factors never develop the disease, while many women with breast cancer have no apparent risk factors (other than being a woman and growing older). Even when a woman with risk factors develops breast cancer, it is hard to know just how much these factors might have contributed. </p>
+    <p> There are different kinds of risk factors. Some factors, like a person's age or race, can't be changed. Others are linked to cancer-causing factors in the environment. Still others are related personal behaviors, such as smoking, drinking, and diet. Some factors influence risk more than others, and your risk for breast cancer can change over time, due to factors such as aging or lifestyle. </p>
+    <h2>Risk factors you cannot change </h2>
+    <h3>Gender </h3>
+    <p> Simply being a woman is the main risk factor for developing breast cancer. Men can develop breast cancer, but this disease is about 100 times more common among women than men. This is likely because men have less of the female hormones estrogen and progesterone, which can promote breast cancer cell growth </p>
+    <h3> Aging </h3>
+    <p> Your risk of developing breast cancer increases as you get older. About 1 out of 8 invasive breast cancers are found in women younger than 45, while about 2 of 3 invasive breast cancers are found in women age 55 or older. </p>
+    <h2>Family history of breast cancer </h2>
+    <p> Breast cancer risk is higher among women whose close blood relatives have this disease. </p>
+    <p> Having one first-degree relative (mother, sister, or daughter) with breast cancer approximately doubles a woman's risk. Having 2 first-degree relatives increases her risk about 3-fold. </p>
+    <p> The exact risk is not known, but women with a family history of breast cancer in a father or brother also have an increased risk of breast cancer. Altogether, less than 15% of women with breast cancer have a family member with this disease. This means that most (over 85%) women who get breast cancer do not have a family history of this disease. </p>
+    <h2>Personal history of breast cancer </h2>
+    <p> A woman with cancer in one breast has a 3- to 4-fold increased risk of developing a new cancer in the other breast or in another part of the same breast. This is different from a recurrence (return) of the first cancer. </p>
+    <h2> Race and ethnicity </h2>
+    <p> Overall, white women are slightly more likely to develop breast cancer than are African-American women, but African-American women are more likely to die of this cancer. However, in women under 45 years of age, breast cancer is more common in African- American women. Asian, Hispanic, and Native-American women have a lower risk of developing and dying from breast cancer. </p>
+    <h2> Dense breast tissue </h2>
+    <p> Breasts are made up of fatty tissue, fibrous tissue, and glandular tissue. Someone is said to have dense breast tissue (as seen on a mammogram) when they have more glandular and fibrous tissue and less fatty tissue. Women with dense breasts have a higher risk of breast cancer than women with less dense breasts. Unfortunately, dense breast tissue can also make mammograms less accurate. </p>
+    <p> A number of factors can affect breast density, such as age, menopausal status, the use of drugs (such as menopausal hormone therapy), pregnancy, and genetics. </p>
   </div>
-  <div data-role="content">
-    <div id="main-content">
-      <h1> What are the risk factors for breast cancer?</h1>
-      <p> A risk factor is anything that affects your chance of getting a disease, such as cancer. Different cancers have different risk factors. For example, exposing skin to strong sunlight is a risk factor for skin cancer. Smoking is a risk factor for cancers of the lung, mouth, larynx (voice box), bladder, kidney, and several other organs. </p>
-      <p> But risk factors don't tell us everything. Having a risk factor, or even several, does not mean that you will get the disease. Most women who have one or more breast cancer risk factors never develop the disease, while many women with breast cancer have no apparent risk factors (other than being a woman and growing older). Even when a woman with risk factors develops breast cancer, it is hard to know just how much these factors might have contributed. </p>
-      <p> There are different kinds of risk factors. Some factors, like a person's age or race, can't be changed. Others are linked to cancer-causing factors in the environment. Still others are related personal behaviors, such as smoking, drinking, and diet. Some factors influence risk more than others, and your risk for breast cancer can change over time, due to factors such as aging or lifestyle. </p>
-      <h2>Risk factors you cannot change </h2>
-      <h3>Gender </h3>
-      <p> Simply being a woman is the main risk factor for developing breast cancer. Men can develop breast cancer, but this disease is about 100 times more common among women than men. This is likely because men have less of the female hormones estrogen and progesterone, which can promote breast cancer cell growth </p>
-      <h3> Aging </h3>
-      <p> Your risk of developing breast cancer increases as you get older. About 1 out of 8 invasive breast cancers are found in women younger than 45, while about 2 of 3 invasive breast cancers are found in women age 55 or older. </p>
-      <h2>Family history of breast cancer </h2>
-      <p> Breast cancer risk is higher among women whose close blood relatives have this disease. </p>
-      <p> Having one first-degree relative (mother, sister, or daughter) with breast cancer approximately doubles a woman's risk. Having 2 first-degree relatives increases her risk about 3-fold. </p>
-      <p> The exact risk is not known, but women with a family history of breast cancer in a father or brother also have an increased risk of breast cancer. Altogether, less than 15% of women with breast cancer have a family member with this disease. This means that most (over 85%) women who get breast cancer do not have a family history of this disease. </p>
-      <h2>Personal history of breast cancer </h2>
-      <p> A woman with cancer in one breast has a 3- to 4-fold increased risk of developing a new cancer in the other breast or in another part of the same breast. This is different from a recurrence (return) of the first cancer. </p>
-      <h2> Race and ethnicity </h2>
-      <p> Overall, white women are slightly more likely to develop breast cancer than are African-American women, but African-American women are more likely to die of this cancer. However, in women under 45 years of age, breast cancer is more common in African- American women. Asian, Hispanic, and Native-American women have a lower risk of developing and dying from breast cancer. </p>
-      <h2> Dense breast tissue </h2>
-      <p> Breasts are made up of fatty tissue, fibrous tissue, and glandular tissue. Someone is said to have dense breast tissue (as seen on a mammogram) when they have more glandular and fibrous tissue and less fatty tissue. Women with dense breasts have a higher risk of breast cancer than women with less dense breasts. Unfortunately, dense breast tissue can also make mammograms less accurate. </p>
-      <p> A number of factors can affect breast density, such as age, menopausal status, the use of drugs (such as menopausal hormone therapy), pregnancy, and genetics. </p>
-    </div>
-    </div>
-    <footer data-role="footer" data-theme="a" data-position="fixed">
-    <a href="#nav-panel" data-role="button" data-display="reveal" data-position="right" data-reveal="reveal" data-dismissible="true" class="ui-bar-a">Menu</a> </footer>
-
-    </footer>
-  </div>
+</div>
+</div>
 
 <!-- end of riskfactos -->
 </body>
