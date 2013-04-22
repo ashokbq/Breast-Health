@@ -14,28 +14,21 @@
 <script>
 
 $(document).bind('pagebeforeshow', function () {
-	  var interval = setInterval(function(){
-      $.mobile.loading( "show", {
-text: "Loading",
-textVisible: true,
-theme: "a",
-html: ""
-});
-        clearInterval(interval);
-    },1);    
+	
+        
  	 var sPageURL = window.location.search.substring(1);
     var sURLVariables = sPageURL.split('&');
     for (var i = 0; i < sURLVariables.length; i++)
     {
         var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == 'city')
+        if (sParameterName[0] == 'center_name')
         {
-       //   alert(sParameterName[1]);
-		 var val=sParameterName[1];    
+      //    alert(sParameterName[1]);
+		 var centerid=sParameterName[1];    
 		 }
     }
 var cityname='';
-if(val=='1')
+/*if(val=='1')
 {
 	cityname="Delhi";
 }
@@ -47,28 +40,24 @@ else
 {
 		cityname="Hyderabad";
 }
+*/
 $('#citydisplay').empty().append(cityname);
 
 		var html='';
 		var cityheader='';
-	  $.getJSON('http://www.mobiletest.mednl.com/centers.php?city='+val+'&callback=?', function (data) {
-	
+	  $.getJSON('http://www.mobiletest.mednl.com/center_display.php?center_id='+centerid+'&callback=?', function (data) {
+
 		   $.each(data, function (i, item) {
 			 	/*alert(item.name);
 				alert(item.image);
-				alert(item.address);*/
-				
+					alert(item.address);*/
+	//alert(item.center_id);			
 	html +='<div id="citydetail"> <img id="cityimage" src="'+item.image+'"><br/><div id="detail"><div id="name_dis">'+item.name+'</div><div id="add_dis">'+item.address+'</div><div style="clear:both;"> </div></div> </div>';		 
 		   });
 		$('#placeholder').empty().append(html);
         });
   });
-$(document).on('pageshow', 'body', function(){  
-    var interval = setInterval(function(){
-  //     $.mobile.loading('hide');
-        clearInterval(interval);
-    },1);      
-});
+
 </script>
 </head>
 <body>

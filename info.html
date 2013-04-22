@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <script type='text/javascript' src="jquery-1.8.2.min.js"></script>
   <script type='text/javascript' src="jquery.mobile-1.3.0.min.js"></script>
-   <script>
+  <script>
 $(document).on('pagebeforecreate', 'body', function(){     
     var interval = setInterval(function(){
       $.mobile.loading( "show", {
@@ -34,9 +34,9 @@ $(document).on('pageshow', 'body', function(){
     <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
     <ul data-role="listview" data-theme="a" data-icon="false" >
         <li><a href="#" id="" data-icon="custom" class="selected">What is breast cancer? </a></li>
-        <li><a href="statistics.html" id="" data-icon="custom" rel="external">Worldwide statistics </a></li>
-        <li><a href="burden.html" id="" data-icon="custom" rel="external">Burden of breast cancer in India</a></li>
-        <li><a href="factors.html" id="" data-icon="custom" rel="external">Risk factors </a></li>
+        <li><a href="#statistics" id="" data-icon="custom" rel="external">Worldwide statistics </a></li>
+        <li><a href="#burden" id="" data-icon="custom" rel="external">Burden of breast cancer in India</a></li>
+        <li><a href="#factors1" id="" data-icon="custom" rel="external">Risk factors </a></li>
       </ul>
   </div>
     <!-- end of panel -->
@@ -68,12 +68,128 @@ $(document).on('pageshow', 'body', function(){
         <p> Occasionally, breast cancer presents as metastatic disease, that is, cancer that has spread beyond the original organ. Metastatic breast cancer will cause symptoms that depend on the location of metastasis. Common sites of metastasis include bone, liver, lung and brain. Unexplained weight loss can occasionally herald an occult breast cancer, as can symptoms of fevers or chills. Bone or joint pains can sometimes be manifestations of metastatic breast cancer, as can jaundice or neurological symptoms. These symptoms are called non-specific, meaning they could be manifestations of many other illnesses.</p>
         <p> Most symptoms of breast disorders, including most lumps, do not turn out to represent underlying breast cancer. Less than 20% of lumps for example are cancer and benign breast diseases such as mastitis and fibroadenoma of the breast are more common causes of breast disorder symptoms. Nevertheless, the appearance of a new symptom should be taken seriously by both patients and their doctors, because of the possibility of an underlying breast cancer at almost any age.</p>
       </div>
-    <!-- End of main --> 
   </div>
     <!-- end of content --> 
-    
   </div>
-<!-- end of page -->
+<!-- end of whatisbc-->
+<div id="statistics" data-role="page"  class="jqm-demos ui-responsive-panel">
+    <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
+    <ul data-role="listview" data-theme="a" data-icon="false" >
+        <li><a href="#info" id=""data-icon="custom" rel="external">What is breast cancer? </a></li>
+        <li><a href="#" id="" data-icon="custom" class="selected">Worldwide statistics </a></li>
+        <li><a href="#burden" id=""  data-icon="custom" rel="external">Burden of breast cancer in India</a></li>
+        <li><a href="#factors1" id="" data-icon="custom"  rel="external">Risk factors </a></li>
+      </ul>
+  </div>
+    <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
+    <h1 class="ui-title" role="heading" aria-level="1">Worldwide statistics </h1>
+    <a id="topmenu" href="#nav-panel" data-role="button" data-display="overlay" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a> </div>
+    <div data-role="content">
+    <div id="main-content"> <img src="breastcancerstatsworldwide-660x447.png" width="100%" height="100%" alt="bca" align="absmiddle"> </div>
+    <!--end of content --> 
+  </div>
+  </div>
+<!-- End of statistics -->
+<div id="burden" data-role="page"  class="jqm-demos ui-responsive-panel">
+    <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
+    <ul data-role="listview" data-theme="a" data-icon="false" >
+        <li><a href="#info" id="info"  rel="external">What is breast cancer? </a></li>
+        <li><a href="#statistics" id="statistics"  rel="external">Worldwide statistics </a></li>
+        <li><a href="#burden" id="burdenicon"  class="selected">Burden of breast cancer in India</a></li>
+        <li><a href="#factors1" id="factors" rel="external">Risk factors </a></li>
+      </ul>
+  </div>
+    <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
+    <h1 class="ui-title" role="heading" aria-level="1">Burden of breast cancer in India</h1>
+    <a id="topmenu" href="#nav-panel" data-role="button" data-display="overlay" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a> </div>
+    <div data-role="content">
+    <div id="main-content">
+        <p> The incidence of breast cancer is rising in India and is now the second most commonly cancer diagnosed in women after cervical cancer.  It is estimated that in 2008 there were 115251 new cases of breast cancer with an age standardised incidence rate of 22.9 per 100000.  It is estimated that by 2030 the number of new cases of breast cancer in India will reach just under 200000 per year (Ferlay J, 2010). </p>
+      </div>
+  </div>
+  </div>
+<!-- end of burden -->
+<div id="factors1" data-role="page"  class="jqm-demos ui-responsive-panel">
+    <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
+    <ul data-role="listview" data-theme="a" data-icon="false" >
+        <li><a href="#info" id="info" data-icon="custom" rel="external">What is breast cancer? </a></li>
+        <li><a href="#statistics" id="" data-icon="custom" rel="external">Worldwide statistics </a></li>
+        <li><a href="#burden" id="" data-icon="custom" rel="external">Burden of breast cancer in India</a></li>
+        <li><a href="#" id="factors" data-icon="custom" class="selected">Risk factors </a></li>
+      </ul>
+  </div>
+    <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
+    <h1 class="ui-title" role="heading" aria-level="1">Risk factors</h1>
+    <a id="topmenu" href="#nav-panel" data-role="button" data-display="overlay" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a> </div>
+    <div data-role="content">
+    <div id="main-content">
+        <h1> What are the risk factors for breast cancer?</h1>
+        <p> A risk factor is anything that affects your chance of getting a disease, such as cancer. Different cancers have different risk factors. For example, exposing skin to strong sunlight is a risk factor for skin cancer. Smoking is a risk factor for cancers of the lung, mouth, larynx (voice box), bladder, kidney, and several other organs. </p>
+        <p> But risk factors don't tell us everything. Having a risk factor, or even several, does not mean that you will get the disease. Most women who have one or more breast cancer risk factors never develop the disease, while many women with breast cancer have no apparent risk factors (other than being a woman and growing older). Even when a woman with risk factors develops breast cancer, it is hard to know just how much these factors might have contributed. </p>
+        <p> There are different kinds of risk factors. Some factors, like a person's age or race, can't be changed. Others are linked to cancer-causing factors in the environment. Still others are related personal behaviors, such as smoking, drinking, and diet. Some factors influence risk more than others, and your risk for breast cancer can change over time, due to factors such as aging or lifestyle. </p>
+        <h2>Risk factors you cannot change </h2>
+        <h3>Gender </h3>
+        <p> Simply being a woman is the main risk factor for developing breast cancer. Men can develop breast cancer, but this disease is about 100 times more common among women than men. This is likely because men have less of the female hormones estrogen and progesterone, which can promote breast cancer cell growth </p>
+        <h3> Aging </h3>
+        <p> Your risk of developing breast cancer increases as you get older. About 1 out of 8 invasive breast cancers are found in women younger than 45, while about 2 of 3 invasive breast cancers are found in women age 55 or older. </p>
+        <h2>Family history of breast cancer </h2>
+        <p> Breast cancer risk is higher among women whose close blood relatives have this disease. </p>
+        <p> Having one first-degree relative (mother, sister, or daughter) with breast cancer approximately doubles a woman's risk. Having 2 first-degree relatives increases her risk about 3-fold. </p>
+        <p> The exact risk is not known, but women with a family history of breast cancer in a father or brother also have an increased risk of breast cancer. Altogether, less than 15% of women with breast cancer have a family member with this disease. This means that most (over 85%) women who get breast cancer do not have a family history of this disease. </p>
+        <h2>Personal history of breast cancer </h2>
+        <p> A woman with cancer in one breast has a 3- to 4-fold increased risk of developing a new cancer in the other breast or in another part of the same breast. This is different from a recurrence (return) of the first cancer. </p>
+        <h2> Race and ethnicity </h2>
+        <p> Overall, white women are slightly more likely to develop breast cancer than are African-American women, but African-American women are more likely to die of this cancer. However, in women under 45 years of age, breast cancer is more common in African- American women. Asian, Hispanic, and Native-American women have a lower risk of developing and dying from breast cancer. </p>
+        <h2> Dense breast tissue </h2>
+        <p> Breasts are made up of fatty tissue, fibrous tissue, and glandular tissue. Someone is said to have dense breast tissue (as seen on a mammogram) when they have more glandular and fibrous tissue and less fatty tissue. Women with dense breasts have a higher risk of breast cancer than women with less dense breasts. Unfortunately, dense breast tissue can also make mammograms less accurate. </p>
+        <p> A number of factors can affect breast density, such as age, menopausal status, the use of drugs (such as menopausal hormone therapy), pregnancy, and genetics. </p>
+      </div>
+  </div>
+  </div>
+<!-- end of riskfactos -->
+<div id="modifiablerisk" data-role="page"  class="jqm-demos ui-responsive-panel">
+    <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
+    <ul data-role="listview" data-theme="a" data-icon="false" >
+        <li><a href="#" id="info" data-icon="custom" rel="external">Modifiable Risk </a></li>
+        <li><a href="#non-modifiablerisk" id="info" data-icon="custom" rel="external" class="selected">Non-Modifiable Risk </a></li>
+      </ul>
+  </div>
+    <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
+    <h1 class="ui-title" role="heading" aria-level="1">Risk factors</h1>
+    <a id="topmenu" href="#nav-panel" data-role="button" data-display="overlay" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a> </div>
+    <div data-role="content">
+    <div id="main-content">
+        <p> There is a large body of evidence from both experimental and epidemiological studies which points to a major influence of ovarian hormones on breast cancer risk with the lifetime risk of developing breast cancer is related to overall oestrogen exposure. </p>
+        <p> Age at menarche is an important determinant of subsequent breast cancer risk.  Estimates from a pooled analysis of the results of 21 studies shows that for each additional year age at menarche is postponed, premenopausal and postmenopausal breast cancer risk decreases by 9% and 4% respectively.  The median age of menarche worldwide is 14 years with a range from 11-18 years and reported average later age of onset in Asian populations compared to the West.  A study in South Indian women showed that the risk of both pre-menopausal and postmenopausal breast cancer decreased with delay of the onset of menarche but not significantly so. Two smaller studies, one of Mumbai women and one of Delhi women also showed no significant association between age of onset of menarche and subsequent breast cancer risk. </p>
+        <p> Late menopause increases the risk of breast cancer. Women who have undergone the menopause have a lower risk of breast cancer than pre-menopausal women of the same age and childbearing pattern.   Risk increases by almost 3% for each year older at menopause (natural or induced by surgery), so that a women who has the menopause at 55 rather than 45, has approximately 30% higher risk.  The South Indian study showed an increased risk of breast cancer in woman who became menopausal after the age of 50 (RR 1.87 (95% CI 1.26-2.78)) but there is little other published data. </p>
+        <p> Child bearing and breast feeding are of importance when considering subsequent breast cancer risk. The younger the woman is when she begins childbearing, the lower her risk of breast cancer. The relative risk of developing breast cancer is estimated to increase by 3% for each year of delay. Childbearing reduces the risk of breast cancer and the higher the number of full-term pregnancies, the greater the protection. The risk of breast cancer reduces by 7% with each full-term pregnancy, and overall women who have had children have a 30% lower risk than nulliparous women </p>
+        <p> Women who breastfeed reduce their risk compared with women who do not breastfeed. The longer a woman breastfeeds, the greater the protection: risk is reduced by 4% for every 12 months of breastfeeding.  There is also evidence that the reduction in risk of breast cancer with childbirth, and higher risk with later age at first full-time birth, may be limited to oestrogen-receptor-positive tumours. </p>
+        <p> Data from Indian studies are less clear. The largest study in India to examine the relationship between breastfeeding and breast cancer risk has shown mixed results.  Increasing duration of breast feeding was associated with a significantly decreased risk of pre-menopausal breast cancer but no effect was seen in women with postmenopausal breast cancer.  With regard to parity, the researchers observed that as the number of children a woman has increases, the subsequent risk of breast cancer decreases.  Conversely, the Delhi study showed a protective effect of breast feeding of greater than 6 years duration on breast cancer risk but no significant protective effect related to parity and the Mumbai study showed a non-significant protective effect for breast feeding.  These studies are of small sample size and thus probably underpowered to detect significant differences. </p>
+        <p> The data from India overall suggests that the role of known risk factors on the development of breast cancer within the Indian population is unclear and a large multicentre study would be of benefit to try and understand the shifting trends in breast cancer incidence in this population. </p>
+      </div>
+  </div>
+  </div>
+<!-- end of modifiable -->
+<div id="non-modifiablerisk" data-role="page"  class="jqm-demos ui-responsive-panel">
+    <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
+    <ul data-role="listview" data-theme="a" data-icon="false" >
+        <li><a href="#modifiablerisk" id="info" data-icon="custom" rel="external">Modifiable Risk </a></li>
+        <li><a href="#" id="info" data-icon="custom" rel="external" class="selected">Non-Modifiable Risk </a></li>
+      </ul>
+  </div>
+    <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
+    <h1 class="ui-title" role="heading" aria-level="1">Risk factors</h1>
+    <a id="topmenu" href="#nav-panel" data-role="button" data-display="overlay" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a> </div>
+    <div data-role="content">
+    <div id="main-content">
+        <p> The incidence of breast cancer increases with increasing age with 80% of all breast cancer occurring in women over the age of 50 in the UK. The average age of presentation for breast cancer in the Indian population is widely reported to be around 10 years younger compared to the developed world and is the result of the age structure of the Indian population which is a bottom-heavy (predominantly young) pyramid. </p>
+        <p> The role of diet in the aetiology of breast cancer remains controversial.  Interest in the role of diet in the aetiology of breast cancer is stimulated by the observation of the lower incidence of breast cancer in Asian populations where intake of animal products is lower than that of western populations.  Worldwide, a large number of individual follow vegetarian diets but in most countries vegetarians comprise only a small proportion of the population. India is a notable exception because a substantial proportion of the population (perhaps as high as 35%) follow a vegetarian diet and have done so for many generations.  Studies to date exploring the relationship of diet and breast cancer incidence and mortality have not demonstrated any difference between vegetarians compared to non-vegetarians. A study specifically examining the effect of vegetarian diet on subsequent risk of breast cancer in British Asian women showed that lifelong vegetarians had a slight reduction in the risk breast cancer development compared to meat eaters but the result did not achieve statistical significance (RR 0.77 (95% CI 0.5-1.2).  Specific studies in India examining this relationship are few and of small size and show inconsistent findings.  An older study of 689 breast cancer patients in Mumbai found no association between vegetarian diet and breast cancer risk  whereas a study in Kerala of 264 women with breast cancer showed an increased risk of breast cancer associated with a non-vegetarian diet (OR 1.82 (95% CI 1.11-2.98)). A large scale case-control study such as this one to investigate the relationship of breast cancer incidence and diet in the Indian population would be of interest. </p>
+        <p> The two diet related factors which have been shown to have an effect on breast cancer incidence within western populations are obesity and alcohol intake.  The incidence of breast cancer in obese postmenopausal women is twice that of the non obese and is related to increased levels of circulating oestrogens due to the peripheral aromatisation of oestrogen in adipose tissue whereas obese pre-menopausal women have a 20% reduction in cancer risk.  Increasing body mass index (BMI) is increasingly becoming a concern in many low-resource countries, particularly in urban India with studies reporting an increase in BMI in urban women compared to women living in rural areas.  A large case control study conducted in South India has shown an increased risk of breast cancer in both overweight pre-menopausal (OR 1.33 (95% CI 1.05-1.69)) and post-menopausal women (OR 1.29 (95% CI 1.00-11.66)).  The findings in pre-menopausal women of an increased risk of breast cancer associated with increased BMI is not consistent with western data. </p>
+        <p> The Collaborative Group on Hormonal Factors in Breast Cancer in a large collaborative reanalysis of the worldwide data have shown that the relative risk of breast cancer is increased (RR 1.32 (95% CI 1.19-1.45)) in women who reported drinking alcohol compared to women who reported no alcohol intake for an intake of 35-44 g per day alcohol.  Alcohol intake amongst Indian women is traditionally low but with changing lifestyles within the urban population it is possible that alcohol consumption has increased and this may in part contribute to increased breast cancer rates but no recent data are available. </p>
+      </div>
+  </div>
+  </div>
+<!-- end of non-modifiable -->
 
 </body>
 </html>

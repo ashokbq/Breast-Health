@@ -355,7 +355,7 @@ p {
 	border: 5px solid #ED1975;
 	border-radius: 10px 10px 10px 10px;
 	float: left;
-	width: 220px;
+/*	width: 220px; */
 }
 #cname {
 	float: left;
@@ -363,7 +363,7 @@ p {
 	font-weight: bold;
 	padding: 3%;
 	text-align: left;
-	width: 70%;
+
 }
 #cname a {
 	color: #C92581;
@@ -614,7 +614,6 @@ abbr, acronym {
 	border-radius: 10px 10px 10px 10px;
 	color: #FFFFFF;
 	font-weight: normal;
-	margin-left: 2%;
 	padding: 8px;
 	text-align: center;
 	font-size:75%;

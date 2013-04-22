@@ -11,14 +11,13 @@
 <script src="jquery-ui.js"></script>
 <script src="jquery-1.7.1.min.js"></script>
 <script src="jquery.mobile-1.1.0.min.js"></script>
-
 <script>
 function bindItems() {
       $.getJSON('http://www.mobiletest.mednl.com/getcity.php?&callback=?', function (data) {
 
           var items = '';
           var itemid;		
-              items +="<option value='0'> Select</option>";
+               items +="<option value='0'> Select</option>";
           $.each(data,function(i,item){
             items +="<option value='"+item.id+"'>"+item.name+"</option>";
       //	alert(item.id);
@@ -41,7 +40,7 @@ $.getJSON('http://www.mobiletest.mednl.com/centers.php?city='+val+'&callback=?',
           alert(item.image);
           alert(item.address);*/
           
-html +='<div id="citydetail"><img id="cityimage" src="'+item.image+'"><div class="clear:both;"> </div> <span id="tip">Click Center Name to know more</span><div id="cname"><a id="clickname" class="tTip" rel="external" href="center_display.html?city='+val+'">'+item.name+'</a></div></div><div class="clear"> </div>';		 
+html +='<div id="citydetail"><img id="cityimage" src="'+item.image+'"><div class="clear:both;"> </div> <span id="tip">Click Center Name to know more</span><div id="cname"><a id="clickname" class="tTip" rel="external" href="center_display.html?center_name='+item.center_id+'">'+item.name+'</a></div></div><div class="clear"> </div>';		 
      });
   $('#placeholder').empty().append(html);
   });
