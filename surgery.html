@@ -3,62 +3,45 @@
 <head>
 <title>Surgery</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
-<link rel="stylesheet" href="jquery-ui.css" />
-<link rel="stylesheet" href="jquery.mobile.simpledialog.min.css" />
-<link rel="stylesheet" href="style.css" />
-<script src="jquery-1.9.1.js"></script>
-<script src="jquery-ui.js"></script>
-<script src="jquery-1.7.1.min.js"></script>
-<script src="jquery.mobile-1.1.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.0.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type='text/javascript' src="jquery-1.8.2.min.js"></script>
+<script type='text/javascript' src="jquery.mobile-1.3.0.min.js"></script>
 </head>
 
 <body>
-<div id="surgery" data-role="page"  class="data-value treatment">
-  <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
-   <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
+<div id="surgery" data-role="page"  class="jqm-demos ui-responsive-panel treatment">
+  <div data-role="panel" data-position="left"  data-dismissible="true" class="ui-responsive-panel ui-bar-c" id="nav-panel" data-theme="b">
+    <ul data-role="listview" data-theme="a" class="nav-search">
+      <li><a href="#" id="info" data-icon="custom" rel="external" class="selected">Surgery</a></li>
+      <li><a href="radiation.html" id="statistics" data-icon="custom" rel="external">Radiation therapy</a></li>
+      <li><a href="chemotherapy.html" id="burdenicon" data-icon="custom" rel="external">Chemotherapy</a></li>
+      <li><a href="hormonetherapy.html" id="factors" data-icon="custom" rel="external">Hormone therapy </a></li>
+      <li><a href="targetedtherapy.html" id="factors" data-icon="custom" rel="external">Targetedtherapy</a></li>
+    </ul>
+  </div>
+  <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
     <h1 class="ui-title" role="heading" aria-level="1">Surgery</h1>
   </div>
- <div data-role="content">
-  <div id="main-content">
-<h1>Breast cancer surgery </h1>
-<p>
-<h2>Operations used to treat breast cancer include:</h2>
-</p>
-<p>
-<b>Removing the breast cancer (lumpectomy).</b> During lumpectomy, which may be referred to as breast-sparing surgery or wide local excision, the surgeon removes the tumor and a small margin of surrounding healthy tissue. Lumpectomy is typically reserved for smaller tumors that are easily separated from the surrounding tissue.
-</p>
-<p>
-<b>Removing the entire breast (mastectomy).</b> Mastectomy is surgery to remove all of your breast tissue. Mastectomy can be simple, meaning the surgeon removes all of the breast tissue — the lobules, ducts, fatty tissue and some skin, including the nipple and areola. Or mastectomy can be radical, meaning the underlying muscle of the chest wall is removed along with breast tissue and surrounding lymph nodes in the armpit. Radical mastectomies are less commonly done today. Some women may be able to undergo a skin-sparing mastectomy, which leaves the skin overlying the breast intact and may help with reconstruction options.
-</p>
-<p>
-<b>Removing one lymph node (sentinel node biopsy).</b> Breast cancer that spreads to the lymph nodes may spread to other areas of the body. Your surgeon determines which lymph node near your breast tumor receives the lymph drainage from your cancer. This lymph node is removed using a procedure called sentinel node biopsy and tested for breast cancer cells. If no cancer is found, the chance of finding cancer in any of the remaining lymph nodes is small and no other nodes need to be removed.
-</p>
-<p>
-<b>Removing several lymph nodes (axillary lymph node dissection).</b> If cancer is found in the sentinel node, your surgeon may remove additional lymph nodes in your armpit. However, there is good evidence that removal of additional affected lymph nodes does not improve survival in cases of early breast cancer following a lumpectomy, chemotherapy and whole-breast irradiation for tumors less than 2 inches (5 centimeters) in size, and where the cancer has spread to just a few lymph nodes in the armpit. In such cases, chemotherapy and radiation treatment after the lumpectomy have proved to be equally effective. This avoids the serious side effects, including chronic swelling of the arm (lymphedema), that often occur after lymph node removal.
-</p>
-<p>
-However, axillary lymph node dissection may still be performed if the sentinel lymph node contains cancer following a mastectomy, in the case of larger breast tumors or when a lymph node is large enough to be felt on physical exam. It may also be performed in situations when a woman elects to receive partial breast irradiation.
-
-Complications of breast cancer surgery depend on the procedures you choose. Surgery carries a risk of bleeding and infection.
-
-Some women choose to have breast reconstruction after surgery. Discuss your options and preferences with your surgeon. Consider a referral to a plastic surgeon before your breast cancer surgery. Your options may include reconstruction with a synthetic breast implant or reconstruction using your own tissue. These operations can be performed at the time of your mastectomy or at a later date.  
-</p>  
-  
-  
-   </div>
-   <footer data-role="footer" data-theme="d" data-position="fixed">
-      <div data-role="navbar" class="btm-navigation" data-grid="d">
-        <ul id="btm_nav">
-          <li><a href="#" id="info" data-icon="custom" rel="external" class="selected">Surgery</a></li>
-          <li><a href="radiation.html" id="statistics" data-icon="custom" rel="external">Radiation therapy</a></li>
-          <li><a href="chemotherapy.html" id="burdenicon" data-icon="custom" rel="external">Chemotherapy</a></li>
-          <li><a href="hormonetherapy.html" id="factors" data-icon="custom" rel="external">Hormone therapy </a></li>
-           <li><a href="targetedtherapy.html" id="factors" data-icon="custom" rel="external">Targetedtherapy</a></li>
-        </ul>
+  <div data-role="content">
+    <div id="main-content">
+      <h1>Breast cancer surgery </h1>
+      <p>
+      <h2>Operations used to treat breast cancer include:</h2>
+      </p>
+      <p> <b>Removing the breast cancer (lumpectomy).</b> During lumpectomy, which may be referred to as breast-sparing surgery or wide local excision, the surgeon removes the tumor and a small margin of surrounding healthy tissue. Lumpectomy is typically reserved for smaller tumors that are easily separated from the surrounding tissue. </p>
+      <p> <b>Removing the entire breast (mastectomy).</b> Mastectomy is surgery to remove all of your breast tissue. Mastectomy can be simple, meaning the surgeon removes all of the breast tissue — the lobules, ducts, fatty tissue and some skin, including the nipple and areola. Or mastectomy can be radical, meaning the underlying muscle of the chest wall is removed along with breast tissue and surrounding lymph nodes in the armpit. Radical mastectomies are less commonly done today. Some women may be able to undergo a skin-sparing mastectomy, which leaves the skin overlying the breast intact and may help with reconstruction options. </p>
+      <p> <b>Removing one lymph node (sentinel node biopsy).</b> Breast cancer that spreads to the lymph nodes may spread to other areas of the body. Your surgeon determines which lymph node near your breast tumor receives the lymph drainage from your cancer. This lymph node is removed using a procedure called sentinel node biopsy and tested for breast cancer cells. If no cancer is found, the chance of finding cancer in any of the remaining lymph nodes is small and no other nodes need to be removed. </p>
+      <p> <b>Removing several lymph nodes (axillary lymph node dissection).</b> If cancer is found in the sentinel node, your surgeon may remove additional lymph nodes in your armpit. However, there is good evidence that removal of additional affected lymph nodes does not improve survival in cases of early breast cancer following a lumpectomy, chemotherapy and whole-breast irradiation for tumors less than 2 inches (5 centimeters) in size, and where the cancer has spread to just a few lymph nodes in the armpit. In such cases, chemotherapy and radiation treatment after the lumpectomy have proved to be equally effective. This avoids the serious side effects, including chronic swelling of the arm (lymphedema), that often occur after lymph node removal. </p>
+      <p> However, axillary lymph node dissection may still be performed if the sentinel lymph node contains cancer following a mastectomy, in the case of larger breast tumors or when a lymph node is large enough to be felt on physical exam. It may also be performed in situations when a woman elects to receive partial breast irradiation.
+        
+        Complications of breast cancer surgery depend on the procedures you choose. Surgery carries a risk of bleeding and infection.
+        
+        Some women choose to have breast reconstruction after surgery. Discuss your options and preferences with your surgeon. Consider a referral to a plastic surgeon before your breast cancer surgery. Your options may include reconstruction with a synthetic breast implant or reconstruction using your own tissue. These operations can be performed at the time of your mastectomy or at a later date. </p>
+    </div>
       </div>
-    </footer>
-</div>
+    <footer data-role="footer" data-theme="d" data-position="fixed"> <a href="#nav-panel" data-role="button" data-display="reveal" data-position="right" data-reveal="reveal" data-dismissible="true" class="ui-bar-a">Menu</a> </footer>
+
 </div>
 <!-- end of riskfactos -->
 </body>

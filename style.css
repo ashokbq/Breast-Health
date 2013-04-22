@@ -6,7 +6,7 @@
 }
 html, body {
 	height: 100%;
-	text-align: justify;
+	text-align: left;
 	font-family:Arial, Microsoft Sans Serif, Lucida Sans Unicode !important;
 	text-shadow:none;
 }
@@ -29,6 +29,7 @@ label.error {
 	margin-top: 0.5em;
 	width: 100%;
 	float: none;
+	text-align: center;
 }
  @media screen and (orientation: portrait) {
 label.error {
@@ -101,7 +102,7 @@ em {
 }
 /* Mammographic centers */
 .ui-listview .ui-li-icon {
-	top: 0.5em;
+	top:0em;
 }
 #centerhome .ui-icon-arrow-r {
 	background-position: -48px 86%;
@@ -289,7 +290,7 @@ header:before, #dropbox:before {
 	padding: 20px;
 }
 p {
-	margin: 7px 0 0 0 !important;
+	line-height: 1.5em;
 }
 #purr-container {
 	position: fixed;
@@ -340,7 +341,7 @@ p {
 #citydetail {
 	border: 5px solid pink;
 	border-radius: 10px 10px 10px 10px;
-	height: 130px;
+	height: 155px;
 	margin: 1%;
 	padding: 1% 2% 2%;
 }
@@ -348,7 +349,7 @@ p {
 	border: 5px solid #ED1975;
 	border-radius: 10px 10px 10px 10px;
 	float: left;
-	width: 13%;
+	width: 220px;
 }
 #cname {
 	float: left;
@@ -423,7 +424,7 @@ p {
 	-webkit-border-radius: none !important;
 	border-radius: none !important;
 }
-#info .ui-icon {
+/*#info .ui-icon {
 	background-image: url(icondemo.png) !important;
 	background-position: -394px -1756px !important;
 	background-repeat: no-repeat;
@@ -442,7 +443,7 @@ p {
 	background-image: url(icondemo.png) !important;
 	background-position:-394px -420px !important;
 	background-repeat: no-repeat;
-}
+} */
 /*statistics */
 
 #statistics #main-content {
@@ -487,7 +488,7 @@ address, caption, cite, code, dfn, em, strong, th, var {
 	font-weight:normal;
 }
 ol, ul {
-	list-style:none;
+/*	list-style:none;*/
 }
 caption, th {
 	text-align:left;
@@ -495,6 +496,8 @@ caption, th {
 h1, h2, h3, h4, h5, h6 {
 	font-size:120%;
 	font-weight:bold;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 q:before, q:after {
 	content:'';
@@ -600,13 +603,61 @@ abbr, acronym {
 .ui-btn-up-c {
 	color: #ED1975;
 }
-#tip
-{
-   background-color: #DF78B0;
-    border-radius: 10px 10px 10px 10px;
-    color: #FFFFFF;
-    font-weight: normal;
-    margin-left: 2%;
-    padding: 8px;
-    text-align: center;
+#tip {
+	background-color: #DF78B0;
+	border-radius: 10px 10px 10px 10px;
+	color: #FFFFFF;
+	font-weight: normal;
+	margin-left: 2%;
+	padding: 8px;
+	text-align: center;
+	font-size:75%;
+}
+
+/*panel */
+ .ui-responsive-panel.ui-panel-open {
+    width:200px;
+}
+.ui-panel-animate.ui-panel-content-fixed-toolbar-position-left.ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-reveal, .ui-panel-animate.ui-panel-content-fixed-toolbar-position-left.ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-push, .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-reveal, .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-push {
+    left: 0;
+    right: 0;
+    margin-left:-70px;
+}
+@media (min-width:35em){
+
+/* wrap on wide viewports once open */
+
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-left,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-left,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-left,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-left {
+    margin-right: 17em;
+    
+    
+    
+    
+}
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-right,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-right,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-right,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-right {
+    margin-left: 17em;
+    
+    
+}
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push,
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal {
+    width:auto;
+    
+}
+
+/* disable "dismiss" on wide viewports */
+.ui-responsive-panel .ui-panel-dismiss-display-push {
+    display: none;
+}
+
+}
+
+.ui-responsive-panel.ui-bar-c {
+    background: linear-gradient(#000000, #000000) repeat scroll 0 0 #EEEEEE;
 }

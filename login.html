@@ -41,16 +41,17 @@ $.getJSON("http://www.mobiletest.mednl.com/login.php?jsoncallback=?&uid="+uid+"&
    		//alert(data['name']);
 	  var username=data['name'];
 	   
-	  //alert(data['msg']);
-	//  window.location = 'home.html?name='+username;
+	  alert(data['msg']);
+	  window.location='riskassessment.html';
+//	  window.location = 'home.html?name='+username;
 	   
    }
    if(data['err']=='1')
    {	
     //alert(data['msg']);
-	  // alert(data['msg']);
-	  $("#dialog-message").append(data['msg']);
-	  	$('#dialog-message').modal();	 
+	   alert(data['msg']);
+	//  $("#dialog-message").append(data['msg']);
+	  //	$('#dialog-message').modal();	 
 		 $('#loginform').reset(); 
    }
 });
@@ -66,10 +67,11 @@ $('#reg').live("click",function()
 	</script>
 	</head>
 	<body>
-    <div id="page1" data-role="page">
-      <div data-role="header">
-        <h1>Login</h1>
-      </div>
+<div id="login" data-role="page"  class="data-value">
+  <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> 
+  <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
+    <h1 class="ui-title" role="heading" aria-level="1">Login</h1>
+  </div>   
       <div data-role="content">
         <form id="loginform" method="post" action="www.mobiletest.mednl.com/login.php">
           <div data-role="fieldcontain">

@@ -64,13 +64,13 @@ if(val==true)
 {
 
 $.getJSON("http://www.mobiletest.mednl.com/signup.php?jsoncallback=?&uname="+uname+"&age="+age+"&uid="+uid+"&pwd="+pwd, function(data){ 
-   alert(data['msg']);
+  // alert(data['msg']);
  if(data['err']== '1')
    {
 	    $("#dialog-message").append(data['msg']);
 	  	$('#dialog-message').modal();	 
 	//alert(data['msg']);
-	   window.location='index.html'
+	   window.location='login.html'
    }
    if(data['err']== '2')
    {
