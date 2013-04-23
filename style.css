@@ -686,6 +686,15 @@ abbr, acronym {
 
 /* Page flickering issue */
 
-.ui-listview li {
-  -webkit-transform: translateZ(0);
+.ui-mobile-viewport-transitioning,
+.ui-mobile-viewport-transitioning .ui-page {
+    overflow: visible;
+}
+.ui-page {
+    -webkit-backface-visibility: hidden; 
+}
+
+.in, .out {
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 350ms;
 }
