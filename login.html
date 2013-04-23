@@ -66,6 +66,11 @@ $('#reg').live("click",function()
 	  window.location = 'register.html'
 });
 });
+$(document).bind("mobileinit", function(){
+  $.extend(  $.mobile , {
+   defaultPageTransition: 'none'
+  });
+});
 	</script>
 	</head>
 	<body>

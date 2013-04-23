@@ -47,7 +47,11 @@ html +='<div id="citydetail"><img id="cityimage" src="'+item.image+'"><div class
   });
 });
 });
-
+$(document).bind("mobileinit", function(){
+  $.extend(  $.mobile , {
+   defaultPageTransition: 'none'
+  });
+});
 </script>
 </head>
 <body onLoad="bindItems()">

@@ -15,6 +15,11 @@
 <script src="jquery.simplemodal.js"> </script>
 <script src="utility.js" type="text/javascript" ></script>
 <script>
+$(document).bind("mobileinit", function(){
+  $.extend(  $.mobile , {
+   defaultPageTransition: 'none'
+  });
+});
 $(window).load(function(){
 (function() {
     $('form > input').keyup(function() {

@@ -58,7 +58,11 @@ $('#citydisplay').empty().append(cityname);
 		$('#placeholder').empty().append(html);
         });
   });
-
+$(document).bind("mobileinit", function(){
+  $.extend(  $.mobile , {
+   defaultPageTransition: 'none'
+  });
+});
 </script>
 </head>
 <body>
