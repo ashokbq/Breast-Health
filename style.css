@@ -20,6 +20,8 @@ html, body {
 {
 	    margin:0.6em 20% 0.8em !important;
 }*/
+
+
 /* Loader Styles */
 
 .ui-icon-loading {
@@ -679,4 +681,11 @@ abbr, acronym {
 {
     height: 18px !important;
     width: 18px !important;
+}
+
+
+/* Page flickering issue */
+
+.ui-listview li {
+  -webkit-transform: translateZ(0);
 }

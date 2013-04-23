@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" manifest="offline.manifest">
 <head>
 <title>Home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,10 +29,8 @@ $(document).ready(function() {
 		$("#dialog-message").append(sParameterName[1]);
 		//$('#popupt').append(sParameterName[1]);
 		//$('#dialog-message').modal();	  
-    
-		 }
+    		 }
     }
-
 });
  $('#splash').live('pageshow', function(){
        var hideSplash = function() {
@@ -40,7 +38,10 @@ $(document).ready(function() {
        };
       setTimeout(hideSplash, 4000);
   });
-
+ $(document).bind("mobileinit", function(){
+        $.mobile.page.prototype.options.domCache = true;
+        $.mobile.page.prototype.options.degradeInputs.date = 'text';
+      });
 </script>
 </head>
 <body id="index">

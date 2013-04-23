@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" manifest="offline.manifest">
   <head>
   <title>What is breast cancer?</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,6 +26,11 @@ $(document).on('pageshow', 'body', function(){
         clearInterval(interval);
     },1);      
 });
+
+ $(document).bind("mobileinit", function(){
+        $.mobile.page.prototype.options.domCache = true;
+        $.mobile.page.prototype.options.degradeInputs.date = 'text';
+      });
   </script>
   </head>
 
@@ -41,9 +46,11 @@ $(document).on('pageshow', 'body', function(){
   </div>
     <!-- end of panel -->
     
-    <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
+    <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> 
+    <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
     <h1 class="ui-title" role="heading" aria-level="1">What is breast cancer?</h1>
-    <a id="topmenu" href="#nav-panel" data-role="button" data-display="overlay" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a> </div>
+    <a id="topmenu" href="#nav-panel" data-role="button" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a>
+    </div>
     <div data-role="content">
     <div id="main-content">
         <p>Breast cancer is a type of cancer originating from breast tissue, most commonly from the inner lining of milk ducts or the 
