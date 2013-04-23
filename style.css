@@ -686,18 +686,6 @@ abbr, acronym {
 
 /* Page flickering issue */
 
-.ui-mobile-viewport-transitioning,
-.ui-mobile-viewport-transitioning .ui-page {
-    overflow: visible;
-}
-.ui-page {
-    -webkit-backface-visibility: hidden; 
-}
-
-.in, .out {
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-duration: 350ms;
-}
 
 /* JQM 1.3.1.min styles */
 .ui-listview .ui-li-icon {

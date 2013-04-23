@@ -28,10 +28,8 @@ $(document).on('pageshow', 'body', function(){
     },1);      
 });
 
- $(document).bind("mobileinit", function(){
-  $.extend(  $.mobile , {
-   defaultPageTransition: 'none'
-  });
+ $(document).bind("mobileinit", function () {
+$.mobile.defaultPageTransition = 'none';
 });
   </script>
   </head>

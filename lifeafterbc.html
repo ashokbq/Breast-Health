@@ -29,6 +29,9 @@ $(document).on('pageshow', 'body', function(){
         clearInterval(interval);
     },1);      
 });
+$(document).bind("mobileinit", function () {
+$.mobile.defaultPageTransition = 'none';
+});
   </script>
 </head>
 
