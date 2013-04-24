@@ -25,10 +25,9 @@ html, body {
 /* Loader Styles */
 
 .ui-icon-loading {
-background-image: url("ajax-loader.gif") !important; 
-background-size: 46px 46px;
+	background-image: url("ajax-loader.gif") !important;
+	background-size: 46px 46px;
 }
-
 label.error {
 	color: red;
 	font-size: 16px;
@@ -356,8 +355,7 @@ p {
 #cityimage {
 	border: 5px solid #ED1975;
 	border-radius: 10px 10px 10px 10px;
-	float: left;
-/*	width: 220px; */
+	float: left;/*	width: 220px; */
 }
 #cname {
 	float: left;
@@ -365,7 +363,6 @@ p {
 	font-weight: bold;
 	padding:2%;
 	text-align: left;
-
 }
 #cname a {
 	color: #C92581;
@@ -620,77 +617,66 @@ abbr, acronym {
 	text-align: center;
 	font-size:75%;
 }
-
 /*panel */
 #nav-panel.ui-panel-open {
-    width:400px;
+	width:400px;
 }
 .ui-panel-animate.ui-panel-content-fixed-toolbar-position-left.ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-reveal, .ui-panel-animate.ui-panel-content-fixed-toolbar-position-left.ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-push, .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-reveal, .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-push {
-    left: 0;
-    right: 0;
-    margin-left:-70px;
+	left: 0;
+	right: 0;
+	margin-left:-70px;
 }
-@media (min-width:35em){
-
+@media (min-width:35em) {
 /* wrap on wide viewports once open */
 
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-left,
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-left,
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-left,
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-left {
-    margin-right: 17em;
-    
-    
-    
-    
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-left, .ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-left, .ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-left, .ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-left {
+	margin-right: 17em;
 }
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-right,
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-right,
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-right,
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-right {
-    margin-left: 17em;
-    
-    
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-right, .ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-right, .ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-right, .ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-right {
+	margin-left: 17em;
 }
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push,
-.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal {
-    width:auto;
-    
+.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push, .ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal {
+	width:auto;
 }
-
 /* disable "dismiss" on wide viewports */
 .ui-responsive-panel .ui-panel-dismiss-display-push {
-    display: none;
+	display: none;
 }
-
 }
-
 .ui-responsive-panel.ui-bar-c {
-    background: linear-gradient(#000000, #000000) repeat scroll 0 0 #EEEEEE;
+	background: linear-gradient(#000000, #000000) repeat scroll 0 0 #EEEEEE;
 }
-
-
 /* Right Menu Styles */
-#topmenu .ui-icon
-{
-    background-image: url("icons-18-white.png") !important;
-    background-position: -432px 2px !important;
+#topmenu .ui-icon {
+	background-image: url("icons-18-white.png") !important;
+	background-position: -432px 2px !important;
 }
-
-#topmenu .ui-icon
-{
-    height: 18px !important;
-    width: 18px !important;
+#topmenu .ui-icon {
+	height: 18px !important;
+	width: 18px !important;
 }
-
-
 /* Page flickering issue */
 
 
 /* JQM 1.3.1.min styles */
 .ui-listview .ui-li-icon {
-    left: 10px;
-    max-height: 38px;
-    max-width: 28px;
-    top: 0.2em;
+	left: 10px;
+	max-height: 38px;
+	max-width: 28px;
+	top: 0.2em;
+}
+
+#riskassessment .welcometxt
+ {
+    float: left;
+    margin: 10px 0;
+    width: 40%;
+}
+
+#riskassessment .pagetitle
+{
+    float: left;
+    margin: 10px 0 10px 0.6em;
+    text-align: center;
+    width: 30%;
 }
