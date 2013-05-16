@@ -45,9 +45,9 @@ $.getJSON("http://www.mobiletest.mednl.com/login.php?jsoncallback=?&uid="+uid+"&
 	//  	$('#dialog-message').modal();	
    		//alert(data['name']);
 	  var username=data['name'];
-	   
-	//  alert(data['msg']);
-	  window.location='riskassessment.html?name='+username;
+	   var user_id=data['user_id'];
+//  alert(data['msg']);
+	  window.location='riskassessment.html?name='+username+'&user_id='+user_id;
 //	  window.location = 'home.html?name='+username;
 	   
    }

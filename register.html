@@ -88,7 +88,7 @@ $.getJSON("http://www.mobiletest.mednl.com/signup.php?jsoncallback=?&uname="+una
 else
 {
 	alert("Please fill all inputs");
-	  	$('#dialog-message').modal();	
+	//  	$('#dialog-message').modal();	
 }
   });
 
@@ -100,12 +100,13 @@ else
 <body>
 <div id="page2" data-role="page">
   <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
+   <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
     <h1 class="ui-title" role="heading" aria-level="1">Register</h1>
   </div>
   <div data-role="content">
     <form id="registerform" method="post" action="www.mobiletest.mednl.com/signup.php">
       <div data-role="fieldcontain">
-        <label for="fullname"> First Name <em>*</em></label>
+        <label for="fullname"> FIRST NAME <em>*</em></label>
         <input type="text" name="fullname" id="fullname"  placeholder="Enter your Full Name"  autofocus />
       </div>
       <div data-role="fieldcontain">
