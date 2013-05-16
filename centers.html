@@ -43,8 +43,9 @@ $.getJSON('http://www.mobiletest.mednl.com/centers.php?city='+val+'&callback=?',
           /*alert(item.name);
           alert(item.image);
           alert(item.address);*/
-          
-html +='<div id="citydetail"><img id="cityimage" src="'+item.image+'"><div class="clear:both;"> </div> <span id="tip">Click Center Name to know more</span><div id="cname"><a id="clickname" class="tTip" rel="external" href="center_display.html?center_name='+item.center_id+'">'+item.name+'</a></div></div><div class="clear"> </div>';		 
+ html +='<div id="citydetail"><a id="clickname" class="tTip" rel="external" href="center_display.html?center_name='+item.center_id+'"><img id="cityimage" src="'+item.image+'"></a><div class="clear:both;"></div><div id="cname">'+item.name+'</div></div>';		 
+         
+//html +='<div id="citydetail"><img id="cityimage" src="'+item.image+'"><div class="clear:both;"> </div> <span id="tip">Click Center Name to know more</span><div id="cname"><a id="clickname" class="tTip" rel="external" href="center_display.html?center_name='+item.center_id+'">'+item.name+'</a></div></div><div class="clear"> </div>';		 
      });
   $('#placeholder').empty().append(html);
   });
@@ -64,8 +65,10 @@ $(document).bind("mobileinit", function(){
   </div>
   <div data-role="content">
     <div id="main-content"> <br>
-      <b> Select City: </b>
+      <b style="color:#EC3092"> Select City: </b>
+      
       <p>
+      <br/>
         <select name='city' id='city'>
         </select>
       </p>
