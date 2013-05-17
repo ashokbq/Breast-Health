@@ -7,7 +7,7 @@
 html, body {
 	height: 100%;
 	text-align: left;
-	font-family:Arial, Microsoft Sans Serif, Lucida Sans Unicode !important;
+	font-family:Myriad Pro !important;
 	text-shadow:none;
 }
 .clear {
@@ -16,9 +16,8 @@ html, body {
 	height: 0;
 	visibility: hidden;
 }
-/*.ui-header .ui-title, .ui-footer .ui-title
-{
-	    margin:0.6em 20% 0.8em !important;
+/*.ui-bar-a, .ui-bar-a input, .ui-bar-a select, .ui-bar-a textarea, .ui-bar-a button,.ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a {
+    font-family: Myriad Pro;
 }*/
 
 
@@ -337,9 +336,7 @@ p {
 	height: 22px;
 	background: url(purrBottom.png) no-repeat left top;
 }
-#about, #self_assesment, #assessment, #centers, #reminder, #share {
-	background:url(maps.png) no-repeat !important;
-}
+
 #citydetail {
 	border: 5px solid pink;
 	border-radius: 10px 10px 10px 10px;
@@ -400,9 +397,6 @@ p {
 }
 /*statistics */
 
-#statistics #main-content {
-	text-align: center;
-}
 .ui-btn-icon-left .ui-btn-inner .ui-icon, .ui-btn-icon-right .ui-btn-inner .ui-icon {
 	margin-top: -10px !important;
 	top: 36% !important;
@@ -464,8 +458,8 @@ address, caption, cite, code, dfn, em, strong, th, var {
 	font-style:normal;
 	font-weight:normal;
 }
-ol, ul {
-/*	list-style:none;*/
+ul {
+padding-left: 2%;
 }
 caption, th {
 	text-align:left;
@@ -766,4 +760,16 @@ img.flashimg {
 	left: 20%;
     position: absolute;
     top: 30%;
+}
+/*Detection stages */
+
+#detection h2
+{
+color:#ec3092;
+font-weight:normal;	
+}
+.highlight
+{
+	color: #FF4898;
+    font-size: 120%;
 }

@@ -33,7 +33,7 @@ $.mobile.defaultPageTransition = 'none';
   </script>
   </head>
 
-  <body>
+  <body id="detection">
 <div id="lowrisk" data-role="page"  class="jqm-demos ui-responsive-panel risk">
     <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
     <ul data-role="listview" data-theme="a" data-icon="false" >
@@ -47,7 +47,8 @@ $.mobile.defaultPageTransition = 'none';
     <a id="topmenu" href="#nav-panel" data-role="button" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a> </div>
     <div data-role="content">
     <div id="main-content">
-    <h4>American Cancer Society guidelines for early detection of breast cancer are as follows:  </h4>
+    <h4>American Cancer Society guidelines for early detection of breast cancer </h4>
+    <h2>Low Risk Individuals </h2>
         <p>It is recommended that women in their 20s and 30s should have a clinical breast exam every 3 years. For women 40 years and older, a clinical breast exam and a mammogram is recommended once every year.</p>
       </div>
   </div>
@@ -66,7 +67,8 @@ $.mobile.defaultPageTransition = 'none';
     <a id="topmenu" href="#nav-panel" data-role="button" data-display="overlay" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a> </div>
     <div data-role="content">
     <div id="main-content">
-        <h4>American Cancer Society guidelines for early detection of breast cancer are as follows:  </h4>
+        <h4>American Cancer Society guidelines for early detection of breast cancer</h4>
+        <h2> Moderate Risk Individuals</h2>
         <h5> Moderate risk women include the following: </h5>
         <ul>
         <li>Women with a lifetime risk of breast cancer of 15% to 20%, according to risk assessment
@@ -75,7 +77,7 @@ $.mobile.defaultPageTransition = 'none';
         <li>Women who have extremely dense breasts or unevenly dense breasts when viewed by mammograms. </li>
       </ul>
         <br>
-        <p> <u> An annual MRI is recommended, in addition to the annual mammogram. It may, however, not be necessary. Discuss with your doctor if it is required. </u></p>
+        <p class="highlight"> <b> An annual MRI is recommended, in addition to the annual mammogram. It may, however, not be necessary. Discuss with your doctor if it is required. </b></p>
       </div>
   </div>
   </div>
@@ -93,8 +95,9 @@ $.mobile.defaultPageTransition = 'none';
     <a id="topmenu" href="#nav-panel" data-role="button" data-display="overlay" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a> </div>
     <div data-role="content">
     <div id="main-content">
-        <h4>American Cancer Society guidelines for early detection of breast cancer are as follows:  </h4>
-        <h5> Moderate risk women include the following: </h5>
+        <h4>American Cancer Society guidelines for early detection of breast cancer</h4>
+         <h2> High Risk Individuals</h2>
+        <h5> High risk women include the following: </h5>
         <ul>
         <li>Women with a known <i>BRCA1</i> or <i>BRCA2</i> gene mutation </li>
         <li>Women who have a first-degree relative (parent, brother, sister, or child) with a <i>BRCA1</i> or <i>BRCA2</i> gene mutation </li>
@@ -103,9 +106,9 @@ $.mobile.defaultPageTransition = 'none';
         <li> Women having syndromes such as Li-Fraumeni, Cowden, or Bannayan-Riley-Ruvalcaba, or having one of these syndromes in first-degree relatives. </li>
       </ul>
         <br>
-        <u>
-      <p>An MRI and a mammogram every year is recommended. </p>
-      </u> </div>
+       
+      <p class="highlight"> <b>An MRI and a mammogram every year is recommended. </b></p>
+      </div>
   </div>
   </div>
 <!-- end of high risk -->
