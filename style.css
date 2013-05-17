@@ -138,7 +138,10 @@ em {
 	font-size: 17px;
 	font-weight: bold;
 }
-/* File Uploader Styles from styles.css */
+.center_img
+{
+	float:left;
+}
 
 /*-------------------------
 	Simple reset
@@ -350,12 +353,13 @@ p {
 	float: left;/*	width: 220px; */
 }
 #cname {
-	float: left;
-	font-size: 16px;
-	font-weight: bold;
-	padding:2%;
-	text-align: left;
-}
+ float: left;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 2%;
+    text-align: left;
+    width: 25%;
+	}
 #cname a {
 	color: #C92581;
 	font-weight: normal;
@@ -459,7 +463,7 @@ address, caption, cite, code, dfn, em, strong, th, var {
 	font-weight:normal;
 }
 ul {
-padding-left: 2%;
+padding-left: 3%;
 }
 caption, th {
 	text-align:left;

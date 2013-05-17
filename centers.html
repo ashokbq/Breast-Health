@@ -43,7 +43,7 @@ $.getJSON('http://www.mobiletest.mednl.com/centers.php?city='+val+'&callback=?',
           /*alert(item.name);
           alert(item.image);
           alert(item.address);*/
- html +='<div id="citydetail"><a id="clickname" class="tTip" rel="external" href="center_display.html?center_name='+item.center_id+'"><img id="cityimage" src="'+item.image+'"></a><div class="clear:both;"></div><div id="cname">'+item.name+'</div></div>';		 
+ html +='<div id="citydetail"><div class="center_img"><a id="clickname" class="tTip" rel="external" href="center_display.html?center_name='+item.center_id+'"><img id="cityimage" src="'+item.image+'"></a></div><div id="cname">'+item.name+'</div></div>';		 
          
 //html +='<div id="citydetail"><img id="cityimage" src="'+item.image+'"><div class="clear:both;"> </div> <span id="tip">Click Center Name to know more</span><div id="cname"><a id="clickname" class="tTip" rel="external" href="center_display.html?center_name='+item.center_id+'">'+item.name+'</a></div></div><div class="clear"> </div>';		 
      });
