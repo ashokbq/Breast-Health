@@ -737,10 +737,10 @@ input.ui-input-text {
 	background-position: 0 2px !important;
 	top: 56% !important
 }
-#calcform label.error {
+#risk label.error {
 	color: yellow;
 }
-#calcform .calbtn .ui-btn-hover-c, #calcform .calbtn .ui-btn-up-c {
+#risk .calbtn .ui-btn-hover-c, #risk .calbtn .ui-btn-up-c {
 	background-image:-webkit-gradient(linear, left top, left bottom, from(#ec3092), to(#ec3092)) !important;
 	background-image:-webkit-linear-gradient(#ec3092, #ec3092) !important;
 	background-image:-moz-linear-gradient(#ec3092, #ec3092) !important;
@@ -748,7 +748,7 @@ input.ui-input-text {
 	background-image:-o-linear-gradient(#ec3092, #ec3092) !important;
 	background-image:linear-gradient(#ec3092, #ec3092) !important;
 }
-#calcform .ui-select .ui-btn-hover-c, #calcform .ui-select .ui-btn-up-c {
+#risk .ui-select .ui-btn-hover-c, #risk .ui-select .ui-btn-up-c {
 	background-image:-webkit-gradient(linear, left top, left bottom, from(#f393bd), to(#f393bd)) !important;
 	background-image:-webkit-linear-gradient(#f393bd, #f393bd) !important;
 	background-image:-moz-linear-gradient(#f393bd, #f393bd) !important;
@@ -756,7 +756,7 @@ input.ui-input-text {
 	background-image:-o-linear-gradient(#f393bd, #f393bd) !important;
 	background-image:linear-gradient(#f393bd, #f393bd) !important;
 }
-#calcform label {
+#risk label {
 	color:#ec3092;
 }
 /* Flash image styles */
