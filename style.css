@@ -512,12 +512,12 @@ abbr, acronym {
 	background-image:linear-gradient(#FFF, #FFF) !important;
 }
 #index .flash {
-	background-image:-webkit-gradient(linear, left top, left bottom, from(#000), to(#000)) !important;
-	background-image:-webkit-linear-gradient(#000, #000) !important;
-	background-image:-moz-linear-gradient(#000, #000) !important;
-	background-image:-ms-linear-gradient(#000, #000) !important;
-	background-image:-o-linear-gradient(#000, #000) !important;
-	background-image:linear-gradient(#000, #000) !important;
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#FFF), to(#FFF)) !important;
+	background-image:-webkit-linear-gradient(#FFF, #FFF) !important;
+	background-image:-moz-linear-gradient(#FFF, #FFF) !important;
+	background-image:-ms-linear-gradient(#FFF, #FFF) !important;
+	background-image:-o-linear-gradient(#FFF, #FFF) !important;
+	background-image:linear-gradient(#FFF, #FFF) !important;
 }
 .ui-content {
 	padding-left:30px;
@@ -526,36 +526,37 @@ abbr, acronym {
 	background: none repeat scroll 0 0 transparent;
 }
 .ui-bar-a {
-	background-image:-webkit-gradient(linear, left top, left bottom, from(#ec3092), to(#ec3092)) !important;
-	background-image:-webkit-linear-gradient(#ec3092, #ec3092) !important;
-	background-image:-moz-linear-gradient(#ec3092, #ec3092) !important;
-	background-image:-ms-linear-gradient(#ec3092, #ec3092) !important;
-	background-image:-o-linear-gradient(#ec3092, #ec3092) !important;
-	background-image:linear-gradient(#ec3092, #ec3092) !important;
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#F292BA), to(#F292BA)) !important;
+	background-image:-webkit-linear-gradient(#F292BA, #F292BA) !important;
+	background-image:-moz-linear-gradient(#F292BA, #F292BA) !important;
+	background-image:-ms-linear-gradient(#F292BA, #F292BA) !important;
+	background-image:-o-linear-gradient(#F292BA, #F292BA) !important;
+	background-image:linear-gradient(#F292BA, #F292BA) !important;
 	color:#FFF;
 	text-shadow:none;
 }
 .ui-bar-b {
-	background-image:-webkit-gradient(linear, left top, left bottom, from(#ec3092), to(#ec3092)) !important;
-	background-image:-webkit-linear-gradient(#ec3092, #ec3092) !important;
-	background-image:-moz-linear-gradient(#ec3092, #ec3092) !important;
-	background-image:-ms-linear-gradient(#ec3092, #ec3092) !important;
-	background-image:-o-linear-gradient(#ec3092, #ec3092) !important;
-	background-image:linear-gradient(#ec3092, #ec3092) !important;
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#F292BA), to(#F292BA)) !important;
+	background-image:-webkit-linear-gradient(#F292BA, #F292BA) !important;
+	background-image:-moz-linear-gradient(#F292BA, #F292BA) !important;
+	background-image:-ms-linear-gradient(#F292BA, #F292BA) !important;
+	background-image:-o-linear-gradient(#F292BA, #F292BA) !important;
+	background-image:linear-gradient(#F292BA, #F292BA) !important;
 	color:#FFF;
 	text-shadow:none;
 }
 .ui-btn-up-a, .ui-btn-hover-a {
 	/* background: url("big-button.png") repeat scroll 0 0 transparent;*/
-		background-image:-webkit-gradient(linear, left top, left bottom, from(#ec3092), to(#ec3092)) !important;
-	background-image:-webkit-linear-gradient(#ec3092, #ec3092) !important;
-	background-image:-moz-linear-gradient(#ec3092, #ec3092) !important;
-	background-image:-ms-linear-gradient(#ec3092, #ec3092) !important;
-	background-image:-o-linear-gradient(#ec3092, #ec3092) !important;
-	background-image:linear-gradient(#ec3092, #ec3092) !important;
+		background-image:-webkit-gradient(linear, left top, left bottom, from(#fddaeb), to(#fddaeb)) !important;
+	background-image:-webkit-linear-gradient(#fddaeb, #fddaeb) !important;
+	background-image:-moz-linear-gradient(#fddaeb, #fddaeb) !important;
+	background-image:-ms-linear-gradient(#fddaeb, #fddaeb) !important;
+	background-image:-o-linear-gradient(#fddaeb, #fddaeb) !important;
+	background-image:linear-gradient(#fddaeb, #fddaeb) !important;
 	border:none !important;
 	text-shadow: none !important;
 }
+
 .ui-btn-up-d {
 	background-image:-webkit-gradient(linear, left top, left bottom, from(#ec3092), to(#ec3092)) !important;
 	background-image:-webkit-linear-gradient(#ec3092, #ec3092) !important;
@@ -567,22 +568,23 @@ abbr, acronym {
 	text-shadow:none;
 }
 #home .ui-btn-active, #home .ui-btn-up-d, #home .ui-btn-hover-d, .ui-btn-hover-c, .ui-btn-up-c {
-	background-image:-webkit-gradient(linear, left top, left bottom, from(#EC3092), to(#EC3092)) !important;
-	background-image:-webkit-linear-gradient(#EC3092, #EC3092) !important;
-	background-image:-moz-linear-gradient(#EC3092, #EC3092) !important;
-	background-image:-ms-linear-gradient(#EC3092, #EC3092) !important;
-	background-image:-o-linear-gradient(#EC3092, #EC3092) !important;
-	background-image:linear-gradient(#EC3092, #EC3092) !important;
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#FDDDED), to(#FDDDED)) !important;
+	background-image:-webkit-linear-gradient(#FDDDED, #FDDDED) !important;
+	background-image:-moz-linear-gradient(#FDDDED, #FDDDED) !important;
+	background-image:-ms-linear-gradient(#FDDDED, #FDDDED) !important;
+	background-image:-o-linear-gradient(#FDDDED, #FDDDED) !important;
+	background-image:linear-gradient(#FDDDED, #FDDDED) !important;
 	color:#FFF !important;
 	border-radius: 15px 15px 15px 15px !important;
 }
-.ui-btn-up-d a.ui-link-inherit, .ui-btn-up-c a.ui-link-inherit, .ui-btn-up-b a.ui-link-inherit, .ui-btn-up-a a.ui-link-inherit, .ui-btn-hover-d:visited, .ui-btn-hover-d:hover, .ui-btn-hover-d a.ui-link-inherit, .ui-btn-hover-c:visited, .ui-btn-hover-c:hover, .ui-btn-hover-c a.ui-link-inherit {
-	color: #FFF;
+.ui-btn-up-d a.ui-link-inherit, .ui-btn-up-c a.ui-link-inherit, .ui-btn-up-b a.ui-link-inherit, .ui-btn-up-a a.ui-link-inherit, .ui-btn-hover-d:visited, .ui-btn-hover-d:hover, .ui-btn-hover-d a.ui-link-inherit, .ui-btn-hover-c:visited, .ui-btn-hover-c:hover, .ui-btn-hover-c a.ui-link-inherit,.ui-btn-hover-a {
+	color:#f13c87 !important;
 	text-shadow:none !important;
 }
+
 .main-tab .ui-icon, .main-tab .ui-widget-content .ui-icon {
 	background-color: transparent;
-	background-image: url("arrowr.png") !important;
+	background-image: url("arrowright.png") !important;
 	background-position: 9px 8px !important;
 	height: 30px;
 	width: 30px;
@@ -593,6 +595,12 @@ abbr, acronym {
 }
 .ui-body-c, .ui-overlay-c {
 	color: #808184;
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#FFF), to(#FFF)) !important;
+	background-image:-webkit-linear-gradient(#FFF, #FFF) !important;
+	background-image:-moz-linear-gradient(#FFF, #FFF) !important;
+	background-image:-ms-linear-gradient(#FFF, #FFF) !important;
+	background-image:-o-linear-gradient(#FFF, #FFF) !important;
+	background-image:linear-gradient(#FFF, #FFF) !important;
 }
 .ui-body-c, .ui-body-c input, .ui-body-c select, .ui-body-c textarea, .ui-body-c button {
 	font-family: Myriad Pro;
@@ -663,9 +671,12 @@ input.ui-input-text {
 	padding: 0 1% 1%;
 }
 .ui-btn-up-c {
-	color: #ED1975;
+	color: #ED1975 !important;
 }
 
+#riskassessment .ui-btn-up-c {
+	color: #FFF !important;
+}
 /*panel */
 #nav-panel.ui-panel-open {
 	width:400px;
@@ -693,7 +704,7 @@ input.ui-input-text {
 }
 }
 .ui-responsive-panel.ui-bar-c {
-	background: linear-gradient(#ec3092, #ec3092) repeat scroll 0 0 #ec3092;
+	background: linear-gradient(#fddaeb, #fddaeb) repeat scroll 0 0 #fddaeb;
 }
 /* Right Menu Styles */
 #topmenu .ui-icon {
@@ -731,16 +742,30 @@ input.ui-input-text {
 	text-align: right;
 	width: 58%;
 }
+
+#riskassessment .ui-btn-up-d a.ui-link-inherit,#riskassessment .ui-btn-up-c a.ui-link-inherit,#riskassessment .ui-btn-up-b a.ui-link-inherit,#riskassessment .ui-btn-up-a a.ui-link-inherit,#riskassessment .ui-btn-hover-d:visited,#riskassessment .ui-btn-hover-d:hover,#riskassessment .ui-btn-hover-d a.ui-link-inherit,#riskassessment .ui-btn-hover-c:visited,#riskassessment .ui-btn-hover-c:hover,#riskassessment .ui-btn-hover-c a.ui-link-inherit,#riskassessment .ui-btn-hover-a
+{
+	color:#FFF !important;
+}
+
+#nav-panel .ui-btn-up-d a.ui-link-inherit,#nav-panel .ui-btn-up-c a.ui-link-inherit,#nav-panel .ui-btn-up-b a.ui-link-inherit,#nav-panel .ui-btn-up-a a.ui-link-inherit,#nav-panel .ui-btn-hover-d:visited,#nav-panel .ui-btn-hover-d:hover,#nav-panel .ui-btn-hover-d a.ui-link-inherit,#nav-panel .ui-btn-hover-c:visited,#nav-panel .ui-btn-hover-c:hover,#nav-panel .ui-btn-hover-c a.ui-link-inherit,#nav-panel .ui-btn-hover-a
+{
+	color:#f13c87 !important;
+}
+
+#riskassessment .ui-body-c, .ui-overlay-c {
+border: none;
+}
 #riskassessment .ui-select .ui-icon, #riskassessment .ui-select .ui-widget-content .ui-icon {
 	background-color: transparent;
 	background-image: url("arrowdown.png") !important;
 	background-position: 0 2px !important;
 	top: 56% !important
 }
-#calcform label.error {
+#risk label.error {
 	color: yellow;
 }
-#calcform .calbtn .ui-btn-hover-c, #calcform .calbtn .ui-btn-up-c {
+#risk .calbtn .ui-btn-hover-c, #risk .calbtn .ui-btn-up-c {
 	background-image:-webkit-gradient(linear, left top, left bottom, from(#ec3092), to(#ec3092)) !important;
 	background-image:-webkit-linear-gradient(#ec3092, #ec3092) !important;
 	background-image:-moz-linear-gradient(#ec3092, #ec3092) !important;
@@ -748,7 +773,7 @@ input.ui-input-text {
 	background-image:-o-linear-gradient(#ec3092, #ec3092) !important;
 	background-image:linear-gradient(#ec3092, #ec3092) !important;
 }
-#calcform .ui-select .ui-btn-hover-c, #calcform .ui-select .ui-btn-up-c {
+#risk .ui-select .ui-btn-hover-c, #risk .ui-select .ui-btn-up-c {
 	background-image:-webkit-gradient(linear, left top, left bottom, from(#f393bd), to(#f393bd)) !important;
 	background-image:-webkit-linear-gradient(#f393bd, #f393bd) !important;
 	background-image:-moz-linear-gradient(#f393bd, #f393bd) !important;
@@ -756,7 +781,7 @@ input.ui-input-text {
 	background-image:-o-linear-gradient(#f393bd, #f393bd) !important;
 	background-image:linear-gradient(#f393bd, #f393bd) !important;
 }
-#calcform label {
+#risk label {
 	color:#ec3092;
 }
 /* Flash image styles */
@@ -776,4 +801,18 @@ font-weight:normal;
 {
 	color: #FF4898;
     font-size: 120%;
+}
+/*risk factors page */
+
+
+#factors1 .ui-listview-inset .ui-li {
+    border: medium none;
+    margin: 1em 0;
+}
+
+
+/* risk factors footer */
+.ui-footer .ui-btn-text
+{
+color:#f13c87 !important;
 }

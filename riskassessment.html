@@ -9,7 +9,7 @@
   <script src="jquery.mobile-1.3.1.min.js"></script>
   <script src="utility.js" type="text/javascript" ></script>
   <script src="jquery.validate.js"></script>
-  <script src="bcra.js" type="text/javascript"> </script>
+  <script src="bcra1.js" type="text/javascript"> </script>
   <script>
 $(document).ready(function() {
     var sPageURL = window.location.search.substring(1);
@@ -24,117 +24,6 @@ $(document).ready(function() {
 		  $('h4').append(val);	  	
 	   }
    }
-	
-	
-	  $('#calcform').validate({  
-	  rules: {
-	  q1:
-	  {  
-              required: true  
-      },
-	  q2:
-	  {  
-              required: true 
-      },
-	  q3:
-	  {  
-              required: true  
-      },
-	  q4:
-	  {  
-              required: true 
-      },
-	  q5:
-	  {  
-              required: true
-      },
-	  q6:
-	  {  
-              required: true 
-      },
-	  q6a:
-	  {  
-              required: true  
-      },
-	  q6b:
-	  {  
-              required: true  
-      },
-	  q7:
-	  {  
-              required: true  
-      }, 
-	  q7a:
-	  {  
-              required: true  
-      } 
-	  }
-	  
-	  });
- //Check cancer history
-$('#q1').change(function() {
-	 var q1 = document.getElementById("q1").value;
-	if(q1 == "1")
-	{
-		checkHistory()
-	}
-});
-// Check age criteria
-$('#q2').change(function() {
-	 var q2 = document.getElementById("q2").value;	
-	 if(q2 == "34")
-	 {
-		 checkAge()
-	 }	  
-});
-	  // change val of 6a n 6b
-  $('#q6').change(function() { 
-	 var q6 = document.getElementById("q6").value;
-	   var q6a   = document.getElementById("q6a");
-	   var q6b   = document.getElementById("q6b");
-	// alert(q6);
-	document.getElementById('q6a').options.length = 0;
-    document.getElementById('q6b').options.length = 0;
-	 if(q6 == '99' || q6 == '0')
-	 {		
-	  	opt = {		  
-		  '3' : 'N/A'
-	  };
-	  opt2= {		 
-		 '3' : 'N/A'
-	  };
-	   }
-	   if(q6 == '1')
-	   {
-			 opt = {		 
-		  '1' : '1',
-		  '2' :'>1'		
-	  };		
-	  opt2= {
-		   '99' : 'Unknown',
-		  '0' : 'No',
-		  '1': 'Yes'
-	  };
-	 }
-	   $("[name='q6a']").append($('<option></option>').val(" "));
-	  $.each(opt, function(q6, text) {
-		
-        $("[name='q6a']").append($('<option></option>').val(q6).html(text));
-    });
-		  $("[name='q6b']").append($('<option></option>').val(" "));
-	$.each(opt2, function(q6, text) {
-	
-        $("[name='q6b']").append(
-            $('<option></option>').val(q6).html(text)
-        );
-    });
-  });  
-});
-
-
-  $(function(){
-$('#calculate').live("click",function()
-{
 	 var sPageURL = window.location.search.substring(1);
     var sURLVariables = sPageURL.split('&');
     for (var i = 0; i < sURLVariables.length; i++)
@@ -143,64 +32,37 @@ $('#calculate').live("click",function()
         if (sParameterName[0] == 'user_id')
         {
         //alert(sParameterName[1]);
-		var id=sParameterName[1];		 
+		var id=sParameterName[1];	
+		  	$('#useridbox').val(id);
+			
         }
     }
-$("#calcform").validate().element("#q1");
-$("#calcform").validate().element("#q2");
-$("#calcform").validate().element("#q3");
-$("#calcform").validate().element("#q4");
-$("#calcform").validate().element("#q5");
-$("#calcform").validate().element("#q6");
-$("#calcform").validate().element("#q6a");
-$("#calcform").validate().element("#q6b");
-$("#calcform").validate().element("#q7");
-$("#calcform").validate().element("#q7a");
+	
 
-var q1 = document.getElementById("q1").value;  
-var q2 = document.getElementById("q2").value;
-var q3 = document.getElementById("q3").value;
-var q4 = document.getElementById("q4").value;
-var q5 = document.getElementById("q5").value;
-var q6 = document.getElementById("q6").value;
-var q6a = document.getElementById("q6a").value;
-var q6b = document.getElementById("q6b").value;
-var q7 = document.getElementById("q7").value;
-var q7a = document.getElementById("q7a").value;	 
+  $(function(){
+$('#calculate').live("click",function()
+{
+	calculate();
 
+ 
+//result display 
+/*var a1 = $("#history option:selected").text();  
+var a2 =$("#current_age option:selected").text();
+var a3 = $("#age_at_menarche option:selected").text();
+var a4 = $("#age_at_first_live_birth option:selected").text();
+var a5 = $("#related_with_breast_cancer option:selected").text();
+var a6 =$("#ever_had_biopsy option:selected").text();
+var a6a = $("#previous_biopsies option:selected").text();
+var a6b = $("#biopsy_with_hyperplasia option:selected").text();
+var a7 = $("#race option:selected").text();
+var a7a =$("#subrace option:selected").text();*/
 
 //submit questions	 
 //  alert(id)		
-var val=$("#calcform").validate().form();
-if(val==true)
-{ 
-$.getJSON("http://www.mobiletest.mednl.com/assessment.php?jsoncallback=?&ans1="+q1+"&ans2="+q2+"&ans3="+q3+"&ans4="+q4+"&ans5="+q5+"&ans6="+q6+"&ans6a="+q6a+"&ans6b="+q6b+"&ans7="+q7+"&ans7a="+q7a+"&user_id="+id, function(data){ 
-if(data['err']== '1')
-   {
-	  alert(data['msg']);
-   }
-else if(data['err']=='2')
-{
-	  alert(data['msg']);
-}
+//window.location='assesmentresult.html?&ans1='+a1+'&ans2='+a2+'&ans3='+a3+'&ans4='+a4+'&ans5='+a5+'&ans6='+a6+'&ans6a='+a6a+'&ans6b='+a6b+'&ans7='+a7+'&ans7a='+a7a;
+ 
 });
-}
-else
-{
-	alert("Please fill all inputs");
-}
-	 
-/*alert(q1);
-alert(q2);
-alert(q3);
-alert(q4);
-alert(q5);
-alert(q6);
-alert(q6a);
-alert(q6b);
-alert(q6b);
-alert(q7);
-alert(q7a);*/
+
 });
 });
 $(document).on('pagebeforecreate', 'body', function(){     
@@ -238,17 +100,17 @@ $.mobile.defaultPageTransition = 'none';
         <p>The Breast Cancer Risk Assessment Tool is an interactive tool designed by scientists at the National Cancer Institute (NCI) and the National surgical Adjuvant Breast and Bowel Project (NSABP) to estimate a woman's risk of developing invasive breast cancer.</p>
         <p> To calculate your risk of getting breast cancer, answer the questions in the Risk Calculator below. </p>
         <h5> RISK CALCULATOR </h5>
-        <form id="calcform" method="post" action="">
-          <label for="q1" class="select">1.Do you have a medical history of any breast cancer or of ductal carcinoma in situ (DCIS) or lobular carcinoma in situ (LCIS)? </label>
-          <select name="q1" id="q1">
-            <option> </option>
+        <form id="risk" method="post" action="" name="risk">
+          <label for="history" class="select">1.Do you have a medical history of any breast cancer or of ductal carcinoma in situ (DCIS) or lobular carcinoma in situ (LCIS)? </label>
+          <select onChange="checkHistory()" name="history" id="history">
+            <option value="">Select</option>
             <option value="1">Yes</option>
             <option value="0">No</option>
           </select>
-          <label for="q2" class="select">2.What is your age? </label>
-          <select name="q2" id="q2">
-            <option> </option>
-            <option value="34"> < 35 </option>
+          <label  for="current_age" class="select">2.What is your age? </label>
+          <select onChange="checkAge()" size="1" name="current_age" id="current_age">
+            <option value="99">Select</option>
+            <option value="34"> &lt; 35 </option>
             <option value="35">35</option>
             <option value="36">36</option>
             <option value="37">37</option>
@@ -301,17 +163,17 @@ $.mobile.defaultPageTransition = 'none';
             <option value="84">84</option>
             <option value="85">85</option>
           </select>
-          <label for="q3" class="select">3.What was your age at the time of your first menstrual period? </label>
-          <select name="q3" id="q3">
-            <option > </option>
+          <label for="age_at_menarche" class="select">3.What was your age at the time of your first menstrual period? </label>
+          <select  size="1" name="age_at_menarche" id="age_at_menarche">
+            <option value="999">Select</option>
             <option value="99">Unknown</option>
             <option value="10">7-11</option>
             <option value="13">12-13</option>
             <option value="14"> >= 14</option>
           </select>
-          <label for="q4" class="select">4.What was your age at the time of the first live birth of your child? </label>
-          <select name="q4" id="q4">
-            <option> </option>
+          <label for="age_at_first_live_birth" class="select">4.What was your age at the time of the first live birth of your child? </label>
+          <select size="1" name="age_at_first_live_birth" id="age_at_first_live_birth">
+            <option value="999">Select</option>
             <option value="99">Unknown</option>
             <option value="0">No births</option>
             <option value="15">< 20</option>
@@ -319,37 +181,47 @@ $.mobile.defaultPageTransition = 'none';
             <option value="27"> 25-29</option>
             <option value="30"> >= 30</option>
           </select>
-          <label for="q5" class="select">5.How many of your first-degree relatives - mother, sisters, daughters - have had breast cancer?</label>
-          <select name="q5" id="q5">
-            <option> </option>
+          <label for="related_with_breast_cancer" class="select">5.How many of your first-degree relatives - mother, sisters, daughters - have had breast cancer?</label>
+          <select size="1" name="related_with_breast_cancer" id="related_with_breast_cancer">
+            <option value="999">Select</option>
             <option value="99">Unknown</option>
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2"> >1</option>
           </select>
-          <label for="q6" class="select">6.Have you ever had a breast biopsy?</label>
-          <select name="q6" id="q6">
-            <option> </option>
+          <label for="ever_had_biopsy" class="select">6.Have you ever had a breast biopsy?</label>
+          <select onChange="checkBiopsy()" size="1" name="ever_had_biopsy" id="ever_had_biopsy">
+            <option value="999">Select</option>
             <option value="99">Unknown</option>
             <option value="0">No</option>
             <option value="1">Yes</option>
           </select>
-          <label for="q6a" class="select">6a. How many breast biopsies (positive or negative) have you had?</label>
-          <select name="q6a" id="q6a">
-            <option> </option>
+          <label for="previous_biopsies" class="select">6a. How many breast biopsies (positive or negative) have you had?</label>
+          <select size="1" name="previous_biopsies" id="previous_biopsies">
+            <option value="999">Select</option>
+            <option value="1">1</option>
+            <option value="2">&gt; 1</option>
           </select>
-          <label for="q6b" class="select">6b. Have you had at least one breast biopsy with atypical hyperplasia?</label>
-          <select name="q6b" id="q6b">
-            <option> </option>
+          <label for="biopsy_with_hyperplasia" class="select">6b. Have you had at least one breast biopsy with atypical hyperplasia?</label>
+          <select size="1" name="biopsy_with_hyperplasia" id="biopsy_with_hyperplasia">
+            <option value="999">Select</option>
+            <option value="99">Unknown</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
           </select>
-          <label for="q7" class="select">7. What is your race/ethnicity?</label>
-          <select name="q7" id="q7">
-            <option> </option>
+          <label for="race" class="select">7. What is your race/ethnicity?</label>
+          <select  onChange="checkEthnicity()" size="1" name="race" id="race">
+            <option value="999">Select</option>
             <option value="1">White</option>
+            <option value="2">African American</option>
+            <option value="3">Hispanic</option>
+            <option value="4">Asian-American</option>
+            <option value="5">American Indian or Alaskan Native</option>
+            <option value="6">Unknown</option>
           </select>
-          <label for="q7a" class="select">7a. What is the sub-race/ethnicity</label>
-          <select name="q7a" id="q7a">
-            <option> </option>
+          <label for="sub_ethnicity" class="select">7a. What is the sub-race/ethnicity</label>
+          <select size="1" name="subrace" id="subrace">
+            <option value="999">Select</option>
             <option value="7">Chinese</option>
             <option value="8">Japanese</option>
             <option value="9">Filipino</option>
@@ -357,8 +229,9 @@ $.mobile.defaultPageTransition = 'none';
             <option value="11">Other Pacific Islander</option>
             <option value="12">Other Asian-American</option>
           </select>
+          <input type="text" id="useridbox" style="display:none;" />
           <div class="calbtn">
-            <input type="button" value="Calculate" id="calculate"/>
+            <input type="button" value="Submit" id="calculate"/>
           </div>
         </form>
       </div>

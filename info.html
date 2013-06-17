@@ -31,6 +31,9 @@ $(document).on('pageshow', 'body', function(){
  $(document).bind("mobileinit", function () {
 $.mobile.defaultPageTransition = 'none';
 });
+$(document).bind("pageinit", function() {
+$("[data-role=header],[data-role=footer]").fixedtoolbar({ tapToggle: true });
+});
   </script>
   </head>
 
@@ -46,24 +49,24 @@ $.mobile.defaultPageTransition = 'none';
       </ul>
   </div>
     <!-- end of panel -->
-    <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> 
-    <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
+    <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
     <h1 class="ui-title" role="heading" aria-level="1">What is breast cancer?</h1>
     <a id="topmenu" href="#nav-panel" data-role="button" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a> </div>
     <div data-role="content">
     <div id="main-content">
         <h4>Interesting Breast facts </h4>
         <ul>
-        <li> The left and right breasts are never exactly the same size. The left breast is usually slightly bigger than the right one. </li>
-        <li> The average breast weighs about half a kg and contributes to about 1 percent of the total body weight in an average woman. </li>
+        <li> The left and right breasts are never exactly the same size. The left breast is usually slightly bigger than the right one.</li>
+        <li> The average breast weighs about half a kg and contributes to about 1 percent of the total body weight in an average woman.</li>
         <li> Your sleeping position is important in maintaining the firmness and shape of your breasts. The best sleep position is on your side with a pillow under the breasts for support. </li>
       </ul>
+        <p> <img src="womanexamining.png" alt="interestingfacts" width="100%" > </p>
       </div>
   </div>
   </div>
 
-    <!-- end of facts -->
-    <div id="whatisbc" data-role="page" class="jqm-demos ui-responsive-panel">
+<!-- end of facts -->
+<div id="whatisbc" data-role="page" class="jqm-demos ui-responsive-panel">
     <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
     <ul data-role="listview" data-theme="a" data-icon="false" >
         <li><a href="#facts" id="" data-icon="custom" rel="external">Interesting Breast facts</a></li>
@@ -81,6 +84,7 @@ $.mobile.defaultPageTransition = 'none';
     <div id="main-content">
         <h4>What is breast cancer? </h4>
         <p>Breast cancer is a form of cancer that affects the cells of the breast. In breast cancer, cells in the breast become abnormal and multiply without control, leading to formation of a tumor.</p>
+        <p> <img src="Breastcancer.png" alt="statistics" width="100%" > </p>
       </div>
   </div>
     <!-- end of content --> 
@@ -89,7 +93,7 @@ $.mobile.defaultPageTransition = 'none';
 <div id="statistics" data-role="page"  class="jqm-demos ui-responsive-panel">
     <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
     <ul data-role="listview" data-theme="a" data-icon="false" >
-    <li><a href="#facts" id="" data-icon="custom" rel="external">Interesting Breast facts</a></li>
+        <li><a href="#facts" id="" data-icon="custom" rel="external">Interesting Breast facts</a></li>
         <li><a href="#whatisbc" id=""data-icon="custom" rel="external">What is breast cancer? </a></li>
         <li><a href="#" id="" data-icon="custom" class="selected">Worldwide statistics </a></li>
         <li><a href="#burden" id=""  data-icon="custom" rel="external">Burden of breast cancer in India</a></li>
@@ -102,6 +106,7 @@ $.mobile.defaultPageTransition = 'none';
     <div data-role="content">
     <div id="main-content">
         <p>Breast cancer is the most common form of cancer seen in women worldwide. It comprises 16% of all cancers in females. According to the WHO Global Burden of Disease, 2004, 69% of all breast cancer deaths occur in developing countries.By 2020, breast cancer cases are expected to increase by 26%. Most of these cases will be seen in developing countries.</p>
+        <p> <img src="abstractglobe.png" alt="globe" width="100%" > </p>
       </div>
     <!--end of content --> 
   </div>
@@ -110,7 +115,7 @@ $.mobile.defaultPageTransition = 'none';
 <div id="burden" data-role="page"  class="jqm-demos ui-responsive-panel">
     <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
     <ul data-role="listview" data-theme="a" data-icon="false" >
-    <li><a href="#facts" id="" data-icon="custom" rel="external">Interesting Breast facts</a></li>
+        <li><a href="#facts" id="" data-icon="custom" rel="external">Interesting Breast facts</a></li>
         <li><a href="#whatisbc" id="info"  rel="external">What is breast cancer? </a></li>
         <li><a href="#statistics" id="statistics"  rel="external">Worldwide statistics </a></li>
         <li><a href="#burden" id="burdenicon"  class="selected">Burden of breast cancer in India</a></li>
@@ -123,7 +128,8 @@ $.mobile.defaultPageTransition = 'none';
     <div data-role="content">
     <div id="main-content">
         <p>The incidence of breast cancer is increasing in India as women adopt western lifestyles of marrying later and having children later in life.</p>
-        <p>It is estimated that over 100,000 new breast cancer patients are diagnosed annually in India. The incidence of this disease has been consistently increasing at a rate of 0.5-2% every year. This rise is being seen across all regions of India and in all age groups but especially in the younger age groups (<45 years). In India, more than 80% of breast cancer patients are younger than 60 years of age, with a significant proportion of Indian breast cancer patients being younger than 35 years of age. </p>
+        <p>It is estimated that over 100,000 new breast cancer patients are diagnosed annually in India. The incidence of this disease has been consistently increasing at a rate of 0.5-2% every year. This rise is being seen across all regions of India and in all age groups but especially in the younger age groups ( < 45 years). In India, more than 80% of breast cancer patients are younger than 60 years of age, with a significant proportion of Indian breast cancer patients being younger than 35 years of age. </p>
+        <p> <img src="Indiamap.png" alt="globe" width="100%" > </p>
       </div>
   </div>
   </div>
@@ -131,7 +137,7 @@ $.mobile.defaultPageTransition = 'none';
 <div id="factors1" data-role="page"  class="jqm-demos ui-responsive-panel">
     <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
     <ul data-role="listview" data-theme="a" data-icon="false" >
-    <li><a href="#facts" id="" data-icon="custom" rel="external">Interesting Breast facts</a></li>
+        <li><a href="#facts" id="" data-icon="custom" rel="external">Interesting Breast facts</a></li>
         <li><a href="#whatisbc" id="info" data-icon="custom" rel="external">What is breast cancer? </a></li>
         <li><a href="#statistics" id="" data-icon="custom" rel="external">Worldwide statistics </a></li>
         <li><a href="#burden" id="" data-icon="custom" rel="external">Burden of breast cancer in India</a></li>
@@ -144,6 +150,10 @@ $.mobile.defaultPageTransition = 'none';
     <div data-role="content">
     <div id="main-content">
         <p>There are several risk factors that may increase a person's chance of developing breast cancer. There are different kinds of risk factors - some are lifestyle-related factors, which can be modified, while other factors cannot be changed.</p>
+        <ul  data-role="listview" data-inset="true">
+        <li class="main-tab"> <a href="info.html#non-modifiablerisk" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Non-modifiable risk factors</a> </li>
+        <li class="main-tab"> <a href="info.html#modifiablerisk" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Modifiable risk factors</a> </li>
+      </ul>
       </div>
   </div>
   </div>
@@ -151,8 +161,13 @@ $.mobile.defaultPageTransition = 'none';
 <div id="modifiablerisk" data-role="page"  class="jqm-demos ui-responsive-panel">
     <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
     <ul data-role="listview" data-theme="a" data-icon="false" >
-               <li><a href="#non-modifiablerisk" id="info" data-icon="custom" rel="external" class="selected">Non-Modifiable Risk </a></li>
-               <li><a href="#" id="info" data-icon="custom" rel="external">Modifiable Risk </a></li>
+        <li><a href="#" id="modifiablerisk" data-icon="custom" rel="external">Having children </a></li>
+        <li><a href="modifiable_2.html" id="modifiablerisk" data-icon="custom" rel="external" class="selected">Birth control </a></li>
+        <li><a href="modifiable_3.html" id="modifiablerisk" data-icon="custom" rel="external" class="selected">Hormone therapy after menopause </a></li>
+        <li><a href="modifiable_4.html" id="modifiablerisk" data-icon="custom" rel="external" class="selected">Breastfeeding </a></li>
+        <li><a href="modifiable_5.html" id="modifiablerisk" data-icon="custom" rel="external" class="selected">Alcohol </a></li>
+        <li><a href="modifiable_6.html" id="modifiablerisk" data-icon="custom" rel="external" class="selected">Overweight/obesity </a></li>
+        <li><a href="modifiable_7.html" id="modifiablerisk" data-icon="custom" rel="external" class="selected">Physical activity </a></li>
       </ul>
   </div>
     <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
@@ -162,13 +177,15 @@ $.mobile.defaultPageTransition = 'none';
     <div id="main-content">
         <ul>
         <li><b>Having children:</b> Having no children, or having the first child after the age of 30 slightly increases the risk of breast cancer. </li>
-        <li><b>Birth control: </b>Use of oral contraceptives has been found to slightly increase the risk of breast cancer. However, the risk was found to reduce once the drug is stopped.</li>
-        <li><b>Hormone therapy after menopause: </b> The use of combined hormone therapy after menopause increases the risk of breast cancer, and also the likelihood of advanced stage cancer. Other hormone therapies have not found to contribute to higher risk.</li>
-        <li><b>Breastfeeding:</b>Breastfeeding has been found to lower breast cancer risk, especially if breastfeeding is continued for 1.5-2 years.</li>
-        <li><b> Alcohol: </b>Alcohol consumption increases the risk of breast cancer.</li>
-        <li><b> Overweight/obesity: </b>Overweight or obesity after menopause has been linked to an increased risk of breast cancer.</li>
-        <li><b> Physical activity: </b>physical activity reduces the risk of breast cancer.</li>
+        <p> <img src="Mother.png" alt="" width="100%" > </p>
       </ul>
+        <!-- Footer Navigation -->
+        <div data-role="footer" data-position="fixed" data-fullscreen="true">
+        <div class="ui-grid-a full-width-buttons"> 
+        <div class="ui-block-a"><a href="#" data-role="button">Previous</a></div>
+            <div class="ui-block-b"><a href="modifiable_2.html" data-role="button" rel="external">Next</a></div>
+          </div>
+      </div>
       </div>
   </div>
   </div>
@@ -176,8 +193,8 @@ $.mobile.defaultPageTransition = 'none';
 <div id="non-modifiablerisk" data-role="page"  class="jqm-demos ui-responsive-panel">
     <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
     <ul data-role="listview" data-theme="a" data-icon="false" >
-               <li><a href="#" id="info" data-icon="custom" rel="external" class="selected">Non-Modifiable Risk </a></li>
-                <li><a href="#modifiablerisk" id="info" data-icon="custom" rel="external">Modifiable Risk </a></li>
+        <li><a href="#" id="info" data-icon="custom" rel="external" class="selected">Non-Modifiable Risk </a></li>
+        <li><a href="#modifiablerisk" id="info" data-icon="custom" rel="external">Modifiable Risk </a></li>
       </ul>
   </div>
     <div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner"> <a href="index.html#home" data-icon="home" class="ui-btn-left" rel="external">Home</a>
@@ -187,13 +204,20 @@ $.mobile.defaultPageTransition = 'none';
     <div id="main-content">
         <ul>
         <li><b>Gender: </b>Being a woman is a major risk factor for breast cancer. While men can also develop breast cancer, it is 100 times more common in women than in men.</li>
+        <p> <img src="illustration.png" alt="globe" width="100%" > </p>
         <li><b>Age: </b>The risk of breast cancer increases with age, with 2 out of 3 invasive breast cancers being found in women older than 55 years.</li>
+        <p> <img src="ageing.png" alt="" width="100%" > </p>
         <li><b>Genetics: </b>Gene defects or mutations are responsible for about 5-10% of breast cancer cases.</li>
+        <p> <img src="DNA_105173207.png" alt="" width="100%" > </p>
         <li><b>Family history: </b>Having a family history of breast cancer increases the risk of developing breast cancer.</li>
+        <p> <img src="Familytree.png" alt="" width="100%" > </p>
         <li><b>Breast density: </b>Women with dense breasts have a higher risk of breast cancer than women with less dense breasts. Breast density is affected by factors such as age, menopausal status, the use of 
             drugs (such as menopausal hormone therapy), pregnancy, and genetics. </li>
+        <p> <img src="breastcare.png" alt="" width="100%" > </p>
         <li><b>Menstrual periods: </b>Being younger at the time of the first menstrual period, or starting menopause at a later age increases the risk of breast cancer.</li>
+        <p> <img src="springsummer.png" alt="" width="100%" > </p>
         <li><b>Treatment with radiation therapy to the breast or chest: </b>Children or young adults who have had radiation therapy of the breast or chest are at significantly higher risk of breast cancer compared to those who have not undergone radiation therapy. The risk varies with age and is highest if the radiation exposure was at the time of adolescence when the breasts were still developing.</li>
+        <p> <img src="Nuclearsign.png" alt="" width="100%" > </p>
       </ul>
       </div>
   </div>
