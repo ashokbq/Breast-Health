@@ -55,7 +55,7 @@ $('#citydisplay').empty().append(cityname);
 				alert(item.image);
 					alert(item.address);*/
 	//alert(item.center_id);			
-	html +='<div id="citydetail"> <img id="cityimage" src="'+item.image+'"><br/><div id="detail"><div id="name_dis">'+item.name+'</div><div id="add_dis">'+item.address+'</div><div style="clear:both;"> </div></div> </div>';		 
+	html +='<div id="citydetaildisplay"><div id="detail"><div id="name_dis">'+item.name+'</div><div id="add_dis">'+item.address+'</div> <div  id="number"> <b> Call: </b>'+item.image+'</div><div style="clear:both;"> </div></div> </div>';		 
 		   });
 		$('#placeholder').empty().append(html);
         });

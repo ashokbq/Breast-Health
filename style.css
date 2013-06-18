@@ -341,11 +341,12 @@ p {
 }
 
 #citydetail {
-	border: 5px solid pink;
-	border-radius: 10px 10px 10px 10px;
-	height: 155px;
-	margin: 1%;
-	padding: 1% 2% 2%;
+	 border: 5px solid pink;
+    border-radius: 10px 10px 10px 10px;
+    height: 9px;
+    margin: 1%;
+    padding: 0 2% 2%;
+
 }
 #cityimage {
 	border: 5px solid #ED1975;
@@ -356,14 +357,15 @@ p {
  float: left;
     font-size: 16px;
     font-weight: bold;
-    padding: 2%;
+   
     text-align: left;
-    width: 25%;
+  /*   width: 25%; */
 	}
 #cname a {
 	color: #C92581;
 	font-weight: normal;
 	text-decoration: none;
+
 }
 #add {
 	margin-top:1%;
@@ -520,7 +522,7 @@ abbr, acronym {
 	background-image:linear-gradient(#FFF, #FFF) !important;
 }
 .ui-content {
-	padding-left:30px;
+ padding: 15px;
 }
 .ui-body-d, .ui-overlay-d {
 	background: none repeat scroll 0 0 transparent;
@@ -659,7 +661,7 @@ input.ui-input-text {
 }
 
 #name_dis {
-	font-size: 1em;
+	font-size: 1.3em;
 	font-weight: bold;
 }
 #add_dis {

@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Life After Breast Cancer</title>
+  <title>Life after breast cancer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="jquery.mobile-1.3.1.min.css" />
-  <link rel="stylesheet" href="jquery-ui.css" />
-  <link rel="stylesheet" href="jquery.mobile.simpledialog.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="style.css">
   <script src="jquery-1.9.1.js"></script>
-  <script src="jquery-ui.js"></script>
   <script src="jquery.mobile-1.3.1.min.js"></script>
+  <script src="utility.js" type="text/javascript" ></script>
   <script>
 $(document).on('pagebeforecreate', 'body', function(){     
     var interval = setInterval(function(){
@@ -29,20 +27,20 @@ $(document).on('pageshow', 'body', function(){
         clearInterval(interval);
     },1);      
 });
-$(document).bind("mobileinit", function () {
+
+ $(document).bind("mobileinit", function () {
 $.mobile.defaultPageTransition = 'none';
 });
   </script>
   </head>
-
   <body>
 <div id="lifeafterbc" data-role="page"  class="data-value">
     <div data-role="panel" id="nav-panel"  data-display="overlay" data-position="left" data-theme="b" class="ui-responsive-panel ui-bar-c">
     <ul data-role="listview" data-theme="a" data-icon="false" >
-        <li><a href="#" id="lifeafterbc" data-icon="custom" rel="external">Regular follow-up with doctor </a></li>
+        <li><a href="lifeafterbc.html" id="lifeafterbc" data-icon="custom" rel="external">Regular follow-up with doctor </a></li>
         <li><a href="life2.html" id="lifeafterbc" data-icon="custom" rel="external" class="selected">Quit Smoking </a></li>
         <li><a href="life3.html" id="lifeafterbc" data-icon="custom" rel="external" class="selected">Balanced diet </a></li>
-        <li><a href="life4.html" id="lifeafterbc" data-icon="custom" rel="external" class="selected">Develop a wellness plan</a></li>
+        <li><a href="#" id="lifeafterbc" data-icon="custom" rel="external" class="selected">Develop a wellness plan</a></li>
         <li><a href="life5.html" id="lifeafterbc" data-icon="custom" rel="external" class="selected">Exercise program</a></li>
         <li><a href="life6.html" id="lifeafterbc" data-icon="custom" rel="external" class="selected">Share about your feelings</a></li>
         <li><a href="life7.html" id="lifeafterbc" data-icon="custom" rel="external" class="selected">Be part of a support group</a></li>
@@ -53,18 +51,17 @@ $.mobile.defaultPageTransition = 'none';
     <a id="topmenu" href="#nav-panel" data-role="button" data-display="overlay" data-position="right" data-icon="grid" class="ui-bar-a ui-btn-right">Menu</a> </div>
     <div data-role="content">
     <div id="main-content">
-    <h4> Life After Breast Cancer </h4>
-        <p> The end of cancer treatment is often a time to rejoice as it marks the end of the demands of treatment. One can look forward to getting back to a normal life. However, it may also be a cause for worry with concerns about the after-treatment effects and the possibility of recurrence of the cancer.</p>
-        <br/>
-        <p>Here are some tips for cancer survivors to follow post-treatment: </p>
+        <h4> Life After Breast Cancer </h4>
         <ul>
-        <li> Regular follow-up care with your doctor is very important. Meet your doctor every 3 to 4 months during the first 2 to 3 years after treatment, and once or twice a year after that.</li>
+        <li> Develop a wellness plan that includes ways you can take care of your physical, emotional, social, and spiritual needs.</li>
+        <br/>
+        <p> <img src="Yogawoman.png" width="100%"></p>
       </ul>
         <!-- Footer Navigation -->
         <div data-role="footer" data-position="fixed" data-fullscreen="true">
         <div class="ui-grid-a full-width-buttons">
-            <div class="ui-block-a"><a href="#" data-role="button" rel="external">Previous</a></div>
-            <div class="ui-block-b"><a href="life2.html" data-role="button" rel="external">Next</a></div>
+            <div class="ui-block-a"><a href="life3.html" data-role="button" rel="external">Previous</a></div>
+            <div class="ui-block-b"><a href="life5.html" data-role="button" rel="external">Next</a></div>
           </div>
       </div>
       </div>
