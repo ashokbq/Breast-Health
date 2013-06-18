@@ -26,6 +26,14 @@ $(document).ready(function() {
 		//$('#dialog-message').modal();	  
     		 }
     }
+	
+/*	$(function() {
+  h = $(window).height();
+  w = $(window).width();
+alert(h);
+alert(w);
+});
+*/
 });
  $('#splash').live('pageshow', function(){
        var hideSplash = function() {
@@ -46,7 +54,14 @@ $.mobile.defaultPageTransition = 'none';
 </head>
 <body id="index">
 <div data-role="page" id="splash" style="background-color:#FFF" class="flash">
-  <div data-role="content"> <img src="flash3.png" alt="startup image" width="674" height="591" align="middle" class="flashimg"/> </div>
+  <div data-role="content">
+  <!--   <img src="flash3.png" alt="startup image" width="674" height="591" align="middle" class="flashimg"/> -->
+    <table id="wrapper">
+      <tr>
+         <td><img src="flash3.png" alt="startup image" class="flashimg" width="100%"/></td>
+      </tr>
+   </table>
+   </div>
 </div>
 <div id="home" data-role="page"> 
   <!--<div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
