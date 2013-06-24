@@ -1,140 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home</title>
+<title>What is breast cancer?</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="jquery.mobile-1.3.1.min.css" />
+<link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
 <link rel="stylesheet" href="jquery-ui.css" />
 <link rel="stylesheet" href="jquery.mobile.simpledialog.min.css" />
 <link rel="stylesheet" href="style.css" />
-<!--<link rel="stylesheet" href="custom_d.min.css" />-->
+<script src="jquery-1.9.1.js"></script>
+<script src="jquery-ui.js"></script>
 <script src="jquery-1.7.1.min.js"></script>
-<script>  
-$(document).ready(function() {
-    var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++)
-    {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == 'name')
-        {
-         // alert(sParameterName[1]);
-		   $('h4').append(sParameterName[1]);
-		   $('#popupt').css({ 'display': 'block'});
-		$("#dialog-message").append(sParameterName[1]);
-		//$('#popupt').append(sParameterName[1]);
-		//$('#dialog-message').modal();	  
-    		 }
-    }
-	
-/*	$(function() {
-  h = $(window).height();
-  w = $(window).width();
-alert(h);
-alert(w);
+<script src="jquery.mobile-1.1.0.min.js"></script>
+</head>
+<script>
+$(function(){
+$('#knowabc').live("click",function()
+{
+	  window.location = 'knowabc.html'
 });
-*/
 });
- $('#splash').live('pageshow', function(){
-       var hideSplash = function() {
-          $.mobile.changePage($("#home"));
-       };
-      setTimeout(hideSplash, 4000);
-  });
-
-$(document).bind("mobileinit", function () {
-$.mobile.defaultPageTransition = 'none';
+$(function(){
+$('#accessrisk').live("click",function()
+{
+	  window.location = 'assessrisk.html'
+});
+});
+$(function(){
+$('#selfcheck').live("click",function()
+{
+	  window.location = 'selfcheck.html'
+});
+});
+$(function(){
+$('#findcenter').live("click",function()
+{
+	  window.location = 'findcenter.html'
+});
+});
+$(function(){
+$('#reminder').live("click",function()
+{
+	  window.location = 'reminder.html'
+});
 });
 </script>
-<script src="jquery-ui.js"></script>
-<script src="jquery.validate.js"></script>
-<script src="jquery.simplemodal.js"> </script>
-<script src="jquery.mobile-1.3.1.min.js"></script>
-<script src="utility.js" type="text/javascript" ></script>
-</head>
-<body id="index">
-<div data-role="page" id="splash" style="background-color:#FFF" class="flash">
+<body>
+<article id="index" data-role="page">
   <div data-role="content">
-  <!--   <img src="flash3.png" alt="startup image" width="674" height="591" align="middle" class="flashimg"/> -->
-    <table id="wrapper">
-      <tr>
-         <td><img src="flash3.png" alt="startup image" class="flashimg" width="100%"/></td>
-      </tr>
-   </table>
-   </div>
-</div>
-<div id="home" data-role="page"> 
-  <!--<div data-position="fixed" data-role="header" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
-    <h1>Home</h1>
-      <h4 class="ui-title"> Welcome </h4>
-  </div>-->
-  <div data-role="content" data-theme="d">
-    <div id="main-content"> 
-      <!-- Tab 1 -->
-      <ul data-role="listview" data-inset="true">
-        <li class="main-tab"> <a href="#"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">General information</a>
-          <ul  data-role="listview" data-inset="true">
-            <li class="main-tab"> <a href="info.html#facts" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Interesting Breast facts</a> </li>
-            <li class="main-tab"> <a href="info.html#whatisbc" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">What is breast cancer?</a> </li>
-            <li class="main-tab"> <a href="info.html#statistics" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Worldwide statistics</a> </li>
-            <li class="main-tab"> <a href="info.html#burden" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Burden of breast cancer in India</a> </li>
-            <li class="main-tab"> <a href="info.html#factors" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Risk factors</a>
-              <ul  data-role="listview" data-inset="true">
-                <li class="main-tab"> <a href="info.html#non-modifiablerisk" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Non-modifiable risk factors</a> </li>
-                <li class="main-tab"> <a href="info.html#modifiablerisk" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Modifiable risk factors</a> </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <!-- Tab 2 -->
-      <ul data-role="listview" data-inset="true">
-        <li class="main-tab"> <a href="#"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Early detection and screening </a>
-          <ul data-role="listview" data-inset="true">
-            <li class="main-tab"> <a href="signs.html" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Signs and symptoms of breast cancer</a> </li>
-            <li class="main-tab"> <a href="signs.html#awareness" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Breast awareness and self-examination</a> </li>
-            <li class="main-tab"> <a href="signs.html#examination" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Clinical breast examination</a> </li>
-            <li class="main-tab"> <a href="signs.html#mammography" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Mammography</a> </li>
-          </ul>
-        </li>
-      </ul>
-      <!-- Tab 3 -->
-      <ul data-role="listview" data-inset="true">
-        <li class="main-tab"> <a href="alert.html" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Breast Cancer Risk Assessment Tool</a> </li>
-      </ul>
-      <!-- Tab 4 -->
-      <ul data-role="listview" data-inset="true">
-        <li class="main-tab"> <a href="#"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Recommendations for early detection </a>
-          <ul data-role="listview" data-inset="true">
-            <li class="main-tab"> <a href="lowrisk.html" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Low risk individuals </a> </li>
-            <li class="main-tab"> <a href="lowrisk.html#modrisk" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Moderate risk individuals</a> </li>
-            <li class="main-tab"> <a href="lowrisk.html#highrisk" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">High risk individuals</a> </li>
-          </ul>
-        </li>
-      </ul>
-      <!-- Tab 5 -->
-      <ul data-role="listview" data-inset="true">
-        <li class="main-tab"> <a href="alert_center.html" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Mammogram centre locator</a> </li>
-      </ul>
-      <!-- Tab 6 -->
-      <ul data-role="listview" data-inset="true">
-        <li class="main-tab"> <a href="#"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Treatment options</a>
-          <ul data-role="listview" data-inset="true">
-            <li class="main-tab"> <a href="surgery.html" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Surgery</a> </li>
-            <li class="main-tab"> <a href="surgery.html#radiation" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Radiation Therapy</a> </li>
-            <li class="main-tab"> <a href="surgery.html#chemotherapy" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Chemotherapy</a> </li>
-            <li class="main-tab"> <a href="surgery.html#hormonetherapy" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Hormone Therapy</a> </li>
-            <li class="main-tab"> <a href="surgery.html#targetedtherapy" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Targeted Therapy</a> </li>
-          </ul>
-        </li>
-      </ul>
-      <!-- Tab 7 -->
-      <ul data-role="listview" data-inset="true">
-        <li class="main-tab"> <a href="lifeafterbc.html" rel="external"> <img src="tab_icon.png" alt="icon1" class="ui-li-icon">Life after breast cancer</a> </li>
-      </ul>
-      <div style="text-align: left;"> <img src="btmlogo.jpg" alt="startup image" width="456" height="467" align="left" /> </div>
+    <div id="header">
+      <div id="topmenu">
+        <div class="menu">
+          <button id="knowabc"> </button>
+          <button id="accessrisk"> </button>
+          <button id="selfcheck"> </button>
+        </div>
+      </div>
+      <div class="clear"> </div>
+      <div id="topmenu2">
+        <div class="menu">
+          <button id="findcenter"> </button>
+          <button id="reminder"> </button>
+        </div>
+      </div>
     </div>
+    <div class="clear"> </div>
+    <img src="breasthealth_logo.png" width="229" height="" align="middle"/> </div>
+  <footer id="footer"> </footer>
   </div>
-</div>
+</article>
 </body>
 </html>

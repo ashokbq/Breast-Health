@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>What is breast cancer?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
+  <link rel="stylesheet" href="jquery-ui.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="jquery-1.9.1.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script src="jquery-1.7.1.min.js"></script>
+  <script src="jquery.mobile-1.1.0.min.js"></script>
+  <script>
+  $(function(){
+$('#donebtn').live("click",function()
+{
+	  window.location = 'index.html'
+});
+});
+
+/* Swipping through pages */	
+$(document).on('swipeleft', 'article', function(event){
+    if(event.handled !== true) // This will prevent event triggering more then once
+    { 
+	
+        var nextpage = $(this).next('article[data-role="page"]');
+        // swipe using id of next page if exists
+        if (nextpage.length > 0) {
+            $.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);						
+        }
+	}
+         event.handled = true;
+	
+     return false;         
+});
+
+$(document).on('swiperight', 'article', function(event){   
+    if(event.handled !== true) // This will prevent event triggering more then once
+    {   
+        var prevpage = $(this).prev('article[data-role="page"]');
+        if (prevpage.length > 0) {
+            $.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);		
+        }
+        event.handled = true;
+      }
+    return false;            
+});
+
+
+  </script>
+  </head>
+  <body>
+<article id="fact" data-role="page">
+    <div data-role="content">
+    <div id="header">
+        <div id="titleheader">
+        <div id="headertext"> </div>
+      </div>
+        <div class="clear"> </div>
+        <div id="btmheader">
+        <button id="donebtn"> </button>
+      </div>
+      </div>
+    <div id="main-content">
+        <h3>Interesting Breast Facts </h3>
+        <div class="clear"> </div>
+        <p> The left breast is usually slightly <br/>
+        bigger than the right one. </p>
+        <div class="clear"> </div>
+        <p> The average breast weighs about <br/>
+        half a kg. </p>
+        <div class="clear"> </div>
+        <p>Sleeping position is important in <br/>
+        maintaining the firmness and shape<br/>
+        of your breasts.</p>
+      </div>
+    <div class="clear"> </div>
+    <div class="bottomnav">
+        <div class="btnnav">
+        <div id="leftbtn">
+            <div class="ui-block-a"><a href="knowabc.html" data-role="button" rel="external" id="leftnav"><img src="leftarrow.png" width="37" height="34"/> </a></div>
+            <div class="ui-block-b"><a href="knowabccont.html#what" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>
+          </div>
+        <div id="rightlogo"> </div>
+      </div>
+      </div>
+  </div>
+    <div class="clear"> </div>
+    <footer id="footer"> </footer>
+  </article>
+<article id="what" data-role="page">
+    <div data-role="content">
+    <div id="header">
+        <div id="titleheader">
+        <div id="headertext"> </div>
+      </div>
+        <div class="clear"> </div>
+        <div id="btmheader">
+        <button id="donebtn"> </button>
+      </div>
+      </div>
+    <div id="main-content">
+        <h3>What is Breast cancer? </h3>
+        <div class="clear"> </div>
+        <p> Breast cancer is a form of cancer that <br/>
+        affects the cells of the breast.</p>
+        <div class="clear"> </div>
+        <p>In breast cancer, cells in the breast <br/>
+        become abnormal and multiply<br/>
+        without control, leading to <br/>
+        formation of a tumor.</p>
+        <p> <img src="whatisimg.png" width="195" height="193"/> </p>
+      </div>
+    <div class="clear"> </div>
+    <div class="bottomnav">
+        <div class="btnnav">
+        <div id="leftbtn">
+            <div class="ui-block-a"><a href="knowabccont.html#fact" data-role="button" rel="external" id="leftnav"><img src="leftarrow.png" width="37" height="34"/> </a></div>
+            <div class="ui-block-b"><a href="knowabccont.html#statistic" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>
+          </div>
+        <div id="rightlogo"> </div>
+      </div>
+      </div>
+  </div>
+    <div class="clear"> </div>
+    <footer id="footer"> </footer>
+  </article>
+<article id="statistic" data-role="page">
+    <div data-role="content">
+    <div id="header">
+        <div id="titleheader">
+        <div id="headertext"> </div>
+      </div>
+        <div class="clear"> </div>
+        <div id="btmheader">
+        <button id="donebtn"> </button>
+      </div>
+      </div>
+    <div id="main-content">
+        <h3>Worldwide Breast cancer Statistics</h3>
+        <div class="clear"> </div>
+        <p> Breast cancer is the most common form of <br/>
+        cancer seen in women worldwide. It<br/>
+        comprises 16% of all cancers in females. </p>
+        <div class="clear"> </div>
+        <p>According to the WHO Global Burden of <br/>
+        Disease, 2004, 69% of all breast cancer<br/>
+        deaths occur in developing countries.</p>
+        <p>By 2020, breast cancer cases are expected<br/>
+        to increase by 26%. Most of these cases will<br/>
+        be seen in developing countries.</p>
+        <p> <img src="statisticsimg.png" width="294" height="187"/> </p>
+      </div>
+    <div class="clear"> </div>
+    <div class="bottomnav">
+        <div class="btnnav">
+        <div id="leftbtn">
+            <div class="ui-block-a"><a href="knowabccont.html#what" data-role="button" rel="external" id="leftnav"><img src="leftarrow.png" width="37" height="34"/> </a></div>
+            <div class="ui-block-b"><a href="knowabccont.html#indiastatistic" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>
+          </div>
+        <div id="rightlogo"> </div>
+      </div>
+      </div>
+  </div>
+    <div class="clear"> </div>
+    <footer id="footer"> </footer>
+  </article>
+<article id="indiastatistic" data-role="page">
+    <div data-role="content">
+    <div id="header">
+        <div id="titleheader">
+        <div id="headertext"> </div>
+      </div>
+        <div class="clear"> </div>
+        <div id="btmheader">
+        <button id="donebtn"> </button>
+      </div>
+      </div>
+    <div id="main-content">
+        <h3>Breast cancer in India</h3>
+        <div class="clear"> </div>
+        <p>The incidence of breast cancer is<br/>
+        increasing in India as women adopt<br/>
+        western lifestyles of marrying later and<br/>
+        having children later in life. </p>
+        <div class="clear"> </div>
+        <p>It is estimated that over 100,000 new<br/>
+        breast cancer patients are diagnosed<br/>
+        annually in India.</p>
+        <p> <img src="statindia.png" width="235" height="173"/> </p>
+        <p> The incidence of this disease has been <br/>
+        consistently increasing at a rate of 0.5-2% every year. </p>
+        <p>This rise is being seen across all <br/>
+        regions of India and in all age groups but <br/>
+        especially in the younger age groups (<45 years). </p>
+        <p> In India, more than 80% of breast cancer <br/>
+        patients are younger than 60 years of age, <br/>
+        with a significant proportion of Indian breast cancer <br/>
+        patients being younger than 35 years of age. 
+      </div>
+    <div class="clear"> </div>
+    <div class="bottomnav">
+        <div class="btnnav">
+        <div id="leftbtn">
+            <div class="ui-block-a"><a href="knowabccont.html#statistic" data-role="button" rel="external" id="leftnav"><img src="leftarrow.png" width="37" height="34"/> </a></div>
+            <div class="ui-block-b"><a href="knowabccont.html#sign" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>
+          </div>
+        <div id="rightlogo"> </div>
+      </div>
+      </div>
+  </div>
+    <div class="clear"> </div>
+    <footer id="footer"> </footer>
+  </article>
+<article id="sign" data-role="page">
+    <div data-role="content">
+    <div id="header">
+        <div id="titleheader">
+        <div id="headertext"> </div>
+      </div>
+        <div class="clear"> </div>
+        <div id="btmheader">
+        <button id="donebtn"> </button>
+      </div>
+      </div>
+    <div id="main-content">
+        <h3>Signs and Symptoms</h3>
+        <div class="clear"> </div>
+        <p>The presence of a lump or mass in or<br/>
+        near the breast</p>
+        <p> <img src="singsimg.png" width="147" height="160"/> </p>
+        <div class="clear"> </div>
+        <p>Swelling of the breast, or a lump or<br/>
+        swelling under the arm</p>
+        <p> <img src="singsimg1.png" width="146" height="125"/> </p>
+        <div class="clear"> </div>
+        <p>Irritation or dimpling of skin in the <br/>
+        breast region.</p>
+        <p> <img src="singsimg2.png" width="136" height="125"/> </p>
+        <div class="clear"> </div>
+        <p>Redness, scaliness, or thickening of <br/>
+        the nipple or breast skin.</p>
+        <p> <img src="singsimg3.png" width="136" height="124"/> </p>
+        <div class="clear"> </div>
+        <p>Breast or nipple pain</p>
+        <p> <img src="singsimg4.png" width="136" height="125"/> </p>
+        <div class="clear"> </div>
+        <p>nipple retraction (turning inward)</p>
+        <p> <img src="singsimg5.png" width="136" height="125"/> </p>
+        <div class="clear"> </div>
+        <p>nipple discharge</p>
+        <p> <img src="singsimg6.png" width="131" height="124"/> </p>
+      </div>
+    <div class="clear"> </div>
+    <div class="bottomnav">
+        <div class="btnnav">
+        <div id="leftbtn">
+            <div class="ui-block-a"><a href="knowabccont.html#indiastatistic" data-role="button" rel="external" id="leftnav"><img src="leftarrow.png" width="37" height="34"/> </a></div>
+            <div class="ui-block-b"><a href="knowabccont.html#treatmentoptions" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>
+          </div>
+        <div id="rightlogo"> </div>
+      </div>
+      </div>
+  </div>
+    <div class="clear"> </div>
+    <footer id="footer"> </footer>
+  </article>
+<article id="treatmentoptions" data-role="page">
+    <div data-role="content">
+    <div id="header">
+        <div id="titleheader">
+        <div id="headertext"> </div>
+      </div>
+        <div class="clear"> </div>
+        <div id="btmheader">
+        <button id="donebtn"> </button>
+      </div>
+      </div>
+    <div id="main-content">
+        <h3>Treatment options</h3>
+        <div class="clear"> </div>
+        <p><b>Surgery:</b>In most patients, surgery is the<br/>
+        treatment option followed in order to <br/>
+        remove the cancer from the breast. </p>
+        <div class="clear"> </div>
+        <p> Surgery may be of two types:</p>
+        <ul>
+        <li>it may involve removal of <br/>
+            the whole breast that has <br/>
+            cancer </li>
+        <li>it may involve removal of the <br/>
+            cancer, but not the  breast<br/>
+            itself (breast-conserving surgery). </li>
+      </ul>
+        <p><b>Radiation therapy:</b>High-energy x-rays or<br/>
+        other types of radiation are used to kill <br/>
+        cancer cells or prevent them from <br/>
+        growing further.</p>
+        <img src="radiationtherapy.png" width="336" height="221" />
+        <p><b>Chemotherapy:</b>Chemotherapy involves<br/>
+        the use of drugs which help to stop the <br/>
+        growth of cancer cells, either by killing <br/>
+        the cells or by stopping them from <br/>
+        dividing. <br/>
+      </p>
+        <p> The drug therapy may be systemic - <br/>
+        taken orally or by injection <br/>
+      </p>
+        <span style="color:#eb2f92;"> or </span><br/>
+        <p> it may be regional - placed directly into <br/>
+        the cerebrospinal fluid, an organ, <br/>
+        or a body cavity such as the abdomen in order <br/>
+        to affect cancer cells in those areas. <br/>
+      </p>
+        <p> <b> Hormone Therapy: </b> Hormone therapy <br/>
+        involves removal of hormones or <br/>
+        blocking of their activity so that cancer <br/>
+        cells are unable to grow. </br>
+      </p>
+        <p><b>Targeted therapy:</b> In targeted therapy, <br/>
+        drugs or other substances are used to <br/>
+        identify and attach to specific cancer<br/>
+        cells, without harming the normal cells. </p>
+        <p> Once attached to cancer cells, they may <br/>
+        kill them, block their growth or prevent <br/>
+        them from spreading. </p>
+        <p>Monoclonal antibodies and tyrosine <br/>
+        kinase inhibitors are two types of <br/>
+        targeted therapies used in the treatment <br/>
+        of breast cancer. <br/>
+      <div class="clear"> </div>
+      </div>
+    <div class="clear"> </div>
+    <div class="bottomnav">
+        <div class="btnnav">
+        <div id="leftbtn">
+            <div class="ui-block-a"><a href="knowabccont.html#sign" data-role="button" rel="external" id="leftnav"><img src="leftarrow.png" width="37" height="34"/> </a></div>
+            <div class="ui-block-b"><a href="knowabccont.html#tipssurvivour" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>
+          </div>
+        <div id="rightlogo"> </div>
+      </div>
+      </div>
+  </div>
+    <div class="clear"> </div>
+    <footer id="footer"> </footer>
+  </article>
+<article id="tipssurvivour" data-role="page">
+    <div data-role="content">
+    <div id="header">
+        <div id="titleheader">
+        <div id="headertext"> </div>
+      </div>
+        <div class="clear"> </div>
+        <div id="btmheader">
+        <button id="donebtn"> </button>
+      </div>
+      </div>
+    <div id="main-content">
+        <h3>Tips for cancer survivors</h3>
+        <div class="clear"> </div>
+        <h4> Regular follow-up care -</h4>
+        <div class="clear"> </div>
+        <p>every 3 to 4 months with your doctor<br/>
+        during the first 2 to 3 years after<br/>
+        treatment</p>
+        <p> once or twice a year after that. </p>
+        <h4> Live a healthy life -</h4>
+        <p>Quit smoking </p>
+        <p> maintain a healthy weight </p>
+        <h4> Make healthy food choices after your <br/>
+        treatment - </h4>
+        <ul>
+        <li> Control your calories to achieve a <br/>
+            healthy weight </li>
+        <li>Eat more fruits and vegetables</li>
+        <li> Eat more plant-based foods </li>
+        <li> Eat more fibre </li>
+        <li> Eat less fat </li>
+        <li> Eat less sugar </li>
+      </ul>
+        <p> Develop a wellness plan to take care of <br/>
+        your physical, emotional, social, and spiritual <br/>
+        needs. </p>
+        <p>Physical activity can be empowering and <br/>
+        can enhance your overall well-being. </p>
+        <p> Be part of a support group to share your <br/>
+        feelings and experiences with others. </p>
+      </div>
+    <div class="clear"> </div>
+    <div class="bottomnav">
+        <div class="btnnav">
+        <div id="leftbtn">
+            <div class="ui-block-a"><a href="knowabccont.html#treatmentoptions" data-role="button" rel="external" id="leftnav"><img src="leftarrow.png" width="37" height="34"/> </a></div>
+            <div class="ui-block-b"><a href="#" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>
+          </div>
+        <div id="rightlogo"> </div>
+      </div>
+      </div>
+  </div>
+    <div class="clear"> </div>
+    <footer id="footer"> </footer>
+  </article>
+</body>
+</html>
