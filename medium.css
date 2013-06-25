@@ -170,16 +170,16 @@ margin-right: 2%;
 }
 #topmenu .ui-btn {
 	float: left;
-	width:104px;
+	width: 80px;
 	margin-bottom:0;
-	height:42px;
+	height:33px;
 }
 #topmenu2 .ui-btn {
 	float: left;
 	margin-bottom:0;
 	margin-top: 0;
-	width:104px;
-	height:42px;
+	width:80px;
+	height:33px;
 }
 #header {
 	height:170px;
@@ -192,14 +192,14 @@ margin-right: 2%;
 }
 .menu {
 	left: 50%;
-	margin-left:-165px;
+	margin-left: -219px;
 	margin-top:14px;
 	position: absolute;
 	top: 0;
 }
-
+menu img
 #topmenu2 .menu {
-	margin-left: -120px;
+	margin-left: -155px;
 	margin-top: 93px;
 }
 #topmenu {
@@ -231,54 +231,48 @@ margin-right: 2%;
 	top: 0;
 	width: 430px;
 }
- #wrapper {
-   height:100%;
-   width: 100%;
-   margin: 0;
-   padding: 0;
-   border: 0;
- }
-#wrapper td {
-   vertical-align: middle;
-   text-align: center;
-}
 #knowabc {
 	background-color: transparent !important;
-	background-image:url(knwabc.png);
+	background-image:url(knwabc1.png);
 	background-repeat:no-repeat;
-	
+	height:33px;
+	width:80px;
 	opacity: 1;
 	float:left;
 }
 #accessrisk {
 	background-color: transparent !important;
-	background-image:url(assesrisk.png);
+	background-image:url(assesrisk1.png);
 	background-repeat:no-repeat;
-	
+	height:33px;
+	width:80px;
 	opacity: 1;
 	float:left;
 }
 #selfcheck {
 	background-color: transparent !important;
-	background-image:url(selfcheck.png);
+	background-image:url(selfcheck1.png);
 	background-repeat:no-repeat;
-	
+	height:33px;
+	width:80px;
 	opacity: 1;
 	float:left;
 }
 #findcenter {
 	background-color: transparent !important;
-	background-image:url(findcenter.png);
+	background-image:url(findcenter1.png);
 	background-repeat:no-repeat;
-	
+	height:33px;
+	width:80px;
 	opacity: 1;
 	float:left;
 }
 #reminder {
 	background-color: transparent !important;
-	background-image:url(reminder.png);
+	background-image:url(reminder1.png);
 	background-repeat:no-repeat;
-	
+	height:33px;
+	width:80px;
 	opacity: 1;
 }
 /* KnowabtABC */
@@ -543,68 +537,4 @@ img.centered {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-/* Mammographic center locate */
-#locatecenter 
-{
-
-}
-
-#locatecenter .ui-select .ui-btn-hover-c, #locatecenter .ui-select .ui-btn-up-c {
-	background-image:-webkit-gradient(linear, left top, left bottom, from(#f393bd), to(#f393bd)) !important;
-	background-image:-webkit-linear-gradient(#f393bd, #f393bd) !important;
-	background-image:-moz-linear-gradient(#f393bd, #f393bd) !important;
-	background-image:-ms-linear-gradient(#f393bd, #f393bd) !important;
-	background-image:-o-linear-gradient(#f393bd, #f393bd) !important;
-	background-image:linear-gradient(#f393bd, #f393bd) !important;
-	Color:#fff !important;
-}
-
-#locatecenter .ui-select .ui-icon, #locatecenter .ui-select .ui-widget-content .ui-icon {
-	background-color: transparent;
-	background-image: url("arrowdown.png") !important;
-	background-position: 0 2px !important;
-	top: 56% !important
-}
-
-#locatecenter .ui-btn-inner
-{
-	    padding: 0.6em 20px !important;
-}
-#searchwell {
-	width:600px;
-	padding-bottom:10px;
-}
-.unselected {
-/*	background-color: #ECECED; */
-	 color: #333333;
-    float: left;
-    height: 100px;
-    line-height: 1.3;
-    margin-bottom: 40px;
-    margin-right: 10px;
-    padding-bottom: 5px;
-    text-align: left;
-    width: 280px;
-}
-#map {
-	border:3px solid #666;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-}
-#map .unselected .gs-result .gs-title, .gs-result .gs-title * {
-	  color: #D70283;
-	 font-weight: normal;
-    text-decoration: none;
-}
-#searchwell.unselected .gs-result .gs-title, .gs-result .gs-title * {
-	   color: #D70283;
-    font-weight: normal;
-    text-decoration: none;
-}
-.gs-directions,
-.gs-directions-to-from,
-.gs-watermark
-{
-	display:none;
 }

@@ -6,7 +6,10 @@
 <link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
 <link rel="stylesheet" href="jquery-ui.css" />
 <link rel="stylesheet" href="jquery.mobile.simpledialog.min.css" />
-<link rel="stylesheet" href="style.css" />
+
+<link rel='stylesheet' type='text/css' href="style.css"/>
+<link rel='stylesheet' media='screen and (max-device-width: 400px)' href="medium.css" />
+
 <script src="jquery-1.9.1.js"></script>
 <script src="jquery-ui.js"></script>
 <script src="jquery-1.7.1.min.js"></script>
@@ -43,6 +46,8 @@ $('#reminder').live("click",function()
 	  window.location = 'reminder.html'
 });
 });
+$(document).ready(function() {	
+});
 </script>
 <body>
 <article id="index" data-role="page">
@@ -50,7 +55,7 @@ $('#reminder').live("click",function()
     <div id="header">
       <div id="topmenu">
         <div class="menu">
-          <button id="knowabc"> </button>
+         <button id="knowabc"> </button>
           <button id="accessrisk"> </button>
           <button id="selfcheck"> </button>
         </div>
@@ -64,7 +69,7 @@ $('#reminder').live("click",function()
       </div>
     </div>
     <div class="clear"> </div>
-    <img src="breasthealth_logo.png" width="229" height="" align="middle"/> </div>
+    <img src="breasthealth_logo.png" width="229" height="" class="centered"/> </div>
   <footer id="footer"> </footer>
   </div>
 </article>
