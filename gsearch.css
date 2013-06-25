@@ -1285,8 +1285,8 @@ div.gs-action.link a.gs-action {
  */
 .gs-result .gs-title,
 .gs-result .gs-title * {
-  color: #0000cc;
-  text-decoration: underline;
+  color:#D70283;
+  text-decoration: none;
 }
 
 .gsc-control-cse .gs-spelling,

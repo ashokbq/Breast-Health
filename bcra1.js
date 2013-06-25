@@ -169,7 +169,7 @@ var selectedsubrace = subraceval.options[subraceval.selectedIndex].text;
          "&race=" + race + "&userid="+userid+
            asian;
 		 
-		 //  alert(parameters);
+		//   alert(parameters);
 
   // Web Analytics (Omniture) - call web analytics-related function defined in 
   // in analytics_include.html and rendered in the web analytics page-load tag.  

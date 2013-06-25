@@ -11,6 +11,9 @@ html, body {
 	text-align: left;
 	text-shadow:none;
 }
+.ui-body-c, .ui-overlay-c {
+	color: #000;
+}
 .clear {
 	clear: both;
 	display: block;
@@ -59,12 +62,13 @@ em {
 	padding-right: .25em;
 }
 #main-content {
-/*	left: 50%;
+	/*left: 50%;
 	margin:-55px 0 0 -135px;*/
-	padding: 3%;
+	 margin: auto;
+	padding: 0 3% 3% !important;
 	position: relative;
-	width:100%;
-	    word-wrap: break-word;
+	width: 70%;
+	word-wrap: break-word;
 }
 /* font import */
 @font-face {
@@ -145,7 +149,6 @@ em {
 }
 .ui-btn {
 	height: 40px;
-	
 	margin: 0.5em 0;
 }
 #btmheader {
@@ -154,7 +157,7 @@ em {
 	background-repeat: repeat-x;
 	height: 63px;
 	opacity: 1;
-margin-right: 2%;
+	margin-right: 2%;
 }
 #btmheader .ui-btn {
 	float: right;
@@ -182,7 +185,7 @@ margin-right: 2%;
 	height:42px;
 }
 #header {
-	height:170px;
+	height:162px;
 	width: 100%;
 }
 #footer {
@@ -197,10 +200,9 @@ margin-right: 2%;
 	position: absolute;
 	top: 0;
 }
-
 #topmenu2 .menu {
 	margin-left: -120px;
-	margin-top: 93px;
+	margin-top: 100px;
 }
 #topmenu {
 	background-image: url("topbg.png");
@@ -231,22 +233,21 @@ margin-right: 2%;
 	top: 0;
 	width: 430px;
 }
- #wrapper {
-   height:100%;
-   width: 100%;
-   margin: 0;
-   padding: 0;
-   border: 0;
- }
+#wrapper {
+	height:100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
 #wrapper td {
-   vertical-align: middle;
-   text-align: center;
+	vertical-align: middle;
+	text-align: center;
 }
 #knowabc {
 	background-color: transparent !important;
 	background-image:url(knwabc.png);
 	background-repeat:no-repeat;
-	
 	opacity: 1;
 	float:left;
 }
@@ -254,7 +255,6 @@ margin-right: 2%;
 	background-color: transparent !important;
 	background-image:url(assesrisk.png);
 	background-repeat:no-repeat;
-	
 	opacity: 1;
 	float:left;
 }
@@ -262,7 +262,6 @@ margin-right: 2%;
 	background-color: transparent !important;
 	background-image:url(selfcheck.png);
 	background-repeat:no-repeat;
-	
 	opacity: 1;
 	float:left;
 }
@@ -270,7 +269,6 @@ margin-right: 2%;
 	background-color: transparent !important;
 	background-image:url(findcenter.png);
 	background-repeat:no-repeat;
-	
 	opacity: 1;
 	float:left;
 }
@@ -278,7 +276,6 @@ margin-right: 2%;
 	background-color: transparent !important;
 	background-image:url(reminder.png);
 	background-repeat:no-repeat;
-	
 	opacity: 1;
 }
 /* KnowabtABC */
@@ -387,14 +384,21 @@ margin-right: 2%;
 	font-weight: bold;
 }
 #main-content p {
-	font-size: 115%;
+	font-size:120%;
 	word-wrap:break-word;
-	 width: 100%;
+	width: 100%;/* margin: 2px !important;*/
 }
-#main-content h3
-{
-	 width: 100%;
+#main-content h3 {
+	width: 100%;
 	word-wrap:break-word;
+}
+#main-content h4 {
+	font-size: 110%;
+}
+img.centerimg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
 }
 /* AssessRisk */
 
@@ -423,13 +427,11 @@ margin-right: 2%;
 	opacity: 1;
 	width: 319px;
 }
-
 #assesrisk .ui-btn {
-    height: 50px;
+	height: 50px;
 }
-#assesheadertext
-{
-		background-image: url("assesriskheader.png");
+#assesheadertext {
+	background-image: url("assesriskheader.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	height: 30px;
@@ -440,7 +442,6 @@ margin-right: 2%;
 	top: 0;
 	width: 430px;
 }
-
 /* Recommendatios */
 #lowrisk {
 	background-color: transparent !important;
@@ -451,18 +452,17 @@ margin-right: 2%;
 	width: 273px;
 }
 #modrisk {
-background-color: transparent !important;
+	background-color: transparent !important;
 	background-image: url("modrisk.png");
 	background-repeat: no-repeat;
 	height: 43px;
 	opacity: 1;
 	width: 273px;
 }
-.highlight
-{
-   background-color: #ECECED;
-    padding: 2%;
-    width:50%;
+.highlight {
+	background-color: #ECECED;
+	padding: 2%;
+	width:50%;
 }
 #highrisk {
 	background-color: transparent !important;
@@ -472,16 +472,21 @@ background-color: transparent !important;
 	opacity: 1;
 	width: 273px;
 }
-
 /* riskcalc calc */
 #riskcalc .ui-btn-up-c {
 	color: #FFF !important;
 }
-#riskcalc .ui-btn-up-d a.ui-link-inherit,#riskcalc .ui-btn-up-c a.ui-link-inherit,#riskcalc .ui-btn-up-b a.ui-link-inherit,#riskcalc .ui-btn-up-a a.ui-link-inherit,#riskcalc .ui-btn-hover-d:visited,#riskcalc .ui-btn-hover-d:hover,#riskcalc .ui-btn-hover-d a.ui-link-inherit,#riskcalc .ui-btn-hover-c:visited,#riskcalc .ui-btn-hover-c:hover,#riskcalc .ui-btn-hover-c a.ui-link-inherit,#riskcalc .ui-btn-hover-a
-{
+#riskcalc label.ui-select {
+	color:#000;
+	font-size: 17px;
+	line-height: 1.6;
+}
+#riskcalc .ui-btn-up-d a.ui-link-inherit, #riskcalc .ui-btn-up-c a.ui-link-inherit, #riskcalc .ui-btn-up-b a.ui-link-inherit, #riskcalc .ui-btn-up-a a.ui-link-inherit, #riskcalc .ui-btn-hover-d:visited, #riskcalc .ui-btn-hover-d:hover, #riskcalc .ui-btn-hover-d a.ui-link-inherit, #riskcalc .ui-btn-hover-c:visited, #riskcalc .ui-btn-hover-c:hover, #riskcalc .ui-btn-hover-c a.ui-link-inherit, #riskcalc .ui-btn-hover-a {
 	color:#FFF !important;
 }
-
+#riskcalc .ui-btn-inner {
+	padding: 0.6em 20px !important;
+}
 #riskcalc .ui-select .ui-icon, #riskcalc .ui-select .ui-widget-content .ui-icon {
 	background-color: transparent;
 	background-image: url("arrowdown.png") !important;
@@ -508,10 +513,10 @@ background-color: transparent !important;
 	background-image:linear-gradient(#f393bd, #f393bd) !important;
 }
 #risk .ui-btn {
-    height: 30px;
+	height: 40px;
 }
 .ui-icon-shadow {
-    box-shadow: none !important;
+	box-shadow: none !important;
 }
 /*#calculate
 {
@@ -526,30 +531,25 @@ background-color: transparent !important;
 /* Self Check */
 
 #selfcheck1 #headertext {
-    background-image: url("selfheadertext.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 30px;
-    left: 50%;
-    margin-left:-70px;
-    margin-top: 50px;
-    position: absolute;
-    top: 0;
-    width: 169px;
+	background-image: url("selfheadertext.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 30px;
+	left: 50%;
+	margin-left:-70px;
+	margin-top: 50px;
+	position: absolute;
+	top: 0;
+	width: 169px;
 }
-
-
 img.centered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 /* Mammographic center locate */
-#locatecenter 
-{
-
+#locatecenter {
 }
-
 #locatecenter .ui-select .ui-btn-hover-c, #locatecenter .ui-select .ui-btn-up-c {
 	background-image:-webkit-gradient(linear, left top, left bottom, from(#f393bd), to(#f393bd)) !important;
 	background-image:-webkit-linear-gradient(#f393bd, #f393bd) !important;
@@ -559,33 +559,30 @@ img.centered {
 	background-image:linear-gradient(#f393bd, #f393bd) !important;
 	Color:#fff !important;
 }
-
 #locatecenter .ui-select .ui-icon, #locatecenter .ui-select .ui-widget-content .ui-icon {
 	background-color: transparent;
 	background-image: url("arrowdown.png") !important;
 	background-position: 0 2px !important;
 	top: 56% !important
 }
-
-#locatecenter .ui-btn-inner
-{
-	    padding: 0.6em 20px !important;
+#locatecenter .ui-btn-inner {
+	padding: 0.6em 20px !important;
 }
 #searchwell {
-	width:600px;
+	width:90%;
 	padding-bottom:10px;
 }
 .unselected {
-/*	background-color: #ECECED; */
+	/*	background-color: #ECECED; */
 	 color: #333333;
-    float: left;
-    height: 100px;
-    line-height: 1.3;
-    margin-bottom: 40px;
-    margin-right: 10px;
-    padding-bottom: 5px;
-    text-align: left;
-    width: 280px;
+	float: left;
+	height: 100px;
+	line-height: 1.3;
+	margin-bottom: 40px;
+	margin-right: 10px;
+	padding-bottom: 5px;
+	text-align: left;
+	width: 280px;
 }
 #map {
 	border:3px solid #666;
@@ -593,18 +590,133 @@ img.centered {
 	border-radius: 4px;
 }
 #map .unselected .gs-result .gs-title, .gs-result .gs-title * {
-	  color: #D70283;
-	 font-weight: normal;
-    text-decoration: none;
+	color: #D70283;
+	font-weight: normal;
+	text-decoration: none;
 }
 #searchwell.unselected .gs-result .gs-title, .gs-result .gs-title * {
-	   color: #D70283;
-    font-weight: normal;
-    text-decoration: none;
+	color: #D70283;
+	font-weight: normal;
+	text-decoration: none;
 }
-.gs-directions,
-.gs-directions-to-from,
-.gs-watermark
-{
+.gs-directions, .gs-directions-to-from, .gs-watermark {
 	display:none;
 }
+/* page under construction */
+#main {
+	background-color: #DDDDDD;
+	border-radius: 20px 20px 20px 20px;
+	height: 412px;
+	margin: auto;
+	width: 100%;
+}
+#message {
+	font-size: 22pt;
+}
+#message p {
+	margin:2%;
+	font-size:65%;
+}
+#sorry {
+/*	margin-left: 60px;
+	margin-top: 30px;*/
+}
+/*#progress {
+	font-size: 16pt;
+	color: #686868;
+	width: 700px;
+	text-align: center;
+	margin: auto;
+	padding-left: 40px;
+}*/
+
+#progress p {
+	padding-top: 150px;
+}
+.progress10, .progress20, .progress30, .progress40, .progress50, .progress60, .progress70, .progress80, .progress90, .progress100 {
+	background-repeat: no-repeat;
+	/*	width: 659px;*/
+	height: 83px;
+}
+/*.progress10 { background-image: url(10-trans.png); }
+.progress20 { background-image: url(20-trans.png); }
+.progress30 { background-image: url(30-trans.png); }
+.progress40 { background-image: url(40-trans.png); }
+.progress50 { background-image: url(50-trans.png); }
+.progress60 { background-image: url(60-trans.png); }
+.progress70 { background-image: url(70-trans.png); }
+.progress80 { background-image: url(80-trans.png); }
+.progress90 { background-image: url(90-trans.png); }
+.progress100 { background-image: url(100-trans.png); }*/
+
+/*#main #progress {
+	margin-left: 110px;
+	margin-top:-50px;
+}*/
+
+#completion {
+	font-size: 16pt;
+	color: #686868;
+	text-align: center;
+	margin: auto;
+	width: 700px;
+	padding-left: 30px;
+	margin-top: 6px;
+}
+/* End main & progress styles */
+
+/*
+***************************************
+** Styles for the Twitter section.
+***************************************
+*/
+
+#tweet_wrap {
+	background-image: url(img/twitterBox-trans.png);/*	background-repeat: no-repeat;
+    width: 855px;
+    height: 92px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom:0px;
+    font-size: 16pt;
+    color: #686868;
+	padding-top:5px;
+	position:relative;*/
+	/* display: none; */
+	/* IF you want to remove the twitter section, un-comment the above line so it just reads... "display: none;" (without the quotes of course) */
+}
+#tweet a {
+	color: #000000;
+}
+#tweet a:hover {
+	color: #000000;
+}
+#tweet .loading {
+/*margin-left:370px;
+	margin-top:28px;*/
+}
+#tweet ul {
+	list-style:none;
+	float:left;
+	margin:10px 0px 0px 0px;
+}
+#tweet li {
+	font-size: 18px;
+	left: 145px;
+	position: absolute;
+	top: 18px;
+	width: 630px;
+}
+#twitterLogo {
+	width: 55px;
+	height:55px;
+	background-image: url(img/twitter-trans.png);
+	background-repeat: no-repeat;
+	position:absolute;
+	top:13px;
+	left:75px
+}
+#twitter img {
+	margin-left: -200px;
+}
+/* End twitter styles */
