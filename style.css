@@ -194,15 +194,15 @@ em {
 	height:22px;
 }
 .menu {
-/*	left: 37%;
-	margin-left:-165px;*/
+	 left: 45%;
+    margin-left: -120px;
 	margin-top:21px;
 	position: absolute;
 	top: 0;
 }
 #topmenu2 .menu {
-margin-left: 40px;
-	margin-top:91px;
+    margin-left: -62px;
+    margin-top: 91px;
 }
 #topmenu {
 	background-image: url("topbg.png");
@@ -589,6 +589,7 @@ img.centered {
 	margin-bottom: 40px;
 	margin-right: 10px;
 	padding-bottom: 5px;
+	    padding-left: 20px;
 	text-align: left;
 	width: 240px;
 	word-wrap: break-word;
@@ -746,7 +747,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', end
 #mainbtn .ui-btn-inner 
 {
 	white-space: normal !important;
-	padding:1.2em 25px !important;
+	padding:1em 25px !important;
 	width: auto !important;
 }
 #riskbtn .ui-btn-inner 
