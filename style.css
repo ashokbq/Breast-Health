@@ -67,7 +67,7 @@ em {
 	 margin: auto;
 	padding: 0 3% 3% !important;
 	position: relative;
-	width: 70%;
+/*	width: 70%;*/
 	word-wrap: break-word;
 }
 /* font import */
@@ -194,15 +194,15 @@ em {
 	height:22px;
 }
 .menu {
-	left: 50%;
-	margin-left:-165px;
-	margin-top:14px;
+/*	left: 37%;
+	margin-left:-165px;*/
+	margin-top:21px;
 	position: absolute;
 	top: 0;
 }
 #topmenu2 .menu {
-	margin-left: -120px;
-	margin-top: 100px;
+margin-left: 40px;
+	margin-top:91px;
 }
 #topmenu {
 	background-image: url("topbg.png");
@@ -213,7 +213,7 @@ em {
 #topmenu2 {
 	background-image:url(topbg2.png);
 	background-repeat: repeat-x;
-	height:74px;
+	height:62px;
 	width:100%;
 }
 #titleheader {
@@ -241,8 +241,13 @@ em {
 	border: 0;
 }
 #wrapper td {
-	vertical-align: middle;
-	text-align: center;
+    color: #FFFFFF;
+    font-family: 'Conv_ufonts.com_whitney-light_1_';
+    font-size: 240%;
+    font-weight: normal !important;
+    text-align: center;
+    text-shadow: none;
+    vertical-align: middle;
 }
 #knowabc {
 	background-color: transparent !important;
@@ -328,9 +333,8 @@ em {
 	width:283px;
 	opacity: 1;
 }
-span.treatheader
-{
-font-weight:bold;	
+p.treatheader {
+	font-weight:bold;
 }
 #tips {
 	background-color: transparent !important;
@@ -579,15 +583,15 @@ img.centered {
 .unselected {
 	/*	background-color: #ECECED; */
 	 color: #333333;
-    float: left;
-    height: 100px;
-    line-height: 1;
-    margin-bottom: 40px;
-    margin-right: 10px;
-    padding-bottom: 5px;
-    text-align: left;
-    width: 240px;
-    word-wrap: break-word;
+	float: left;
+	height: 100px;
+	line-height: 1;
+	margin-bottom: 40px;
+	margin-right: 10px;
+	padding-bottom: 5px;
+	text-align: left;
+	width: 240px;
+	word-wrap: break-word;
 }
 #map {
 	border:3px solid #666;
@@ -685,8 +689,7 @@ img.centered {
     font-size: 16pt;
     color: #686868;
 	padding-top:5px;
-	position:relative;*/
-	/* display: none; */
+	position:relative;*//* display: none; */
 	/* IF you want to remove the twitter section, un-comment the above line so it just reads... "display: none;" (without the quotes of course) */
 }
 #tweet a {
@@ -724,3 +727,57 @@ img.centered {
 	margin-left: -200px;
 }
 /* End twitter styles */
+#mainbtn {
+	background:#eb008b !important; /* Old browsers */
+	background:-moz-linear-gradient(top, #eb008b 0%, #9c005d 100%)  !important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb008b), color-stop(100%,#9c005d))  !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #eb008b 0%,#9c005d 100%)  !important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #eb008b 0%,#9c005d 100%)  !important; /* Opera 11.10+ */
+	background:-ms-linear-gradient(top, #eb008b 0%,#9c005d 100%)  !important; /* IE10+ */
+	background: linear-gradient(to bottom, #eb008b 0%,#9c005d 100%)  !important; /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#9c005d',GradientType=0 )  !important; /* IE6-9 */
+	color:#FFF !important;
+	font-weight:normal;
+	width:auto !important;
+    height: auto !important;
+	font-family:Tahoma, Geneva, sans-serif;
+	 word-wrap: break-word;
+}
+#mainbtn .ui-btn-inner 
+{
+	white-space: normal !important;
+	padding:1.2em 25px !important;
+	width: auto !important;
+}
+#riskbtn .ui-btn-inner 
+{
+	white-space: normal !important;
+	padding:0.5em 19px !important;
+	width: auto !important;
+}
+#mainbtn.ui-btn-corner-all,
+#riskbtn.ui-btn-corner-all {
+    border-radius: 10px 10px 10px 10px !important; 
+}
+
+.menu .ui-block-a
+{
+	    padding: 0 1px 0 0;
+}
+#riskbtn
+{
+		background:#eb008b !important; /* Old browsers */
+	background:-moz-linear-gradient(top, #eb008b 0%, #9c005d 100%)  !important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb008b), color-stop(100%,#9c005d))  !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #eb008b 0%,#9c005d 100%)  !important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #eb008b 0%,#9c005d 100%)  !important; /* Opera 11.10+ */
+	background:-ms-linear-gradient(top, #eb008b 0%,#9c005d 100%)  !important; /* IE10+ */
+	background: linear-gradient(to bottom, #eb008b 0%,#9c005d 100%)  !important; /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#9c005d',GradientType=0 )  !important; /* IE6-9 */
+	color:#FFF !important;
+	font-weight:normal;
+	width:auto !important;
+    height: auto !important;
+	font-family:Tahoma, Geneva, sans-serif;
+	 word-wrap: break-word;
+}

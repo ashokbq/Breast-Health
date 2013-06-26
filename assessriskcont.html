@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title> </title>
+  <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
   <link rel="stylesheet" href="jquery-ui.css" />
@@ -10,7 +10,7 @@
   <script src="jquery-ui.js"></script>
   <script src="jquery-1.7.1.min.js"></script>
   <script src="jquery.mobile-1.1.0.min.js"></script>
- <script src="bcra1.js" type="text/javascript"> </script>
+  <script src="bcra1.js" type="text/javascript"> </script>
   <script>
   $(function(){
 $('#donebtn').live("click",function()
@@ -77,13 +77,13 @@ $('#calculate').live("click",function()
 <article id="factor" data-role="page">
     <div data-role="content">
     <div id="header">
-        <div id="titleheader">
-     <!--   <div id="assesheadertext"> </div>-->
-      <table id="wrapper">
-          <tr>
-            <td> <img src="assesriskheader.png" /></td>
+        <div id="titleheader"> 
+        <!--   <div id="assesheadertext"> </div>-->
+        <table id="wrapper">
+            <tr>
+                  <td> <!--<img src="assesriskheader.png" />--> Assess Risk</td>
           </tr>
-        </table>
+          </table>
       </div>
         <div class="clear"> </div>
         <div id="btmheader">
@@ -101,9 +101,9 @@ $('#calculate').live("click",function()
         some are lifestyle-related factors, which
         can be modified, while other factors
         cannot be changed.</p>
-        <div class="ui-block-a"><a href="assessriskcont.html#nonmodrisk" data-role="button" rel="external" ><img src="nonmodrf.png" width="282" height="43"/> </a></div>
+        <div class="ui-block-a"><a href="assessriskcont.html#nonmodrisk" data-role="button" rel="external" id="riskbtn">Non-modifiable risk factors</a></div>
         <div class="clear"> </div>
-        <div class="ui-block-a"><a href="assessriskcont.html#modrisk" data-role="button" rel="external" ><img src="modrf.png" width="282" height="43"/> </a></div>
+        <div class="ui-block-a"><a href="assessriskcont.html#modrisk" data-role="button" rel="external" id="riskbtn">Modifiable risk factors </a></div>
       </div>
     <div class="clear"> </div>
     <div class="bottomnav">
@@ -123,13 +123,13 @@ $('#calculate').live("click",function()
 <article id="nonmodrisk" data-role="page">
     <div data-role="content">
     <div id="header">
-        <div id="titleheader">
-       <!-- <div id="assesheadertext"> </div>-->
+        <div id="titleheader"> 
+        <!-- <div id="assesheadertext"> </div>-->
         <table id="wrapper">
-          <tr>
-            <td> <img src="assesriskheader.png" /></td>
+            <tr>
+                 <td> <!--<img src="assesriskheader.png" />--> Assess Risk</td>
           </tr>
-        </table>
+          </table>
       </div>
         <div class="clear"> </div>
         <div id="btmheader">
@@ -139,43 +139,21 @@ $('#calculate').live("click",function()
     <div id="main-content">
         <p class="titletext">Risk factors: Non-modifiable</p>
         <div class="clear"> </div>
-      <p>   <span class="treatheader"> Gender: </span>Being a woman is a major risk
+        <p class="treatheader"> Gender: </p>
+        <p> Being a woman is a major risk
         factor for breast cancer. While men can also develop breast cancer, it is 100 time
-        more common in women than in men.
-      </p>
-         <p><span class="treatheader"> Age: </span>The risk of breast cancer increases 
+        more common in women than in men. </p>
+        <p class="treatheader"> Age: </p>
+        <p>The risk of breast cancer increases 
         with age, with 2 out of 3 invasive breast
         cancers being found in women older
         than 55 years. </p>
-        <p> <span class="treatheader">Genetics:</span> Gene defects or mutations are
+        <p class="treatheader">Genetics:</p>
+        <p> Gene defects or mutations are
         responsible for about 5-10% of breast
         cancer cases. </p>
-<p>         <span class="treatheader">Family history: </span>Having a family history of
-        breast cancer increases the risk of
-        developing breast cancer. </p>
-   <p>      <span class="treatheader"> Breast density: </span>Women with dense breasts
-        have a higher risk of breast cancer than
-        women with less dense breasts. Breast
-        density is affected by factors such as age,
-        menopausal status, the use of drugs (such
-        as menopausal hormone therapy),
-        pregnancy, and genetics.</p>
-      <p>  <span class="treatheader"> Menstrual periods: </span> Being younger 
-        at the time of the first menstrual period,
-        or starting menopause at a later age
-        increases the risk of breast cancer.</p>
-        <p> <span class="treatheader">Treatment with radiation therapy to the 
-          breast or chest: </span>Children or young adults
-        who have had radiation therapy of the
-        breast or chest are at significantly higher risk
-        of breast cancer compared to those who
-        have not undergone radiation therapy.</p>
-        <p> The risk varies with age and is highest if the
-        radiation exposure was at the time of
-        adolescence when the breasts were still
-        developing. </p>
         <p>
-      <div class="ui-block-a"><a href="assessriskcont.html#riskcalc" data-role="button" rel="external" ><img src="assescalc.png" width="282" height="43"/> </a></div>
+      <div class="ui-block-a"><a href="assessriskcont.html#riskcalc" data-role="button" rel="external" id="riskbtn" > Assess your breast cancer risk</a></div>
         </p>
       </div>
     <div class="clear"> </div>
@@ -183,7 +161,7 @@ $('#calculate').live("click",function()
         <div class="btnnav">
         <div id="leftbtn">
             <div class="ui-block-a"><a href="assessriskcont.html#factor" data-role="button" rel="external" id="leftnav"><img src="leftarrow.png" width="37" height="34"/> </a></div>
-            <div class="ui-block-b"><a href="assessriskcont.html#modrisk1" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>
+            <div class="ui-block-b"><a href="assessriskcont.html#nonmodrisk2" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>
           </div>
         <div id="rightlogo"> </div>
       </div>
@@ -193,16 +171,16 @@ $('#calculate').live("click",function()
     <footer id="footer"> </footer>
   </article>
 <!-- end of 2 -->
-<article id="modrisk1" data-role="page">
+<article id="nonmodrisk2" data-role="page">
     <div data-role="content">
     <div id="header">
-        <div id="titleheader">
-       <!-- <div id="assesheadertext"> </div>-->
+        <div id="titleheader"> 
+        <!-- <div id="assesheadertext"> </div>-->
         <table id="wrapper">
-          <tr>
-            <td> <img src="assesriskheader.png" /></td>
+            <tr>
+                 <td> <!--<img src="assesriskheader.png" />--> Assess Risk</td>
           </tr>
-        </table>
+          </table>
       </div>
         <div class="clear"> </div>
         <div id="btmheader">
@@ -210,36 +188,22 @@ $('#calculate').live("click",function()
       </div>
       </div>
     <div id="main-content">
-       <p class="titletext">Risk factors: Modifiable</p>
+        <p class="titletext">Risk factors: Non-modifiable</p>
         <div class="clear"> </div>
-        <p> <span class="treatheader">Having children:</span>Having no children, or
-        having the first child after the age of 30
-        slightly increases the risk of breast cancer. </p>
-        <p> <span class="treatheader">Birth control: </span>Use of oral contraceptives has
-        been found to slightly increase the risk of
-        breast cancer. </p>
-        <p> However, the risk was found to reduce once
-        the drug is stopped. </p>
-        <p> <span class="treatheader">Hormone therapy after menopause:</span> The
-        use of combined hormone therapy after
-        menopause increases the risk of breast
-        cancer, and also the likelihood of advanced
-        stage cancer.</p>
-        <p>Other hormone therapies have not found to 
-        contribute to higher risk. </p>
-        <p>  <span class="treatheader">Breastfeeding: </span>Breastfeeding has
-        been found to lower breast cancer risk,
-        especially if breastfeeding is
-        continued for 1.5-2 years. </p>
-        <p> <span class="treatheader">Alcohol: </span>Alcohol consumption 
-        increases the risk of breast cancer. </p>
-        <p> <span class="treatheader">Overweight/obesity:</span> Overweight or obesity
-        after menopause has been linked to an
-        increased risk of breast cancer. </p>
-        <p> <span class="treatheader">Physical activity: </span>Regular physical activity
-        reduces the risk of breast cancer. </p>
+        <p class="treatheader">Family history: </p>
+        <p> Having a family history of
+        breast cancer increases the risk of
+        developing breast cancer. </p>
+        <p class="treatheader"> Breast density: </p>
+        <p> Women with dense breasts
+        have a higher risk of breast cancer than
+        women with less dense breasts. Breast
+        density is affected by factors such as age,
+        menopausal status, the use of drugs (such
+        as menopausal hormone therapy),
+        pregnancy, and genetics.</p>
         <p>
-      <div class="ui-block-a"><a href="assessriskcont.html#riskcalc" data-role="button" rel="external" ><img src="assescalc.png" width="282" height="43"/> </a></div>
+      <div class="ui-block-a"><a href="assessriskcont.html#riskcalc" data-role="button" rel="external" id="riskbtn" > Assess your breast cancer risk</a></div>
         </p>
       </div>
     <div class="clear"> </div>
@@ -247,6 +211,205 @@ $('#calculate').live("click",function()
         <div class="btnnav">
         <div id="leftbtn">
             <div class="ui-block-a"><a href="assessriskcont.html#nonmodrisk" data-role="button" rel="external" id="leftnav"><img src="leftarrow.png" width="37" height="34"/> </a></div>
+            <div class="ui-block-b"><a href="assessriskcont.html#nonmodrisk3" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>
+          </div>
+        <div id="rightlogo"> </div>
+      </div>
+      </div>
+  </div>
+    <div class="clear"> </div>
+    <footer id="footer"> </footer>
+  </article>
+<!-- end of non-mod 2 -->
+<article id="nonmodrisk3" data-role="page">
+    <div data-role="content">
+    <div id="header">
+        <div id="titleheader"> 
+        <!-- <div id="assesheadertext"> </div>-->
+        <table id="wrapper">
+            <tr>
+       <td> <!--<img src="assesriskheader.png" />--> Assess Risk</td>
+          </tr>
+          </table>
+      </div>
+        <div class="clear"> </div>
+        <div id="btmheader">
+        <button id="donebtn"> </button>
+      </div>
+      </div>
+    <div id="main-content">
+        <p class="titletext">Risk factors: Non-modifiable</p>
+        <div class="clear"> </div>
+        <p class="treatheader"> Menstrual periods: </p>
+        <p> Being younger 
+        at the time of the first menstrual period,
+        or starting menopause at a later age
+        increases the risk of breast cancer.</p>
+        <p class="treatheader">Treatment with radiation therapy to the 
+        breast or chest: </p>
+        <p>Children or young adults
+        who have had radiation therapy of the
+        breast or chest are at significantly higher risk
+        of breast cancer compared to those who
+        have not undergone radiation therapy.</p>
+        <p> The risk varies with age and is highest if the
+        radiation exposure was at the time of
+        adolescence when the breasts were still
+        developing. </p>
+        <p>
+      <div class="ui-block-a"><a href="assessriskcont.html#riskcalc" data-role="button" rel="external" id="riskbtn" > Assess your breast cancer risk</a></div>
+        </p>
+      </div>
+    <div class="clear"> </div>
+    <div class="bottomnav">
+        <div class="btnnav">
+        <div id="leftbtn">
+            <div class="ui-block-a"><a href="assessriskcont.html#nonmodrisk2" data-role="button" rel="external" id="leftnav"><img src="leftarrow.png" width="37" height="34"/> </a></div>
+            <div class="ui-block-b"><a href="assessriskcont.html#modrisk1" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>
+          </div>
+        <div id="rightlogo"> </div>
+      </div>
+      </div>
+  </div>
+    <div class="clear"> </div>
+    <footer id="footer"> </footer>
+  </article>
+<!-- end of non-mod 3 -->
+<article id="modrisk1" data-role="page">
+    <div data-role="content">
+    <div id="header">
+        <div id="titleheader"> 
+        <!-- <div id="assesheadertext"> </div>-->
+        <table id="wrapper">
+            <tr>
+      <td> <!--<img src="assesriskheader.png" />--> Assess Risk</td>
+          </tr>
+          </table>
+      </div>
+        <div class="clear"> </div>
+        <div id="btmheader">
+        <button id="donebtn"> </button>
+      </div>
+      </div>
+    <div id="main-content">
+        <p class="titletext">Risk factors: Modifiable</p>
+        <div class="clear"> </div>
+        <p class="treatheader">Having children:</p>
+        <p> Having no children, or
+        having the first child after the age of 30
+        slightly increases the risk of breast cancer. </p>
+        <p class="treatheader">Birth control: </p>
+        <p> Use of oral contraceptives has
+        been found to slightly increase the risk of
+        breast cancer. </p>        
+        <p>
+     <div class="ui-block-a"><a href="assessriskcont.html#riskcalc" data-role="button" rel="external" id="riskbtn" > Assess your breast cancer risk</a></div>
+        </p>
+      </div>
+    <div class="clear"> </div>
+    <div class="bottomnav">
+        <div class="btnnav">
+        <div id="leftbtn">
+            <div class="ui-block-a"><a href="assessriskcont.html#nonmodrisk" data-role="button" rel="external" id="leftnav"><img src="leftarrow.png" width="37" height="34"/> </a></div>
+            <div class="ui-block-b"><a href="assessriskcont.html#modrisk2" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>
+          </div>
+        <div id="rightlogo"> </div>
+      </div>
+      </div>
+  </div>
+    <div class="clear"> </div>
+    <footer id="footer"> </footer>
+  </article>
+<!--end of mod-risk 1 -->
+<article id="modrisk2" data-role="page">
+    <div data-role="content">
+    <div id="header">
+        <div id="titleheader"> 
+        <!-- <div id="assesheadertext"> </div>-->
+        <table id="wrapper">
+            <tr>
+      <td> <!--<img src="assesriskheader.png" />--> Assess Risk</td>
+          </tr>
+          </table>
+      </div>
+        <div class="clear"> </div>
+        <div id="btmheader">
+        <button id="donebtn"> </button>
+      </div>
+      </div>
+    <div id="main-content">
+        <p class="titletext">Risk factors: Modifiable</p>
+        <div class="clear"> </div>       
+        <p class="treatheader">Hormone therapy after menopause:</p> 
+        <p> The use of combined hormone therapy after
+        menopause increases the risk of breast
+        cancer, and also the likelihood of advanced
+        stage cancer.</p>
+        <p>Other hormone therapies have not found to 
+        contribute to higher risk. </p>       
+       <p class="treatheader">Breastfeeding: </p>
+        <p> Breastfeeding has
+        been found to lower breast cancer risk,
+        especially if breastfeeding is
+        continued for 1.5-2 years. </p>
+       <p class="treatheader">Alcohol: </p>
+        <p> Alcohol consumption 
+        increases the risk of breast cancer. </p>
+        <p>
+   <div class="ui-block-a"><a href="assessriskcont.html#riskcalc" data-role="button" rel="external" id="riskbtn" > Assess your breast cancer risk</a></div>
+        </p>
+      </div>
+    <div class="clear"> </div>
+    <div class="bottomnav">
+        <div class="btnnav">
+        <div id="leftbtn">
+            <div class="ui-block-a"><a href="assessriskcont.html#modrisk1" data-role="button" rel="external" id="leftnav"><img src="leftarrow.png" width="37" height="34"/> </a></div>
+            <div class="ui-block-b"><a href="assessriskcont.html#modrisk3" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>
+          </div>
+        <div id="rightlogo"> </div>
+      </div>
+      </div>
+  </div>
+    <div class="clear"> </div>
+    <footer id="footer"> </footer>
+  </article>
+<!--end of mod-risk 2 -->
+<article id="modrisk3" data-role="page">
+    <div data-role="content">
+    <div id="header">
+        <div id="titleheader"> 
+        <!-- <div id="assesheadertext"> </div>-->
+        <table id="wrapper">
+            <tr>
+       <td> <!--<img src="assesriskheader.png" />--> Assess Risk</td>
+          </tr>
+          </table>
+      </div>
+        <div class="clear"> </div>
+        <div id="btmheader">
+        <button id="donebtn"> </button>
+      </div>
+      </div>
+    <div id="main-content">
+        <p class="titletext">Risk factors: Modifiable</p>
+        <div class="clear"> </div>
+      
+        <p class="treatheader">Overweight/obesity:</p>
+        <p>  Overweight or obesity
+        after menopause has been linked to an
+        increased risk of breast cancer. </p>
+        <p class="treatheader">Physical activity: </p>
+        <p> Regular physical activity
+        reduces the risk of breast cancer. </p>
+        <p>
+   <div class="ui-block-a"><a href="assessriskcont.html#riskcalc" data-role="button" rel="external" id="riskbtn" > Assess your breast cancer risk</a></div>
+        </p>
+      </div>
+    <div class="clear"> </div>
+    <div class="bottomnav">
+        <div class="btnnav">
+        <div id="leftbtn">
+            <div class="ui-block-a"><a href="assessriskcont.html#modrisk2" data-role="button" rel="external" id="leftnav"><img src="leftarrow.png" width="37" height="34"/> </a></div>
             <div class="ui-block-b"><a href="assessriskcont.html#riskcalc" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>
           </div>
         <div id="rightlogo"> </div>
@@ -256,17 +419,17 @@ $('#calculate').live("click",function()
     <div class="clear"> </div>
     <footer id="footer"> </footer>
   </article>
-<!--end of 3 --> 
+<!--end of mod-risk 3 -->
 <article id="riskcalc" data-role="page">
     <div data-role="content">
     <div id="header">
-        <div id="titleheader">
+        <div id="titleheader"> 
         <!--<div id="assesheadertext"> </div>-->
-         <table id="wrapper">
-          <tr>
-            <td> <img src="assesriskheader.png" /></td>
+        <table id="wrapper">
+            <tr>
+       <td> <!--<img src="assesriskheader.png" />--> Assess Risk</td>
           </tr>
-        </table>
+          </table>
       </div>
         <div class="clear"> </div>
         <div id="btmheader">
@@ -277,17 +440,17 @@ $('#calculate').live("click",function()
         <p class="titletext">Assess your breast cancer risk</p>
         <div class="clear"> </div>
         <p>To calculate your risk of getting breast
-cancer, answer the questions in the Risk
-Calculator below.</p> 
-  <form id="risk" method="post" action="" name="risk">
-          <label for="history" class="select">1.Do you have a medical history of any breast cancer or of ductal carcinoma in situ (DCIS) or lobular carcinoma in situ (LCIS)? </label>
-          <select onChange="checkHistory()" name="history" id="history">
+        cancer, answer the questions in the Risk
+        Calculator below.</p>
+        <form id="risk" method="post" action="" name="risk">
+        <label for="history" class="select">1.Do you have a medical history of any breast cancer or of ductal carcinoma in situ (DCIS) or lobular carcinoma in situ (LCIS)? </label>
+        <select onChange="checkHistory()" name="history" id="history">
             <option value="">Select</option>
             <option value="1">Yes</option>
             <option value="0">No</option>
           </select>
-          <label  for="current_age" class="select">2.What is your age? </label>
-          <select onChange="checkAge()" size="1" name="current_age" id="current_age">
+        <label  for="current_age" class="select">2.What is your age? </label>
+        <select onChange="checkAge()" size="1" name="current_age" id="current_age">
             <option value="99">Select</option>
             <option value="34"> &lt; 35 </option>
             <option value="35">35</option>
@@ -342,16 +505,16 @@ Calculator below.</p>
             <option value="84">84</option>
             <option value="85">85</option>
           </select>
-          <label for="age_at_menarche" class="select">3.What was your age at the time of your first menstrual period? </label>
-          <select  size="1" name="age_at_menarche" id="age_at_menarche">
+        <label for="age_at_menarche" class="select">3.What was your age at the time of your first menstrual period? </label>
+        <select  size="1" name="age_at_menarche" id="age_at_menarche">
             <option value="999">Select</option>
             <option value="99">Unknown</option>
             <option value="10">7-11</option>
             <option value="13">12-13</option>
             <option value="14"> >= 14</option>
           </select>
-          <label for="age_at_first_live_birth" class="select">4.What was your age at the time of the first live birth of your child? </label>
-          <select size="1" name="age_at_first_live_birth" id="age_at_first_live_birth">
+        <label for="age_at_first_live_birth" class="select">4.What was your age at the time of the first live birth of your child? </label>
+        <select size="1" name="age_at_first_live_birth" id="age_at_first_live_birth">
             <option value="999">Select</option>
             <option value="99">Unknown</option>
             <option value="0">No births</option>
@@ -360,36 +523,36 @@ Calculator below.</p>
             <option value="27"> 25-29</option>
             <option value="30"> >= 30</option>
           </select>
-          <label for="related_with_breast_cancer" class="select">5.How many of your first-degree relatives - mother, sisters, daughters - have had breast cancer?</label>
-          <select size="1" name="related_with_breast_cancer" id="related_with_breast_cancer">
+        <label for="related_with_breast_cancer" class="select">5.How many of your first-degree relatives - mother, sisters, daughters - have had breast cancer?</label>
+        <select size="1" name="related_with_breast_cancer" id="related_with_breast_cancer">
             <option value="999">Select</option>
             <option value="99">Unknown</option>
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2"> >1</option>
           </select>
-          <label for="ever_had_biopsy" class="select">6.Have you ever had a breast biopsy?</label>
-          <select onChange="checkBiopsy()" size="1" name="ever_had_biopsy" id="ever_had_biopsy">
+        <label for="ever_had_biopsy" class="select">6.Have you ever had a breast biopsy?</label>
+        <select onChange="checkBiopsy()" size="1" name="ever_had_biopsy" id="ever_had_biopsy">
             <option value="999">Select</option>
             <option value="99">Unknown</option>
             <option value="0">No</option>
             <option value="1">Yes</option>
           </select>
-          <label for="previous_biopsies" class="select">6a. How many breast biopsies (positive or negative) have you had?</label>
-          <select size="1" name="previous_biopsies" id="previous_biopsies">
+        <label for="previous_biopsies" class="select">6a. How many breast biopsies (positive or negative) have you had?</label>
+        <select size="1" name="previous_biopsies" id="previous_biopsies">
             <option value="999">Select</option>
             <option value="1">1</option>
             <option value="2">&gt; 1</option>
           </select>
-          <label for="biopsy_with_hyperplasia" class="select">6b. Have you had at least one breast biopsy with atypical hyperplasia?</label>
-          <select size="1" name="biopsy_with_hyperplasia" id="biopsy_with_hyperplasia">
+        <label for="biopsy_with_hyperplasia" class="select">6b. Have you had at least one breast biopsy with atypical hyperplasia?</label>
+        <select size="1" name="biopsy_with_hyperplasia" id="biopsy_with_hyperplasia">
             <option value="999">Select</option>
             <option value="99">Unknown</option>
             <option value="0">No</option>
             <option value="1">Yes</option>
           </select>
-          <label for="race" class="select">7. What is your race/ethnicity?</label>
-          <select  onChange="checkEthnicity()" size="1" name="race" id="race">
+        <label for="race" class="select">7. What is your race/ethnicity?</label>
+        <select  onChange="checkEthnicity()" size="1" name="race" id="race">
             <option value="999">Select</option>
             <option value="1">White</option>
             <option value="2">African American</option>
@@ -398,8 +561,8 @@ Calculator below.</p>
             <option value="5">American Indian or Alaskan Native</option>
             <option value="6">Unknown</option>
           </select>
-          <label for="sub_ethnicity" class="select">7a. What is the sub-race/ethnicity</label>
-          <select size="1" name="subrace" id="subrace">
+        <label for="sub_ethnicity" class="select">7a. What is the sub-race/ethnicity</label>
+        <select size="1" name="subrace" id="subrace">
             <option value="999">Select</option>
             <option value="7">Chinese</option>
             <option value="8">Japanese</option>
@@ -408,11 +571,11 @@ Calculator below.</p>
             <option value="11">Other Pacific Islander</option>
             <option value="12">Other Asian-American</option>
           </select>
-          <input type="text" id="useridbox" style="display:none;" />
-          <div class="calbtn">
+        <input type="text" id="useridbox" style="display:none;" />
+        <div class="calbtn">
             <input type="button" value="Calculate Risk" id="calculate"/>
           </div>
-        </form>      
+      </form>
       </div>
     <div class="clear"> </div>
     <div class="bottomnav">
@@ -427,18 +590,18 @@ Calculator below.</p>
   </div>
     <div class="clear"> </div>
     <footer id="footer"> </footer>
-  </article> 
+  </article>
 <!--end of 4(riskcalc) -->
 <article id="recommand" data-role="page">
     <div data-role="content">
     <div id="header">
-        <div id="titleheader">
-     <!--   <div id="assesheadertext"> </div>-->
-      <table id="wrapper">
-          <tr>
-            <td> <img src="assesriskheader.png" /></td>
+        <div id="titleheader"> 
+        <!--   <div id="assesheadertext"> </div>-->
+        <table id="wrapper">
+            <tr>
+       <td> <!--<img src="assesriskheader.png" />--> Assess Risk</td>
           </tr>
-        </table>
+          </table>
       </div>
         <div class="clear"> </div>
         <div id="btmheader">
@@ -472,13 +635,13 @@ Calculator below.</p>
 <article id="low" data-role="page">
     <div data-role="content">
     <div id="header">
-        <div id="titleheader">
+        <div id="titleheader"> 
         <!--<div id="assesheadertext"> </div>-->
-         <table id="wrapper">
-          <tr>
-            <td> <img src="assesriskheader.png" /></td>
+        <table id="wrapper">
+            <tr>
+           <td> <!--<img src="assesriskheader.png" />--> Assess Risk</td>
           </tr>
-        </table>
+          </table>
       </div>
         <div class="clear"> </div>
         <div id="btmheader">
@@ -491,11 +654,11 @@ Calculator below.</p>
     <div id="main-content">
         <p class="titletext">Recommendations for early detection</p>
         <div class="clear"> </div>
-        <p>It is recommended that women in their 20s <br/>
-        and 30s should have a clinical breast exam<br/>
+        <p>It is recommended that women in their 20s 
+        and 30s should have a clinical breast exam
         every 3 years. </p>
-        <p>For women 40 years and older, a clinical<br/>
-        breast exam and a mammogram is recommended<br/>
+        <p>For women 40 years and older, a clinical
+        breast exam and a mammogram is recommended
         once every year. </p>
       </div>
     <div class="clear"> </div>
@@ -516,13 +679,13 @@ Calculator below.</p>
 <article id="mod" data-role="page">
     <div data-role="content">
     <div id="header">
-        <div id="titleheader">
+        <div id="titleheader"> 
         <!--<div id="assesheadertext"> </div>-->
-         <table id="wrapper">
-          <tr>
-            <td> <img src="assesriskheader.png" /></td>
+        <table id="wrapper">
+            <tr>
+               <td> <!--<img src="assesriskheader.png" />--> Assess Risk</td>
           </tr>
-        </table>
+          </table>
       </div>
         <div class="clear"> </div>
         <div id="btmheader">
@@ -535,9 +698,9 @@ Calculator below.</p>
     <div id="main-content">
         <p class="titletext">Recommendations for early detection</p>
         <div class="clear"> </div>
-        <p>An annual MRI is recommended, in addition <br/>
+        <p>An annual MRI is recommended, in addition 
         to the annual mammogram.</p>
-        <p>It may, however, not be necessary. Discuss <br/>
+        <p>It may, however, not be necessary. Discuss
         with your doctor if it is required. </p>
         <div class="highlight">
         <p>Moderate risk women include - </p>
@@ -569,14 +732,14 @@ Calculator below.</p>
 <article id="high" data-role="page">
     <div data-role="content">
     <div id="header">
-        <div id="titleheader">
-<!--        <div id="assesheadertext"> </div>-->     
- <table id="wrapper">
-          <tr>
-            <td> <img src="assesriskheader.png" /></td>
+        <div id="titleheader"> 
+        <!--        <div id="assesheadertext"> </div>-->
+        <table id="wrapper">
+            <tr>
+                <td> <!--<img src="assesriskheader.png" />--> Assess Risk</td>
           </tr>
-        </table>
- </div>
+          </table>
+      </div>
         <div class="clear"> </div>
         <div id="btmheader">
         <button id="donebtn"> </button>
@@ -588,7 +751,7 @@ Calculator below.</p>
     <div id="main-content">
         <p class="titletext">Recommendations for early detection</p>
         <div class="clear"> </div>
-        <p>An MRI and a mammogram every year is <br/>
+        <p>An MRI and a mammogram every year is
         recommended.</p>
         <div class="highlight">
         <p>High risk women include - </p>
@@ -609,7 +772,7 @@ Calculator below.</p>
         <div class="btnnav">
         <div id="leftbtn">
             <div class="ui-block-a"><a href="assessriskcont.html#low" data-role="button" rel="external" id="leftnav"><img src="leftarrow.png" width="37" height="34"/> </a></div>
-            <!--<div class="ui-block-b"><a href="assessriskcont.html#high" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>-->
+            <!--<div class="ui-block-b"><a href="assessriskcont.html#high" data-role="button" rel="external" id="rightnav"><img src="rightarrow.png" width="37" height="34"/> </a></div>--> 
           </div>
         <div id="rightlogo"> </div>
       </div>
