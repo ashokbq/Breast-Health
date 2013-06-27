@@ -60,7 +60,7 @@ Version: 3.1.5
 												<a href="#" class="pp_arrow_next">Next</a> \
 											</div> \
 											<p class="pp_description"></p> \
-											<div></div> \
+											<div class="pp_social">{pp_social}</div> \
 											<a class="pp_close" href="#">Close</a> \
 										</div> \
 									</div> \
@@ -90,7 +90,7 @@ Version: 3.1.5
             iframe_markup: '<iframe src ="{path}" width="{width}" height="{height}" frameborder="no"></iframe>',
             inline_markup: '<div class="pp_inline">{content}</div>',
             custom_markup: '',
-            social_tools: '<div class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div><div class="facebook"><iframe src="//www.facebook.com/plugins/like.php?locale=en_US&href={location_href}&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:23px;" allowTransparency="true"></iframe></div>' /* html or false to disable */
+            social_tools: '' /* html or false to disable */
         }, pp_settings);
 
         // Global variables accessible only by prettyPhoto
