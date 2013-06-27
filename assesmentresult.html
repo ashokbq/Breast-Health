@@ -67,17 +67,43 @@ $('#donebtn').live("click",function()
 		
 		  $('#desc').append('Based on the information provided, the womans estimated risk for developing invasive breast cancer over the next 5 years is '+abs1 +'% compared to a risk of '+ avr1 +'% for a woman of the same age and race/ethnicity from the general U.S. population. This calculation also means that the womans risk of NOT getting breast cancer over the next 5 years is '+ minus1 +'%.');	  	
 	   }
- if (sParameterName[0] =='race')
+/* if (sParameterName[0] =='race')
         {
        // alert(sParameterName[1]);
 		var race=sParameterName[1];
 		  	  $('#race').append(race +": "); 	
-	   }
+	   }*/
 	    if (sParameterName[0] =='subrace')
         {
        // alert(sParameterName[1]);
+	    $('#race').append("Asian-American : "); 
 		var subrace=sParameterName[1];
-		  	  $('#race').append(decodeURI(subrace)); 	
+		
+				if(subrace=='8')
+		{
+				  	  $('#race').append("Japanese"); 
+		}
+				if(subrace=='9')
+		{
+				  	  $('#race').append("Filipino"); 
+		}
+				if(subrace=='10')
+		{
+				  	  $('#race').append("Hawaiian"); 
+		}
+				if(subrace=='7')
+		{
+				  	  $('#race').append("Chinese"); 
+		}
+					if(subrace=='11')
+		{
+				  	  $('#race').append("Other Pacific Islander"); 
+		}
+					if(subrace=='12')
+		{
+				  	  $('#race').append("Other Asian-American"); 
+		}
+		
 	   }
    }
     
@@ -123,15 +149,15 @@ $.mobile.defaultPageTransition = 'none';
       </div>
       </div>
     <div id="main-content">
-
+ <p class="titletext">Breast Cancer Risk Assesment Result</p>
    <div id="Reminder">
         <p> <b> Reminder: </b>The Breast Cancer Risk Assessment Tool was designed for use by health professionals. If you are not a health professional, you are encouraged to discuss these results and your personal risk of breast cancer with your doctor. </p>
       </div>
       <!-- End of reminder -->
       <div id="Results">
-        <p><b> Race/Ethnicity: </b>
+        <p><b> Race/Ethnicity: </b> </p>
         <p id="race"> </p>
-        <br/>
+        <br/> 
         <b> 5 Year Risk </b>
         <div id="basedage">
           <p id="result"> </p>
@@ -153,5 +179,8 @@ $.mobile.defaultPageTransition = 'none';
   <!-- end of content -->
 <div class="ui-block-a"><a href="assessriskcont.html#recommand" data-role="button" rel="external" id="riskbtn"> See Recommendation </a></div>   
 </div>
+ <div class="clear"> </div>
+  <footer id="footer"> </footer>
+</article>
 </body>
 </html>

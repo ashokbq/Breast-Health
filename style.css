@@ -67,7 +67,7 @@ em {
 	 margin: auto;
 	padding: 0 3% 3% !important;
 	position: relative;
-/*	width: 70%;*/
+	/*	width: 70%;*/
 	word-wrap: break-word;
 }
 /* font import */
@@ -193,7 +193,6 @@ em {
 	background-repeat:repeat-x;
 	height:22px;
 }
-
 #titleheader {
 	background-image:url(headerbgstrip.png);
 	background-repeat:repeat-x;
@@ -219,13 +218,13 @@ em {
 	border: 0;
 }
 #wrapper td {
-    color: #FFFFFF;
-    font-family: 'Conv_ufonts.com_whitney-light_1_';
-    font-size: 240%;
-    font-weight: normal !important;
-    text-align: center;
-    text-shadow: none;
-    vertical-align: middle;
+	color: #FFFFFF;
+	font-family: 'Conv_ufonts.com_whitney-light_1_';
+	font-size: 240%;
+	font-weight: normal !important;
+	text-align: center;
+	text-shadow: none;
+	vertical-align: middle;
 }
 #knowabc {
 	background-color: transparent !important;
@@ -667,8 +666,7 @@ img.centered {
     font-size: 16pt;
     color: #686868;
 	padding-top:5px;
-	position:relative;*//* display: none; */
-	/* IF you want to remove the twitter section, un-comment the above line so it just reads... "display: none;" (without the quotes of course) */
+	position:relative;*//* display: none; *//* IF you want to remove the twitter section, un-comment the above line so it just reads... "display: none;" (without the quotes of course) */
 }
 #tweet a {
 	color: #000000;
@@ -706,64 +704,55 @@ img.centered {
 }
 /* End twitter styles */
 
-#riskbtn .ui-btn-inner 
-{
+#riskbtn .ui-btn-inner {
 	white-space: normal !important;
 	padding:0.5em 19px !important;
 	width: auto !important;
 }
-#mainbtn.ui-btn-corner-all,
-#riskbtn.ui-btn-corner-all {
-    border-radius: 10px 10px 10px 10px !important; 
+#mainbtn.ui-btn-corner-all, #riskbtn.ui-btn-corner-all {
+	border-radius: 10px 10px 10px 10px !important;
 }
-
-.menu .ui-block-a
-{
-	    padding: 0 1px 0 0;
+.menu .ui-block-a {
+	padding: 0 1px 0 0;
 }
-#riskbtn
-{
-		background:#eb008b !important; /* Old browsers */
-	background:-moz-linear-gradient(top, #eb008b 0%, #9c005d 100%)  !important; /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb008b), color-stop(100%,#9c005d))  !important; /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #eb008b 0%,#9c005d 100%)  !important; /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #eb008b 0%,#9c005d 100%)  !important; /* Opera 11.10+ */
-	background:-ms-linear-gradient(top, #eb008b 0%,#9c005d 100%)  !important; /* IE10+ */
-	background: linear-gradient(to bottom, #eb008b 0%,#9c005d 100%)  !important; /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#9c005d',GradientType=0 )  !important; /* IE6-9 */
+#riskbtn {
+	background:#eb008b !important; /* Old browsers */
+	background:-moz-linear-gradient(top, #eb008b 0%, #9c005d 100%) !important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eb008b), color-stop(100%, #9c005d)) !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #eb008b 0%, #9c005d 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #eb008b 0%, #9c005d 100%) !important; /* Opera 11.10+ */
+	background:-ms-linear-gradient(top, #eb008b 0%, #9c005d 100%) !important; /* IE10+ */
+	background: linear-gradient(to bottom, #eb008b 0%, #9c005d 100%) !important; /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#9c005d', GradientType=0 ) !important; /* IE6-9 */
 	color:#FFF !important;
 	font-weight:normal;
 	width:auto !important;
-    height: auto !important;
+	height: auto !important;
 	font-family:Tahoma, Geneva, sans-serif;
-	 word-wrap: break-word;
+	word-wrap: break-word;
 }
-
 /* prettyphoto styles */
-.pp_details
-{
+.pp_details {
 /* 	display:none;*/
 }
-
 /* Centering menu */
 #mainbtn {
 	background:#eb008b !important; /* Old browsers */
-	background:-moz-linear-gradient(top, #eb008b 0%, #9c005d 100%)  !important; /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eb008b), color-stop(100%,#9c005d))  !important; /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #eb008b 0%,#9c005d 100%)  !important; /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #eb008b 0%,#9c005d 100%)  !important; /* Opera 11.10+ */
-	background:-ms-linear-gradient(top, #eb008b 0%,#9c005d 100%)  !important; /* IE10+ */
-	background: linear-gradient(to bottom, #eb008b 0%,#9c005d 100%)  !important; /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#9c005d',GradientType=0 )  !important; /* IE6-9 */
+	background:-moz-linear-gradient(top, #eb008b 0%, #9c005d 100%) !important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eb008b), color-stop(100%, #9c005d)) !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #eb008b 0%, #9c005d 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #eb008b 0%, #9c005d 100%) !important; /* Opera 11.10+ */
+	background:-ms-linear-gradient(top, #eb008b 0%, #9c005d 100%) !important; /* IE10+ */
+	background: linear-gradient(to bottom, #eb008b 0%, #9c005d 100%) !important; /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#9c005d', GradientType=0 ) !important; /* IE6-9 */
 	color:#FFF !important;
 	font-weight:normal;
 	width:auto !important;
-    height: auto !important;
+	height: auto !important;
 	font-family:Tahoma, Geneva, sans-serif;
-	 word-wrap: break-word;
+	word-wrap: break-word;
 }
-#mainbtn .ui-btn-inner 
-{
+#mainbtn .ui-btn-inner {
 	white-space: normal !important;
 	padding:0.7em !important;
 	width: auto !important;
@@ -783,50 +772,47 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', end
 	background-position:left bottom;
 }
 .centeredmenu {
-   float:left;
-   width:100%;
-   overflow:hidden;
-   position:relative;
+	float:left;
+	width:100%;
+	overflow:hidden;
+	position:relative;
 }
 .centeredmenu ul {
-   clear:left;
-   float:left;
-   list-style:none;
-   margin:0;
-   padding:0;
-   position:relative;
-   left:50%;
-   text-align:center;
+	clear:left;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	left:50%;
+	text-align:center;
 }
 .centeredmenu ul li {
-   display:block;
-   float:left;
-   list-style:none;
-   margin:0;
-   padding:0;
-   position:relative;
-   right:50%;
-   margin: 0 1px 0 0;
+	display:block;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	right:50%;
+	margin: 0 1px 0 0;
 }
 .centeredmenu ul li a {
-   display:block;
-  background:#ddd;
-   color:#000;
-   text-decoration:none;
-   line-height:1.3em;
+	display:block;
+	background:#ddd;
+	color:#000;
+	text-decoration:none;
+	line-height:1.3em;
 }
 .centeredmenu ul li a:hover {
-   background:#369;
-   color:#fff;
+	background:#369;
+	color:#fff;
 }
-.centeredmenu ul li a.active,
-.centeredmenu ul li a.active:hover {
-   color:#fff;
-   background:#000;
-   font-weight:bold;
+.centeredmenu ul li a.active, .centeredmenu ul li a.active:hover {
+	color:#fff;
+	background:#000;
+	font-weight:bold;
 }
-
-
 /*.menu {
 	left: 36%;
 	margin-left:-180px;
@@ -838,3 +824,68 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', end
 margin-left:50px;
 	margin-top:91px;
 }*/
+
+.riskcalculation #main-content .ui-btn {
+	background:#eb008b !important; /* Old browsers */
+	background:-moz-linear-gradient(top, #eb008b 0%, #9c005d 100%) !important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eb008b), color-stop(100%, #9c005d)) !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #eb008b 0%, #9c005d 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #eb008b 0%, #9c005d 100%) !important; /* Opera 11.10+ */
+	background:-ms-linear-gradient(top, #eb008b 0%, #9c005d 100%) !important; /* IE10+ */
+	background: linear-gradient(to bottom, #eb008b 0%, #9c005d 100%) !important; /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', endColorstr='#9c005d', GradientType=0 ) !important; /* IE6-9 */
+	color:#FFF !important;
+	font-weight:normal;
+	width:auto !important;
+	height: auto !important;
+	font-family:Tahoma, Geneva, sans-serif;
+	word-wrap: break-word;
+	padding: 0.5em 19px !important;
+	white-space: normal !important;
+	width: auto !important;
+    float: left;
+    margin: 0.5em 1em;
+}
+.riskcalculation #main-content .ui-select .ui-btn {
+	background:#FFF !important; /* Old browsers */
+	background:-moz-linear-gradient(top, #FFF 0%, #FFF 100%) !important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFF), color-stop(100%, #FFF)) !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #FFF 0%, #FFF 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #FFF 0%, #FFF 100%) !important; /* Opera 11.10+ */
+	background:-ms-linear-gradient(top, #FFF 0%, #FFF 100%) !important; /* IE10+ */
+	background: linear-gradient(to bottom, #FFF 0%, #FFF 100%) !important; /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFF', endColorstr='#FFF', GradientType=0 ) !important; /* IE6-9 */
+	color:#000 !important;
+	border:1px solid #eb008b !important;
+	
+	
+}
+.riskcalculation .ui-select .ui-icon, .riskcalculation .ui-select .ui-widget-content .ui-icon {
+	background-color:#EB008B;
+	background-image: url("arrowdown.png") !important;
+	background-position: 0 2px !important;
+	top: 56% !important;
+}
+.riskcalculation #main-content .calbtn .ui-btn {
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#F831A3), to(#EB008B)) !important;
+	background-image:-webkit-linear-gradient(#F831A3, #EB008B) !important;
+	background-image:-moz-linear-gradient(#F831A3, #EB008B) !important;
+	background-image:-ms-linear-gradient(#F831A3, #EB008B) !important;
+	background-image:-o-linear-gradient(#F831A3, #EB008B) !important;
+	background-image:linear-gradient(#F831A3, #EB008B) !important;
+
+	color:#FFF !important;
+	font-weight:normal;
+	width:auto !important;
+	height: auto !important;
+	font-family:Tahoma, Geneva, sans-serif;
+	word-wrap: break-word;
+	padding: 0.5em 19px !important;
+	white-space: normal !important;
+	width: auto !important;
+}
+
+.riskcalculation #main-content .ui-select .ui-btn-inner
+{
+	    padding: 0.6em 45px  !important;
+}

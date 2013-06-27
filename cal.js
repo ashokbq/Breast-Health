@@ -65,107 +65,181 @@ function getrelated_with_breast_cancer(val3)
 function checkBiopsy(val4)
 {
 ever_had_biopsy=val4;
+//alert(val4);
 if(val4=='99')
 {
-	
-document.getElementById('previous_biopsies1').style.display='block';
-document.getElementById('previous_biopsies2').style.display='none';
-document.getElementById('previous_biopsies3').style.display='none';
-document.getElementById('biopsy_with_hyperplasia1').style.display='block';
-document.getElementById('biopsy_with_hyperplasia2').style.display='none';
-document.getElementById('biopsy_with_hyperplasia3').style.display='none';
-document.getElementById('biopsy_with_hyperplasia4').style.display='none';
+
+document.getElementById('btn1').style.display='block';
+document.getElementById('btn2').style.display='none';
+document.getElementById('btn3').style.display='none';
+document.getElementById('btn4').style.display='block';
+document.getElementById('btn5').style.display='none';
+document.getElementById('btn6').style.display='none';
+document.getElementById('btn7').style.display='none';
 previous_biopsies='99';
 biopsy_with_hyperplasia='99';
+setTimeout(redirect, 5000);
 }
 
 if(val4=='0')
 {
-document.getElementById('previous_biopsies1').style.display='block';
-document.getElementById('previous_biopsies2').style.display='none';
-document.getElementById('previous_biopsies3').style.display='none';
-document.getElementById('biopsy_with_hyperplasia1').style.display='block';
-document.getElementById('biopsy_with_hyperplasia2').style.display='none';
-document.getElementById('biopsy_with_hyperplasia3').style.display='none';
-document.getElementById('biopsy_with_hyperplasia4').style.display='none';
+	
+document.getElementById('btn1').style.display='block';
+document.getElementById('btn2').style.display='none';
+document.getElementById('btn3').style.display='none';
+document.getElementById('btn4').style.display='block';
+document.getElementById('btn5').style.display='none';
+document.getElementById('btn6').style.display='none';
+document.getElementById('btn7').style.display='none';
 previous_biopsies='0';
 biopsy_with_hyperplasia='0';
-
-
+setTimeout(redirect, 5000);
 }
 
 if(val4=='1')
 {
-document.getElementById('previous_biopsies1').style.display='none';
-document.getElementById('previous_biopsies2').style.display='block';
-document.getElementById('previous_biopsies3').style.display='block';
-document.getElementById('biopsy_with_hyperplasia1').style.display='none';
-document.getElementById('biopsy_with_hyperplasia2').style.display='block';
-document.getElementById('biopsy_with_hyperplasia3').style.display='block';
-document.getElementById('biopsy_with_hyperplasia4').style.display='block';
+
+document.getElementById('btn1').style.display='none';
+document.getElementById('btn2').style.display='block';
+document.getElementById('btn3').style.display='block';
+document.getElementById('btn4').style.display='none';
+document.getElementById('btn5').style.display='block';
+document.getElementById('btn6').style.display='block';
+document.getElementById('btn7').style.display='block';
 }
 
-
-
+function redirect(){
+   window.location = "riskcalc.html#riskcalc7";
+}
 
 }
 
-function previous_biopsies(val5)
+function test(val5)
 {
-		
+	//	alert(val5);
 previous_biopsies=val5;	
 }
 
-function biopsy_with_hyperplasia(val6)
+function test1(val6)
 {
+
 biopsy_with_hyperplasia=val6;	
 
-alert("swipe");
+window.location= 'riskcalc.html#riskcalc7'
+// setTimeout("window.location= riskcalc.html#riskcalc7",5000);
+
 }
 
 
 
-function checkEthnicity() {
-    if (document.risk.race.selectedIndex == 2) {
+function checkEthnicity(val7){
+	race=val7;
+	rc=val7;
+    if (race=='1') {
+		
+		document.getElementById('btn71').style.display='block';
+		document.getElementById('btn72').style.display='none';
+		document.getElementById('btn73').style.display='none';
+		document.getElementById('btn74').style.display='none';
+		document.getElementById('btn75').style.display='none';
+		document.getElementById('btn76').style.display='none';
+		document.getElementById('btn77').style.display='none';
+		
         //alert("Assessments for African American women may underestimate the chance of breast cancer and are subject to greater uncertainty than those for white women. Researchers are conducting additional studies, including studies with minority populations, to gather more data and to increase the accuracy of the tool for women in these populations."); 
         //dec282007 SRamaiah: this has been removed as the new model(CARE) is now in use for african american women
     }
-    else if (document.risk.race.selectedIndex == 3)
-    { alert("Assessments for Hispanic women are subject to greater uncertainty than those for white and African American women. Researchers are conducting additional studies, including studies with minority populations, to gather more data and to increase the accuracy of the tool for women in these populations."); }
-    //else if (document.risk.race.selectedIndex == 4) {    
-    //{ alert("Assessments for Asian or Pacific Islander women are uncertain and are based on data for white women. Researchers are conducting additional studies, including studies with minority populations, to gather more data and to increase the accuracy of the tool for women in these populations."); }    
-    else if (document.risk.race.selectedIndex == 5)
-    { alert("Assessments for American Indian or Alaskan Native women are uncertain and are based on data for white women. Researchers are conducting additional studies, including studies with minority populations, to gather more data and to increase the accuracy of the tool for women in these populations."); }
-    else if (document.risk.race.selectedIndex == 6)
-    { alert("This risk assessment was based on data for white females."); }
-  //reset it to white female
-    //document.risk.race.selectedIndex=1;
+	
+	if(race=='2')
+	{
+		
+		document.getElementById('btn71').style.display='block';
+		document.getElementById('btn72').style.display='none';
+		document.getElementById('btn73').style.display='none';
+		document.getElementById('btn74').style.display='none';
+		document.getElementById('btn75').style.display='none';
+		document.getElementById('btn76').style.display='none';
+		document.getElementById('btn77').style.display='none';
+		
+        //alert("Assessments for African American women may underestimate the chance of breast cancer and are subject to greater uncertainty than those for white women. Researchers are conducting additional studies, including studies with minority populations, to gather more data and to increase the accuracy of the tool for women in these populations."); 
+        //dec282007 SRamaiah: this has been removed as the new model(CARE) is now in use for african american women
+    
+	}
+	
+	if (race == '3')
+    { 
+	alert("Assessments for Hispanic women are subject to greater uncertainty than those for white and African American women. Researchers are conducting additional studies, including studies with minority populations, to gather more data and to increase the accuracy of the tool for women in these populations."); 
+	
+		document.getElementById('btn71').style.display='block';
+		document.getElementById('btn72').style.display='none';
+		document.getElementById('btn73').style.display='none';
+		document.getElementById('btn74').style.display='none';
+		document.getElementById('btn75').style.display='none';
+		document.getElementById('btn76').style.display='none';
+		document.getElementById('btn77').style.display='none';
+		
+        //alert("Assessments for African American women may underestimate the chance of breast cancer and are subject to greater uncertainty than those for white women. Researchers are conducting additional studies, including studies with minority populations, to gather more data and to increase the accuracy of the tool for women in these populations."); 
+        //dec282007 SRamaiah: this has been removed as the new model(CARE) is now in use for african american women
+    
+	}
+      
+   if (race == '5')
+    { 
+	alert("Assessments for American Indian or Alaskan Native women are uncertain and are based on data for white women. Researchers are conducting additional studies, including studies with minority populations, to gather more data and to increase the accuracy of the tool for women in these populations.");
+	
+		document.getElementById('btn71').style.display='block';
+		document.getElementById('btn72').style.display='none';
+		document.getElementById('btn73').style.display='none';
+		document.getElementById('btn74').style.display='none';
+		document.getElementById('btn75').style.display='none';
+		document.getElementById('btn76').style.display='none';
+		document.getElementById('btn77').style.display='none';
+		
+        //alert("Assessments for African American women may underestimate the chance of breast cancer and are subject to greater uncertainty than those for white women. Researchers are conducting additional studies, including studies with minority populations, to gather more data and to increase the accuracy of the tool for women in these populations."); 
+        //dec282007 SRamaiah: this has been removed as the new model(CARE) is now in use for african american women
+    
+	
+	 }
+	 
+   if (race == '6')
+    { 
+	alert("This risk assessment was based on data for white females.");
+	
+		document.getElementById('btn71').style.display='block';
+		document.getElementById('btn72').style.display='none';
+		document.getElementById('btn73').style.display='none';
+		document.getElementById('btn74').style.display='none';
+		document.getElementById('btn75').style.display='none';
+		document.getElementById('btn76').style.display='none';
+		document.getElementById('btn77').style.display='none';
+		
+        //alert("Assessments for African American women may underestimate the chance of breast cancer and are subject to greater uncertainty than those for white women. Researchers are conducting additional studies, including studies with minority populations, to gather more data and to increase the accuracy of the tool for women in these populations."); 
+        //dec282007 SRamaiah: this has been removed as the new model(CARE) is now in use for african american women
+    
+	 }
+	 
+	 
+	 
+	 
+	 if(race=='4')
+	 {
+		document.getElementById('btn71').style.display='none';
+		document.getElementById('btn72').style.display='block';
+		document.getElementById('btn73').style.display='block';
+		document.getElementById('btn74').style.display='block';
+		document.getElementById('btn75').style.display='block';
+		document.getElementById('btn76').style.display='block';
+		document.getElementById('btn77').style.display='block';	 
+		 
+	 }
 
-    //Populate sub race/ehnicity
-    if (document.risk.race.selectedIndex != 4) {
-        document.risk.subrace.options.length = 0;
-        document.risk.subrace.options[0] = new Option("n/a");
-        document.risk.subrace.selectedIndex = 0;
-        document.risk.subrace.options[0].value = 99;
-        }
-    else{
-        document.risk.subrace.options[0] = new Option("(select) ");
-        document.risk.subrace.options[0].value = 999;
-        document.risk.subrace.options[1] = new Option("Chinese");
-        document.risk.subrace.options[1].value = 7;
-        document.risk.subrace.options[2] = new Option("Japanese");
-        document.risk.subrace.options[2].value = 8;
-        document.risk.subrace.options[3] = new Option("Filipino");
-        document.risk.subrace.options[3].value = 9;
-        document.risk.subrace.options[4] = new Option("Hawaiian");
-        document.risk.subrace.options[4].value = 10;
-        document.risk.subrace.options[5] = new Option("Other Pacific Islander");
-        document.risk.subrace.options[5].value = 11;
-        document.risk.subrace.options[6] = new Option("Other Asian-American");
-        document.risk.subrace.options[6].value = 12;        
-        document.risk.subrace.selectedIndex = 0;
-        }
-    }
+	}
+	
+function subrace(val8)
+{
+	if(race=='4'){
+	subrace=val8;
+	}
+}
 
 /*function checkBiopsy(val4) {
 	
@@ -214,42 +288,43 @@ function checkEthnicity() {
   }
 }*/
 function calculate() {
-alert('hi');
+//alert('hi');
 
   current_age = document.risk.current_age.options[document.risk.current_age.selectedIndex].value;
-  alert(current_age);
+  //alert(current_age);
 //  age_at_menarche = age_at_menarche;
-  alert("age_at_menarche"+age_at_menarche);
+ // alert("age_at_menarche"+age_at_menarche);
   age_at_first_live_birth = age_at_first_live_birth;
-  alert(age_at_first_live_birth);
+ // alert(age_at_first_live_birth);
   ever_had_biopsy = ever_had_biopsy;
-  alert(ever_had_biopsy);
+ // alert(ever_had_biopsy);
   previous_biopsies = previous_biopsies;
- alert(previous_biopsies);
+ //alert(previous_biopsies);
   biopsy_with_hyperplasia = biopsy_with_hyperplasia;
-  alert( biopsy_with_hyperplasia);
+ // alert( biopsy_with_hyperplasia);
   related_with_breast_cancer = related_with_breast_cancer;
  // alert(related_with_breast_cancer);
-  if (document.risk.race.selectedIndex == 4) {
-      race = document.risk.subrace.options[document.risk.subrace.selectedIndex].value;
+ //alert("ra"+race);
+  if (race == '4') {
+      race = subrace;
   }
   else {
-      race = document.risk.race.options[document.risk.race.selectedIndex].value;
+      race = race;
 
   }
-  alert(race);
+ // alert("rt"+race);
 
-  if (document.risk.race.selectedIndex==4)
+  if (rc=='4')
     asian = "&asian=" + escape("It has been observed that recent immigrants from rural Asia may have a lower risk of breast cancer than calculated.");
   else
     asian = "";
-alert(asian);
+//alert(asian);
   if (previous_biopsies=="")
     previous_biopsies = "99";
-	alert(previous_biopsies);
+	//alert(previous_biopsies);
   if (biopsy_with_hyperplasia=="")
     biopsy_with_hyperplasia = "99";
-alert(biopsy_with_hyperplasia);
+//alert(biopsy_with_hyperplasia);
   parameters = "current_age=" + current_age +
          "&age_at_menarche=" + age_at_menarche +
          "&age_at_first_live_birth=" + age_at_first_live_birth +
@@ -259,7 +334,7 @@ alert(biopsy_with_hyperplasia);
          "&related_with_breast_cancer=" + related_with_breast_cancer +
          "&race=" + race +
            asian;
-		   alert(parameters);
+	//	   alert(parameters);
 
   // Web Analytics (Omniture) - call web analytics-related function defined in 
   // in analytics_include.html and rendered in the web analytics page-load tag.  
@@ -269,15 +344,21 @@ alert(biopsy_with_hyperplasia);
   // will be needed in this file.  
   if(window.Analytics_CalculateRiskConversionEvent)
     window.Analytics_CalculateRiskConversionEvent();
-alert(document.location);
-  document.location = servlet + "?" + parameters;
+//alert(document.location);
+ $.getJSON("http://www.mobiletest.mednl.com/assessment.php?jsoncallback=?&"+parameters, function(data){ 
+//alert(data);
+
+var abs1=data['abs1'];
+var avr1=data['avr1'];
+var abs2=data['abs2'];
+var avr2=data['avr2'];
+var age=data['age'];
+var minus1=data['minus1'];
+window.location='assesmentresult.html?&abs1='+abs1+'&avr1='+avr1+'&abs2='+abs2+'&avr2='+avr2+'&age='+age+'&minus1='+minus1+'&subrace='+race;
+});
   return;
 
-  
-  if (document.risk.race.selectedIndex==0) {
-    alert("You must indicate the patient's race.");
-    return;
-  }
+ 
 }
 function disclaimer() {
   if (document.risk.race.selectedIndex==0||document.risk.race.selectedIndex==1) {
