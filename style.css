@@ -742,7 +742,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb008b', end
 /* prettyphoto styles */
 .pp_details
 {
-	display:none;
+/* 	display:none;*/
 }
 
 /* Centering menu */
