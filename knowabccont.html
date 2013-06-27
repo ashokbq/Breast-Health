@@ -6,11 +6,17 @@
   <link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
   <link rel="stylesheet" href="jquery-ui.css" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="prettyPhoto.css" />
   <script src="jquery-1.9.1.js"></script>
-  <script src="jquery-ui.js"></script>
   <script src="jquery-1.7.1.min.js"></script>
+  <script src="jquery-ui.js"></script>
   <script src="jquery.mobile-1.1.0.min.js"></script>
+  <script src="jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
   <script>
+   $(document).ready(function(){
+       $("a[rel^='prettyPhoto']").prettyPhoto();
+
+   });
   $(function(){
 $('#donebtn').live("click",function()
 {
@@ -98,7 +104,7 @@ $(document).on('swiperight', 'article', function(event){
         <!--   <div id="headertext"> </div>-->
         <table id="wrapper">
             <tr>
-        <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
+            <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
           </tr>
           </table>
       </div>
@@ -118,7 +124,12 @@ $(document).on('swiperight', 'article', function(event){
         without control, leading to 
         formation of a tumor.</p>
         <br/>
-        <p> <img src="whatisimg.png" width="195" height="193" class="centerimg"/> </p>
+        <!--     <div id="an-obj-2" class="gallery clearfix"> 
+<a href="1-07.png" rel="prettyPhoto"><img src="whatisimg.png" width="195" height="193"/></a>        
+        </div> --> 
+        
+        <a href="1-07.png" rel="prettyPhoto"><img src="whatisimg.png" width="195" height="193" class="centerimg"/></a> 
+        <!--  <p> <img src="whatisimg.png" width="195" height="193" class="centerimg"/> </p>--> 
       </div>
     <div class="clear"> </div>
     <div class="bottomnav">
@@ -141,7 +152,7 @@ $(document).on('swiperight', 'article', function(event){
         <!--  <div id="headertext"> </div>-->
         <table id="wrapper">
             <tr>
-          <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
+            <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
           </tr>
           </table>
       </div>
@@ -163,7 +174,8 @@ $(document).on('swiperight', 'article', function(event){
         <p>By 2020, breast cancer cases are expected
         to increase by 26%. Most of these cases will
         be seen in developing countries.</p>
-        <p> <img src="statisticsimg.png" width="294" height="187" class="centerimg"/> </p>
+        <p><a href="1-08.png" rel="prettyPhoto"><img src="statisticsimg.png" width="294" height="220" class="centerimg"/></a> </p>
+        <!-- <p> <img src="statisticsimg.png" width="294" height="187" class="centerimg"/> </p>--> 
       </div>
     <div class="clear"> </div>
     <div class="bottomnav">
@@ -207,7 +219,7 @@ $(document).on('swiperight', 'article', function(event){
         breast cancer patients are diagnosed
         annually in India.</p>
         <br/>
-        <p> <img src="statindia.png" width="235" height="173" class="centerimg"/> </p>
+        <p><a href="1-09.png" rel="prettyPhoto"> <img src="statindia.png" width="235" height="173" class="centerimg"/> </a></p>
         <br/>
         <p> The incidence of this disease has been 
         consistently increasing at a rate of 0.5-2% every year. </p>
@@ -240,7 +252,7 @@ $(document).on('swiperight', 'article', function(event){
         <!-- <div id="headertext"> </div>-->
         <table id="wrapper">
             <tr>
-           <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
+            <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
           </tr>
           </table>
       </div>
@@ -254,11 +266,11 @@ $(document).on('swiperight', 'article', function(event){
         <div class="clear"> </div>
         <p>The presence of a lump or mass in or
         near the breast</p>
-        <p> <img src="singsimg.png" width="147" height="160"  class="centerimg"/> </p>
+        <p><a href="1-10.png" rel="prettyPhoto"> <img src="singsimg.png" width="147" height="160"  class="centerimg"/></a> </p>
         <div class="clear"> </div>
         <p>Swelling of the breast, or a lump or
         swelling under the arm</p>
-        <p> <img src="singsimg1.png" width="146" height="125"  class="centerimg"/> </p>
+        <p> <a href="1-12.png" rel="prettyPhoto"><img src="singsimg1.png" width="146" height="125"  class="centerimg"/> </a></p>
       </div>
     <div class="clear"> </div>
     <div class="bottomnav">
@@ -282,7 +294,7 @@ $(document).on('swiperight', 'article', function(event){
         <!-- <div id="headertext"> </div>-->
         <table id="wrapper">
             <tr>
-         <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
+            <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
           </tr>
           </table>
       </div>
@@ -296,11 +308,11 @@ $(document).on('swiperight', 'article', function(event){
         <div class="clear"> </div>
         <p>Irritation or dimpling of skin in the
         breast region.</p>
-        <p> <img src="singsimg2.png" width="136" height="125"  class="centerimg"/> </p>
+         <p><a href="1-11.png" rel="prettyPhoto"> <img src="singsimg2.png" width="136" height="125"  class="centerimg"/> </a> </p>
         <div class="clear"> </div>
         <p>Redness, scaliness, or thickening of 
         the nipple or breast skin.</p>
-        <p> <img src="singsimg3.png" width="136" height="124"  class="centerimg"/> </p>
+         <p><a href="1-15.png" rel="prettyPhoto"><img src="singsimg3.png" width="136" height="124"  class="centerimg"/> </a></p>
         <div class="clear"> </div>
       </div>
     <div class="clear"> </div>
@@ -325,7 +337,7 @@ $(document).on('swiperight', 'article', function(event){
         <!-- <div id="headertext"> </div>-->
         <table id="wrapper">
             <tr>
-             <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
+            <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
           </tr>
           </table>
       </div>
@@ -337,13 +349,13 @@ $(document).on('swiperight', 'article', function(event){
     <div id="main-content">
         <p class="titletext">Signs and Symptoms</p>
         <p>Breast or nipple pain</p>
-        <p> <img src="singsimg4.png" width="136" height="125"  class="centerimg"/> </p>
+         <p><a href="1-13.png" rel="prettyPhoto"> <img src="singsimg4.png" width="136" height="125"  class="centerimg"/> </a> </p>
         <div class="clear"> </div>
         <p>Nipple retraction (turning inward)</p>
-        <p> <img src="singsimg5.png" width="136" height="125"  class="centerimg"/> </p>
+         <p><a href="1-14.png" rel="prettyPhoto"> <img src="singsimg5.png" width="136" height="125"  class="centerimg"/> </a></p>
         <div class="clear"> </div>
         <p>Nipple discharge</p>
-        <p> <img src="singsimg6.png" width="131" height="124"  class="centerimg"/> </p>
+         <p><a href="1-16.png" rel="prettyPhoto"> <img src="singsimg6.png" width="131" height="124"  class="centerimg"/> </a></p>
       </div>
     <div class="clear"> </div>
     <div class="bottomnav">
@@ -367,7 +379,7 @@ $(document).on('swiperight', 'article', function(event){
         <!--   <div id="headertext"> </div>-->
         <table id="wrapper">
             <tr>
-       <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
+            <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
           </tr>
           </table>
       </div>
@@ -386,12 +398,14 @@ $(document).on('swiperight', 'article', function(event){
         <div class="clear"> </div>
         <p> Surgery may be of two types:</p>
         <ul>
-        <li>it may involve removal of 
+        <li> <p>it may involve removal of 
             the whole breast that has 
-            cancer </li>
-        <li>it may involve removal of the 
+            cancer </p></li>
+ <p><a href="1-06.png" rel="prettyPhoto"> <img src="type1.png" width="200" height="245"  class="centerimg"/> </a></p>            
+        <li> <p>it may involve removal of the 
             cancer, but not the  breast
-            itself (breast-conserving surgery). </li>
+            itself (breast-conserving surgery). </p></li>
+ <p><a href="1-05.png" rel="prettyPhoto"> <img src="type2.png" width="250" height="169"  class="centerimg"/> </a></p>               
       </ul>
         <div class="clear"> </div>
         <div class="bottomnav">
@@ -417,7 +431,7 @@ $(document).on('swiperight', 'article', function(event){
         <!--   <div id="headertext"> </div>-->
         <table id="wrapper">
             <tr>
-           <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
+            <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
           </tr>
           </table>
       </div>
@@ -434,7 +448,7 @@ $(document).on('swiperight', 'article', function(event){
         other types of radiation are used to kill 
         cancer cells or prevent them from
         growing further.</p>
-        <img src="radiationtherapy.png" width="336" height="221" class="centerimg" /> </div>
+  <p><a href="radiation.png" rel="prettyPhoto"> <img src="radiationtherapy.png" width="336" height="221" class="centerimg" /> </a> </p>					   </div>
     <div class="clear"> </div>
     <div class="bottomnav">
         <div class="btnnav">
@@ -457,7 +471,7 @@ $(document).on('swiperight', 'article', function(event){
         <!--   <div id="headertext"> </div>-->
         <table id="wrapper">
             <tr>
-        <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
+            <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
           </tr>
           </table>
       </div>
@@ -474,8 +488,7 @@ $(document).on('swiperight', 'article', function(event){
         the use of drugs which help to stop the
         growth of cancer cells, either by killing
         the cells or by stopping them from 
-        dividing. 
-      </p>
+        dividing. </p>
         <p> The drug therapy may be systemic - 
         taken orally or by injection </p>
         <span style="color:#eb2f92;font-weight:bold;"> or </span>
@@ -506,7 +519,7 @@ $(document).on('swiperight', 'article', function(event){
         <!--   <div id="headertext"> </div>-->
         <table id="wrapper">
             <tr>
-       <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
+            <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
           </tr>
           </table>
       </div>
@@ -546,7 +559,7 @@ $(document).on('swiperight', 'article', function(event){
         <!--   <div id="headertext"> </div>-->
         <table id="wrapper">
             <tr>
-           <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
+            <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
           </tr>
           </table>
       </div>
@@ -593,7 +606,7 @@ $(document).on('swiperight', 'article', function(event){
         <!--  <div id="headertext"> </div>-->
         <table id="wrapper">
             <tr>
-         <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
+            <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
           </tr>
           </table>
       </div>
@@ -633,7 +646,7 @@ $(document).on('swiperight', 'article', function(event){
         <!--  <div id="headertext"> </div>-->
         <table id="wrapper">
             <tr>
-           <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
+            <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
           </tr>
           </table>
       </div>
@@ -671,7 +684,7 @@ $(document).on('swiperight', 'article', function(event){
         <!--  <div id="headertext"> </div>-->
         <table id="wrapper">
             <tr>
-             <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
+            <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
           </tr>
           </table>
       </div>
@@ -717,7 +730,7 @@ $(document).on('swiperight', 'article', function(event){
         <!--  <div id="headertext"> </div>-->
         <table id="wrapper">
             <tr>
-       <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
+            <td><!-- <img src="knwheader.png" />--> Know About Breast Cancer</td>
           </tr>
           </table>
       </div>

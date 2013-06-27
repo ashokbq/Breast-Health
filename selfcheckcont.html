@@ -6,11 +6,17 @@
   <link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
   <link rel="stylesheet" href="jquery-ui.css" />
   <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="prettyPhoto.css" />
   <script src="jquery-1.9.1.js"></script>
   <script src="jquery-ui.js"></script>
   <script src="jquery-1.7.1.min.js"></script>
   <script src="jquery.mobile-1.1.0.min.js"></script>
+<script src="jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
   <script>
+   $(document).ready(function(){
+       $("a[rel^='prettyPhoto']").prettyPhoto();
+
+   });
   $(function(){
 $('#donebtn').live("click",function()
 {
@@ -70,8 +76,9 @@ $(document).on('swiperight', 'article', function(event){
         <p class="titletext">Breast self-examination</p>
         <div class="clear"> </div>
         <p class="treatheader"> Step 1: Looking </p>
-        <p style="float:left;margin-right: 2%;" >Always carry out a BSE in good light. </p>
-        <img src="selfstep1.png" width="150" height="134" align="" class="centerimg"/>
+        <p >Always carry out a BSE in good light. </p>
+<a href="1-01.png" rel="prettyPhoto"><img src="selfstep1.png" width="150" height="134" align="" class="centerimg"/></a>       
+        
         <div class="clear"> </div>
         <p>Standing in front of a mirror, place
         your hands on your hips and press
@@ -122,7 +129,7 @@ $(document).on('swiperight', 'article', function(event){
         each breast one by one. </p>
         <p>For left breast examination, place 
         your left hand under the head. </p>
-        <img src="step2_1.png" width="288" height="128" class="centerimg"/>
+<a href="1-02.png" rel="prettyPhoto">        <img src="step2_1.png" width="288" height="128" class="centerimg"/> </a>
         <p>Feel the left breast with your right
         hand using the pads of your three
         middle fingers, starting in the
@@ -133,7 +140,7 @@ $(document).on('swiperight', 'article', function(event){
         edium and firm pressure.</p>
         <p>Move your fingers slowly up to the
         rib cage.</p>
-        <img src="step2_2.png" width="144" height="116" class="centerimg"/>
+ <a href="1-03.png" rel="prettyPhoto">       <img src="step2_2.png" width="144" height="116" class="centerimg"/> </a>
         <p >Next, move your fingers closer towards
         the nipple and the slowly up to the
         collarbone using the same small, circular
@@ -144,7 +151,8 @@ $(document).on('swiperight', 'article', function(event){
         breast, starting from
         the underarm upto
         the middle of the
-        chest. <img src="step2_3.png" width="161" height="166" class="centerimg"/> </p>
+        chest.
+<a href="1-04.png" rel="prettyPhoto">    <img src="step2_3.png" width="161" height="166" class="centerimg"/> </a> </p>
         <p style=" padding-top: 3px;">Examine the right breast in a similar
         manner with the three middle
         fingers of your left hand, keeping
