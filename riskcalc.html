@@ -19,7 +19,12 @@ $('#donebtn').live("click",function()
 });
 });
 
+$(document).bind('pagebeforeshow', function () {
+$("#previous_biopsies1").hide();
+});
 
+$(document).ready(function() {
+});
 </script>
 </head>
 <body>
@@ -306,13 +311,17 @@ $('#donebtn').live("click",function()
  <button type="button" value="0" id="ever_had_biopsy2" onclick="checkBiopsy(this.value)">No</button> 
  <button type="button" value="1" id="ever_had_biopsy3" onclick="checkBiopsy(this.value)">Yes</button>
 <label for="previous_biopsies">How many breast biopsies (positive or negative) has the woman had?</label>
-  <button type="button" value="99" id="previous_biopsies1" onclick="previous_biopsies(this.value)" style="display:none">N/a</button> 	  <button type="button" value="1" id="previous_biopsies2" onclick="previous_biopsies(this.value)" style="display:none">1</button> 
-  <button type="button" value="2" id="previous_biopsies3" onclick="previous_biopsies(this.value)" style="display:none">&gt; 1</option>  
+<div id="hide">
+  <button type="button" value="99" id="previous_biopsies1" onclick="previous_biopsies(this.value)" >N/a</button> 	  <button type="button" value="1" id="previous_biopsies2" onclick="previous_biopsies(this.value)" >1</button> 
+  <button type="button" value="2" id="previous_biopsies3" onclick="previous_biopsies(this.value)">&gt; 1</button>  
+  </div>
 <label for="biopsy_with_hyperplasia">Has the woman had at least one breast biopsy with atypical hyperplasia?</label> 
-<button type="button" value="99" id="biopsy_with_hyperplasia1" onclick="biopsy_with_hyperplasia(this.value)" style="display:none">N/a</button>    
-<button type="button" value="99" id="biopsy_with_hyperplasia2" onclick="biopsy_with_hyperplasia(this.value)" style="display:none">Unknown</button> 
-<button type="button" value="0" id="biopsy_with_hyperplasia3" onclick="biopsy_with_hyperplasia(this.value)" style="display:none">No</button>
-<button type="button" value="1" id="biopsy_with_hyperplasia4" onclick="biopsy_with_hyperplasia(this.value)" style="display:none">Yes</button>  
+<div id="hide">
+<button type="button" value="99" id="biopsy_with_hyperplasia1" onclick="biopsy_with_hyperplasia(this.value)">N/a</button>    
+<button type="button" value="99" id="biopsy_with_hyperplasia2" onclick="biopsy_with_hyperplasia(this.value)" >Unknown</button> 
+<button type="button" value="0" id="biopsy_with_hyperplasia3" onclick="biopsy_with_hyperplasia(this.value)">No</button>
+<button type="button" value="1" id="biopsy_with_hyperplasia4" onclick="biopsy_with_hyperplasia(this.value)">Yes</button>  
+</div>
 </form>      
       <div class="clear"> </div>
     </div>
@@ -328,7 +337,7 @@ $('#donebtn').live("click",function()
   <footer id="footer"> </footer>
 </article>
 <!-- 7 -->
-<article id="riskcalc5" data-role="page">
+<article id="riskcalc7" data-role="page">
   <div data-role="content">
     <div id="header">
       <div id="titleheader"> 
@@ -364,7 +373,7 @@ $('#donebtn').live("click",function()
 </article>
 
 <!-- 8 -->
-<article id="riskcalc5" data-role="page">
+<article id="riskcalc8" data-role="page">
   <div data-role="content">
     <div id="header">
       <div id="titleheader"> 
@@ -400,7 +409,7 @@ $('#donebtn').live("click",function()
 </article>
 
 <!-- 9 -->
-<article id="riskcalc5" data-role="page">
+<article id="riskcalc9" data-role="page">
   <div data-role="content">
     <div id="header">
       <div id="titleheader"> 
@@ -436,7 +445,7 @@ $('#donebtn').live("click",function()
 </article>
 
 <!-- 10 -->
-<article id="riskcalc5" data-role="page">
+<article id="riskcalc10" data-role="page">
   <div data-role="content">
     <div id="header">
       <div id="titleheader"> 

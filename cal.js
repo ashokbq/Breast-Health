@@ -67,6 +67,7 @@ function checkBiopsy(val4)
 ever_had_biopsy=val4;
 if(val4=='99')
 {
+	
 document.getElementById('previous_biopsies1').style.display='block';
 document.getElementById('previous_biopsies2').style.display='none';
 document.getElementById('previous_biopsies3').style.display='none';
